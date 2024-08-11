@@ -1,12 +1,11 @@
 .team {
-    @media (min-width: 1920px) {
-        margin: 136px 165px 120px 165px;
-    }
     margin: calc(var(--vw)*136)
         calc(var(--vw)*165)
         calc(var(--vw)*120)
         calc(var(--vw)*165);
-
+    @media (min-width: 1920px) {
+        margin: 136px 165px 120px 165px;
+    }
     @media (max-width: 375px ) {
         margin: 0 16px 60px 16px;
     }
@@ -38,19 +37,10 @@
     }
     &__header {
         text-align: center;
-
-        // @media (min-width: 1920px) {
-        //     margin: 0 255px 160px 255px;
-        // }
-        // margin: 0 calc(var(--vw)*255)
-        //     calc(var(--vw)*160)
-        //     calc(var(--vw)*255);
-        // margin: 0;
-
+        position: relative;
         @media (max-width: 375px ) {
             margin: 80px 0 60px 0;
         }
-        position: relative;
     }
     &__title {
         font-size: 84px;
@@ -114,8 +104,6 @@
         background-color: $header;
     }
     &__postcard-foto {
-        // width: 375px;
-        // height: 480px;
         @media (max-width: 375px) {
             width: 343px;
             height: 400px;
@@ -131,7 +119,6 @@
         padding: 30px 20px;
         background-color: $header;
         @media (max-width: 375px) {
-            // padding: 20px 17px;
             padding: calc((100vw/375)*20) calc((100vw/375)*17);
         }
         @media (max-width: 370px) {

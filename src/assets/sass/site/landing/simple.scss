@@ -1,12 +1,12 @@
 .simple {
-    @media (min-width: 1920px) {
-        margin: 120px 0 0 0;
-        padding: 120px 165px;
-    }
     margin: calc(var(--vw)*120) 0 0 0;
     padding: calc(var(--vw)*120) calc(var(--vw)*165);
     position: relative;
     background-color: $header;
+    @media (min-width: 1920px) {
+        margin: 120px 0 0 0;
+        padding: 120px 165px;
+    }
     @media (max-width: 375px) {
         padding: 0 ;
     }
@@ -18,27 +18,27 @@
     }
     &__header {
         text-align:center;
-        @media (min-width: 1920px) {
-            margin-bottom: 60px;
-        }
         margin-bottom: calc(var(--vw)*60);
         z-index: 1;
         position: relative;
+        @media (min-width: 1920px) {
+            margin-bottom: 60px;
+        }
         @media (max-width: 375px) {
             margin-bottom: 40px;
         }
     }
 
     &__title {
+        font-size: calc(24px + 34 * var(--vw));
+        font-weight: 700;
+        line-height: calc(24px + 49 * var(--vw));
+        margin-bottom: calc(var(--vw)*30);
         @media (min-width: 1920px) {
             font-size: 58px;
             line-height: 73px;
             margin-bottom: 30px;
         }
-        font-size: calc(24px + 34 * var(--vw));
-        font-weight: 700;
-        line-height: calc(24px + 49 * var(--vw));
-        margin-bottom: calc(var(--vw)*30);
         @media (max-width: 375px) {
             font-size: 42px;
             font-weight: 400;
@@ -48,15 +48,15 @@
 
     &__coment {
         margin: 0 auto;
-        @media (min-width: 1920px) {
-            width: 1050px;
-        }
         width: calc(900px + 150 * var(--vw));
         text-align:center;
         color: $grey;
         font-size: 18px;
         font-weight: 400;
         line-height: 28px;
+        @media (min-width: 1920px) {
+            width: 1050px;
+        }
         @media (max-width: 1200px) {
             width: auto;
         }
@@ -66,8 +66,6 @@
             line-height: 26px;
             text-align: center;
             width: auto;
-
-
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
@@ -77,12 +75,12 @@
         }
     }
     &__line {
-        @media (min-width: 1920px) {
-            margin-bottom: 60px;
-        }
         margin-bottom: calc(var(--vw)*60);
         z-index: 1;
         position: relative;
+        @media (min-width: 1920px) {
+            margin-bottom: 60px;
+        }
         @media (max-width: 375px) {
             margin-bottom: 40px;
         }
@@ -104,10 +102,10 @@
         text-align: center;
         background-color: $num;
         border-radius: 16px;
+        padding: calc(var(--vw)*60) calc(var(--vw)*30);
         @media (min-width: 1920px) {
             padding: 60px 30px;
         }
-        padding: calc(var(--vw)*60) calc(var(--vw)*30);
         @media (max-width: 375px) {
             margin: 20px 16px;
             padding: 20px 30px;
@@ -115,10 +113,10 @@
     }
     &__text {
         margin: 0 30px 40px;
+        margin: 0 calc(var(--vw)*30) calc(var(--vw)*40);
         @media (min-width: 1920px) {
             font-size: 18px;
         }
-        margin: 0 calc(var(--vw)*30) calc(var(--vw)*40);
         @media (max-width: 375px) {
             margin: 0 0 40px 0;
         }
@@ -128,11 +126,10 @@
         font-size: 24px;
     }
     &__card-text {
+        font-size: calc(12px + 4 * var(--vw));
         @media (min-width: 1920px) {
             font-size: 16px;
         }
-        font-size: calc(12px + 4 * var(--vw));
-
     }
     &__button {
         @media (max-width: 375px) {

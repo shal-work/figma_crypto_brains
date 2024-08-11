@@ -1,12 +1,12 @@
 .footer {
-    @media (min-width: 1920px) {
-        margin: 120px 0 0 0;
-        padding: 120px 165px;
-    }
     margin: calc(var(--vw) * 120) 0 0 0 ;
     background-color: $header;
     padding: calc(var(--vw) * 120) calc(var(--vw) *165);
     position: relative;
+    @media (min-width: 1920px) {
+        margin: 120px 0 0 0;
+        padding: 120px 165px;
+    }
     @media (max-width: 375px) {
         margin: 70px 0 20px 0 ;
         padding: 0 12px;
@@ -17,10 +17,10 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 60px;
+        margin-bottom: calc(var(--vw)*60);
         @media (min-width: 1920px) {
             margin-bottom: 60px;
         }
-        margin-bottom: calc(var(--vw)*60);
         @media (max-width: 768px) {
             flex-direction: column;
             margin-bottom: 20px;
@@ -73,10 +73,10 @@
         list-style: none;
     }
     &__line {
+        margin-bottom: calc(var(--vw)*60);
         @media (min-width: 1920px) {
             margin-bottom: 60px;
         }
-        margin-bottom: calc(var(--vw)*60);
         @media (max-width: 375px) {
             margin-bottom: 20px;
         }
@@ -100,10 +100,10 @@
         }
     }
     &__block {
+        width: calc(var(--vw)*240);
         @media (min-width: 1920px) {
             width: 240px;
         }
-        width: calc(var(--vw)*240);
         @media (max-width: 375px) {
             width: auto;
         }
@@ -119,9 +119,6 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        @media (max-width: 375px) {
-            // display: none;
-        }
     }
     &__icon{
         display: block;
@@ -219,16 +216,12 @@
 }
 
 .menu {
-
-    &__block {
-    }
-
     &__element {
         list-style: none;
+        margin-bottom: calc(var(--vw)*12);
         @media (min-width: 1920px) {
             margin-bottom: 12px;
         }
-        margin-bottom: calc(var(--vw)*12);
     }
 
     &__link {

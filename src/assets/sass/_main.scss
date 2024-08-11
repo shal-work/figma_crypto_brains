@@ -29,7 +29,6 @@
     transform: rotate(45deg);
     display: inline-block;
     font-size: 15px;
-    // font-size: calc(var(--vw)*15);
 }
 .line {
     height: 1px;
@@ -46,7 +45,7 @@
     background: $primary;
     opacity: 4%;
     border-radius: 100%;
-    filter: blur(80px); // размытие фона
+    filter: blur(80px);
 }
 .elipse__home {
     width: 80%;
@@ -54,7 +53,7 @@
     top: 10%;
     opacity: 4%;
     will-change: transform;
-    animation: 2.5s ease-in-out .5s infinite pulse; //продолжит, функция, задержка, бесконечно, имя
+    animation: 2.5s ease-in-out .5s infinite pulse;
 }
 .elipse__choice {
     width: 100%;
@@ -67,7 +66,7 @@
     top:0;
     will-change: transform;
     opacity: 4%;
-    animation: 2.5s ease-in-out .5s infinite pulse; //продолжит, функция, задержка, бесконечно, имя
+    animation: 2.5s ease-in-out .5s infinite pulse;
 }
 .elipse__testimonials {
     width: 100%;
@@ -94,16 +93,15 @@
 .elipse-deg {
     position: absolute;
     width: 100%;
-    // height: 332px;
     height: 38.12%;
     background: $primary;
     border-radius: 100%;
     transform: rotate(19deg);
-    filter: blur(79px); // размытие фона
+    filter: blur(79px);
     top: 280px;
     opacity: 4%;
     will-change: transform;
-    animation: 3.5s ease-in-out .5s infinite pulse-deg; //продолжит, функция, задержка, бесконечно, имя
+    animation: 3.5s ease-in-out .5s infinite pulse-deg;
 }
 @keyframes pulse-deg {
     from {

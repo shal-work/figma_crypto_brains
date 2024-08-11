@@ -55,25 +55,22 @@
         line-height: 32px;
         color:$grey2;
     }
-    &__content {
-
-    }
     &__img-first {
+        width: 40.625vw;
         @media (min-width: 1920px) {
             width: 780px;
             height: 440px;
         }
-        width: 40.625vw; //width: 780px; height: 440px
         @media (max-width: 1200px) {
             width: 100%;
         }
     }
     &__img {
+        width: 19.532vw; //width: 375px; height: 220px
         @media (min-width: 1920px) {
             width: 375px;
             height: 220px;
         }
-        width: 19.532vw; //width: 375px; height: 220px
         @media (max-width: 1200px) {
             width: 100%;
         }
@@ -86,40 +83,37 @@
     width: 100%;
 }
 .news-post {
-    margin: -84px 30px 0 30px;
-    padding: 20px 30px;
+    margin: calc(var(--vw)* -84) calc(var(--vw)*30) 0 calc(var(--vw)*30);
+    padding: calc(var(--vw)20) calc(var(--vw)*30);
+    background-color: $background;
+    position: relative;
     @media (min-width: 1920px) {
         margin: -84px 30px 0 30px;
         padding: 20px 30px;
     }
-    margin: calc(var(--vw)* -84) calc(var(--vw)*30) 0 calc(var(--vw)*30);
-    padding: calc(var(--vw)20) calc(var(--vw)*30);
-
     @media (max-width: 1200px) {
         margin: -50px 20px 0 20px;
         padding: 14px 20px;
         background-color: #131517;
         position: relative;
     }
-    background-color: $background;
-    position: relative;
-        &__header {
-            display: flex;
-            justify-content: space-between;
-        }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
 
-        &__date {
-            color: $pagination;
-            margin-bottom: 20px;
-            font-size: 16px;
-            line-height: 24px;
-        }
+    &__date {
+        color: $pagination;
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 24px;
+    }
 
-        &__time {
-            color: $grey-paragraph;
-            font-size: 14px;
-            line-height: 20px;
-        }
+    &__time {
+        color: $grey-paragraph;
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 
 .news-content {
@@ -152,8 +146,6 @@
 }
 
 .main-news-related__block {
-    // display: grid;
-    // grid-template-columns: repeat(4, 1fr);
     display: flex;
     grid-gap: 30px;
     margin-bottom: 60px;

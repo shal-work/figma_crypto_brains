@@ -1,22 +1,22 @@
 .market-trend {
+    margin: calc(var(--vw)*120) calc(var(--vw)*165) 0 calc(var(--vw)*165);
     @media (min-width: 1920px) {
         margin: 120px 165px 0 165px;
     }
-    margin: calc(var(--vw)*120) calc(var(--vw)*165) 0 calc(var(--vw)*165);
     @media (max-width: 375px) {
         margin: 20px 16px;
     }
     &__heading {
         height: 92px;
         justify-content: space-between;
-        @media (min-width: 1920px) {
-            margin-bottom: 60px;
-        }
         margin-bottom: calc(var(--vw) * 60);
         background-color: $header;
         flex-wrap: wrap;
         align-content: center;
         gap: 0;
+        @media (min-width: 1920px) {
+            margin-bottom: 60px;
+        }
         @media (max-width: 1200px) {
             flex-direction: column-reverse;
             flex-wrap: nowrap;
@@ -81,10 +81,10 @@
 }
 
 .table {
+    margin-bottom: calc(81 * var(--vw));
     @media (min-width: 1920px) {
         margin-bottom: 81px;
     }
-    margin-bottom: calc(81 * var(--vw));
     &__row{
         display: flex;
         justify-content: space-between;
@@ -97,23 +97,23 @@
     }
 
     &__cell{
-        @media (min-width: 1920px) {
-            font-size: 18px;
-        }
         font-size: calc(14px + 4 * var(--vw));
         font-weight: 400;
         line-height: 28px;
         color: $white;
         display: flex;
         align-items: center;
-        &_gap {
-            gap: 12px;
+        @media (min-width: 1920px) {
+            font-size: 18px;
         }
         @media (max-width: 375px) {
             font-size: 16px;
             font-size: calc(82 * var(--vw));
             font-weight: 400;
             line-height: 26px
+        }
+        &_gap {
+            gap: 12px;
         }
     }
     &__cell-first {
@@ -125,12 +125,12 @@
         }
     }
     &__ico{
+        width: calc(12 + 12 * var(--vw));
+        height: calc(12 + 12 * var(--vw));
         @media (min-width: 1920px) {
             width: 24px;
             height: 24px;
         }
-        width: calc(12 + 12 * var(--vw));
-        height: calc(12 + 12 * var(--vw));
         @media (max-width: 375px) {
             width: 16px;
             height: 16px;
@@ -152,10 +152,10 @@
 .table-header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: calc(var(--vw) * 41);
     @media (min-width: 1920px) {
         margin-bottom: 41px;
     }
-    margin-bottom: calc(var(--vw) * 41);
     &__cell {
         display: flex;
         align-items: center;
@@ -212,7 +212,6 @@
     @media (max-width: 768px) {
         justify-content: flex-start;
         width: auto;
-        // overflow: scroll;
         margin: 12px 0;
     }
 }

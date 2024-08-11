@@ -21,10 +21,10 @@
         }
     }
     &__header {
+        margin-bottom: calc(var(--vw)*40);
         @media (min-width: 1920px) {
             margin-bottom: 40px;
         }
-        margin-bottom: calc(var(--vw)*40);
     }
     &__img {
 
@@ -36,42 +36,41 @@
         }
     }
     &__img-mod {
-        // width: 740px;
         width: 100%;
     }
     &__top {
         color: $grey;
+        font-size: calc(var(--vw)*10 + 8px);
+        font-weight: 400;
+        line-height: 28px;
         @media (min-width: 1920px) {
             font-size: 18px;
             font-weight: 400;
             line-height: 28px;
         }
-        font-size: calc(var(--vw)*10 + 8px);
-        font-weight: 400;
-        line-height: 28px;
     }
     &__user {
         color: $grey;
         position: relative;
         margin-right: 22px;
+        font-size: calc(var(--vw)*10 + 8px);
+        font-weight: 400;
+        line-height: 28px;
         @media (min-width: 1920px) {
             font-size: 18px;
             font-weight: 400;
             line-height: 28px;
         }
-        font-size: calc(var(--vw)*10 + 8px);
-        font-weight: 400;
-        line-height: 28px;
     }
     &__user::before {
         content: " ";
         position: absolute;
         border-right: 1px solid $grey13;
-        // height: 16px;
         width: 1px;
         right: 0px;
-
         margin-top: 8px;
+        right: calc(var(--vw)* -13);
+        height: calc(var(--vw)* 16);
         @media (min-width: 1920px) {
             height: 16px;
             width: 1px;
@@ -79,29 +78,27 @@
             right: -13px;
             margin-top: 8px;
         }
-        right: calc(var(--vw)* -13);
-        height: calc(var(--vw)* 16);
     }
     &__time {
         color: $grey;
+        font-size: calc(var(--vw)*10 + 8px);
+        font-weight: 400;
+        line-height: 28px;
         @media (min-width: 1920px) {
             font-size: 18px;
             font-weight: 400;
             line-height: 28px;
         }
-        font-size: calc(var(--vw)*10 + 8px);
-        font-weight: 400;
-        line-height: 28px;
     }
     &__title {
         font-weight: 600;
+        font-size: calc(var(--vw)*16 + 20px);
+        line-height: calc(var(--vw)*19 + 26px);
         @media (min-width: 1920px) {
             font-size: 36px;
             font-weight: 600;
             line-height: 45px;
         }
-        font-size: calc(var(--vw)*16 + 20px);
-        line-height: calc(var(--vw)*19 + 26px);
     }
     &__pagination {
         margin: 60px 0;
@@ -141,12 +138,6 @@
         @media (max-width: 1200px) {
             margin-right: 0;
         }
-        // @media (max-width: 640px) {
-        //     display: none;
-        // }
-        // @media (max-width: 375px) {
-        //     display: none;
-        // }
     }
     &__newest-text {
         font-size: 16px;

@@ -1,9 +1,10 @@
 .questions {
+
+    margin: calc(var(--vw) * 120) calc(var(--vw) * 165) calc(var(--vw) *120) calc(var(--vw) *165);
+    position: relative;
     @media (min-width: 1920px) {
         margin: 120px 165px 120px 165px;
     }
-    margin: calc(var(--vw) * 120) calc(var(--vw) * 165) calc(var(--vw) *120) calc(var(--vw) *165);
-    position: relative;
     @media (max-width: 375px) {
         margin: 0;
     }
@@ -26,12 +27,12 @@
         font-weight: 400;
         color: $grey;
         text-align: center;
-        @media (min-width: 1920px) {
-            margin-bottom: 60px;
-        }
         margin-bottom: calc(var(--vw) *60);
         z-index: 10;
         position: relative;
+        @media (min-width: 1920px) {
+            margin-bottom: 60px;
+        }
         @media (max-width: 375px) {
             font-size: 16px;
             font-weight: 400;
@@ -40,12 +41,12 @@
         }
     }
     &__line {
-        @media (min-width: 1920px) {
-            margin-bottom: 60px;
-        }
         margin-bottom: calc(var(--vw) *60);
         z-index: 10;
         position: relative;
+        @media (min-width: 1920px) {
+            margin-bottom: 60px;
+        }
         @media (max-width: 375px) {
             margin-bottom: 40px;
         }
@@ -82,8 +83,7 @@
         font-weight: 600;
         line-height: 36px;
         color: $white;
-        margin: 20px 40px 20px 20px;
-
+        position: relative;
         @media (max-width: 1024px) {
             font-weight: 600;
             align-items: center;
@@ -91,8 +91,6 @@
             line-height: 28px;
             margin: 20px 60px 20px 20px;
         }
-
-        position: relative;
         @media (max-width: 375px) {
             align-items: center;
             font-size: 18px;

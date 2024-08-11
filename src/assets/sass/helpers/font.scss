@@ -7,11 +7,11 @@
 }
 
 .fz-16 {
-    font-size: 16px;
+    // font-size: 16px;
+    font-size: calc(var(--vw) * 16);
     @media (min-width: 1920px) {
         font-size: 16px;
     }
-    font-size: calc(var(--vw) * 16);
 }
 .fz-17 {
     font-size: 17px;

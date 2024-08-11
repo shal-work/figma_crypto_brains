@@ -4,8 +4,6 @@
         height: 100%;
         top: 7%;
         opacity: 4%;
-        // will-change: transform;
-        // animation: 2.5s ease-in-out 0.5s infinite pulse;
     }
 }
 
@@ -14,22 +12,15 @@
     margin-bottom: 200px;
     align-items: center;
     position: relative;
-
+    margin: calc(var(--vw)*152) 0 calc(var(--vw)*200) calc(var(--vw)*165);
     @media (min-width: 1920px) {
         margin: 152px 0 120px 165px;
     }
-    margin: calc(var(--vw)*152) 0 calc(var(--vw)*200) calc(var(--vw)*165);
-
     @media (max-width: 768px) {
         flex-direction: column-reverse;
         margin-bottom: 80px;
         margin: 60px 16px 80px 16px;
         gap: 30px;
-    }
-    @media (max-width: 375px) {
-        // flex-direction: column-reverse;
-        // margin-bottom: 80px;
-        // margin: 60px 16px 80px 16px;
     }
     &__logo {
         color: #1B70F1;
@@ -84,23 +75,18 @@
         }
     }
     &__title {
-        // font-size: 84px;
-        // font-weight: 600;
-        // line-height: 106px;
-        // color: $white;
-        // letter-spacing: -1px;
         width: 120%;
+        font-size: calc(var(--vw)*84);
+        font-weight: 600;
+        line-height: calc(var(--vw)*106);
+        color: $white;
+        letter-spacing: -1px;
         @media (min-width: 1920px) {
             font-size: 84px;
             line-height: 106px;
             color: $white;
             letter-spacing: -1px;
         }
-        font-size: calc(var(--vw)*84);
-        font-weight: 600;
-        line-height: calc(var(--vw)*106);
-        color: $white;
-        letter-spacing: -1px;
         @media (max-width: 768px) {
             letter-spacing: 0;
             font-size: 48px;
@@ -118,22 +104,17 @@
         }
     }
     &__title-grey {
-        // font-size: 84px;
-        // font-weight: 400;
-        // line-height: 106px;
-        // color: $grey;
-        // letter-spacing: -1px;
+        font-size: calc(var(--vw)*84);
+        font-weight: 600;
+        line-height: calc(var(--vw)*106);
+        letter-spacing: -1px;
+        color: $grey;
         @media (min-width: 1920px) {
             font-size: 84px;
             line-height: 106px;
             color: $white;
             letter-spacing: -1px;
         }
-        font-size: calc(var(--vw)*84);
-        font-weight: 600;
-        line-height: calc(var(--vw)*106);
-        letter-spacing: -1px;
-        color: $grey;
         @media (max-width: 768px) {
             font-size: 48px;
             font-weight: 600;
@@ -166,19 +147,17 @@
         }
     }
     &__text {
+        margin: calc(var(--vw)*30) 0 calc(var(--vw)*80);
+        font-size: calc(var(--vw)*8 + 14px);
+        font-weight: 400;
+        line-height: calc(var(--vw)*8 + 20px);
+        color: $grey;
         @media (min-width: 1920px) {
             margin: 30px 0 80px;
             font-size: 18px;
             font-weight: 400;
             line-height: 28px;
         }
-        margin: calc(var(--vw)*30) 0 calc(var(--vw)*80);
-        font-size: calc(var(--vw)*8 + 14px);
-        font-weight: 400;
-        line-height: calc(var(--vw)*8 + 20px);
-
-        color: $grey;
-
         @media (max-width: 768px) {
             width: auto;
             text-align: center;
@@ -192,13 +171,12 @@
     }
     &__action {
         display: flex;
-
+        gap: calc(var(--vw)*30);
+        margin-bottom: calc(var(--vw)*146);
         @media (min-width: 1920px) {
             gap: 30px;
             margin-bottom: 146px;
         }
-        gap: calc(var(--vw)*30);
-        margin-bottom: calc(var(--vw)*146);
         @media (max-width: 768px) {
             flex-direction: column;
             gap: 20px;
@@ -227,16 +205,13 @@
     }
     &__result {
         display: flex;
-
+        gap: calc(var(--vw)*178);
+        position: relative;
         @media (min-width: 1920px) {
             gap: 178px;
         }
-        gap: calc(var(--vw)*178);
-
-        position: relative;
         @media (max-width: 375px) {
             flex-direction: column;
-            // align-items: center;
             gap: 40px;
         }
     }
@@ -266,16 +241,15 @@
     &__trusted-user-value,
     &__coins-purchased-value,
     &__years-experience-value {
-
         color: $white;
+        font-size: calc(var(--vw)*46);
+        font-weight: 700;
+        line-height: calc(var(--vw)*58);
         @media (min-width: 1920px) {
             font-size: 46px;
             font-weight: 700;
             line-height: 58px;
         }
-        font-size: calc(var(--vw)*46);
-        font-weight: 700;
-        line-height: calc(var(--vw)*58);
         @media (max-width: 375px) {
             font-size: 32px;
             font-weight: 700;
@@ -304,19 +278,14 @@
         }
     }
     &__img {
-        // width: 49%;
         width: 80vw;
         height: 728px;
         height: 38vw;
+        position: relative;
         @media (min-width:1920px) {
             width: 945px;
             height: 728px;
         }
-        position: relative;
-        // @media (max-width: 992px) {
-        //     width: auto;
-        //     height: auto;
-        // }
         @media (max-width: 768px) {
             width: auto;
             height: auto;
@@ -328,8 +297,6 @@
     }
     &__img-working {
         width: 100%;
-        // position: absolute;
-        // top: -728px;
         @media (min-width:1920px) {
             width: auto;
         }
@@ -359,15 +326,12 @@
             padding: 16px 20px 16px 54px;
         }
     }
-    &__btn {
-        // margin: 0 auto;
-    }
 }
 .career-select {
+    margin: 0 calc(var(--vw)*165) 0 calc(var(--vw)*165);
     @media (min-width: 1920px) {
         margin: 0 165px 0 165px;
     }
-    margin: 0 calc(var(--vw)*165) 0 calc(var(--vw)*165);
     @media (max-width: 375px) {
         margin: 60px 16px 0 16px;
     }
@@ -385,14 +349,14 @@
     &__title {
         color: $white;
         width: auto;
-        @media (min-width: 1920px) {
-            font-size: 58px;
-            line-height: 72px;
-        }
         font-size: calc(var(--vw)*58);
         font-weight: 600;
         line-height: calc(var(--vw)*72);
         color: $white;
+        @media (min-width: 1920px) {
+            font-size: 58px;
+            line-height: 72px;
+        }
         @media (max-width: 375px) {
             font-size: 42px;
             font-weight: 600;
@@ -424,13 +388,12 @@
         display: grid;
         // grid-template-columns: repeat(4, 1fr);
         grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
-
+        grid-gap: calc(var(--vw)*30);
+        margin-bottom: calc(var(--vw)*120);
         @media (min-width: 1920px) {
             grid-gap: 30px;
             margin-bottom: 120px;
         }
-        grid-gap: calc(var(--vw)*30);
-        margin-bottom: calc(var(--vw)*120);
         @media (max-width: 375px) {
             grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             grid-gap: 20px;
@@ -454,23 +417,17 @@
             padding: 18px 0;
         }
     }
-    &__input {
-
-    }
 }
 
 .career-open {
     display: flex;
     flex-direction: column;
-
+    margin: calc(var(--vw)*120) calc(var(--vw)*200);
+    gap: calc(var(--vw)*30);
     @media (min-width: 1920px) {
         margin: 120px 300px;
         gap: 30px;
     }
-    // margin: calc(var(--vw)*120) calc(var(--vw)*300);
-    margin: calc(var(--vw)*120) calc(var(--vw)*200);
-    gap: calc(var(--vw)*30);
-
     @media (max-width: 1800px) {
         margin: calc(var(--vw)*60) calc(var(--vw)*150);
     }
@@ -480,17 +437,17 @@
     }
     &__title {
 
-        @media (min-width: 1920px) {
-            font-size: 58px;
-            line-height: 72px;
-            margin-bottom: 60px;
-        }
         font-size: calc(var(--vw)*58);
         font-weight: 600;
         line-height: calc(var(--vw)*72);
         color: $white;
         text-align: center;
         margin-bottom: calc(var(--vw)*60);
+        @media (min-width: 1920px) {
+            font-size: 58px;
+            line-height: 72px;
+            margin-bottom: 60px;
+        }
         @media (max-width: 375px) {
             font-size: 42px;
             line-height: 52px;
@@ -509,11 +466,6 @@
             padding: 20px 12px;
             background-color: $header;
         }
-        // @media (max-width: 375px) {
-            // flex-direction: column;
-            // gap: 20px;
-            // padding: 20px 12px;
-        // }
     }
 
     &__post {
@@ -521,9 +473,7 @@
         font-weight: 600;
         line-height: 36px;
         color: $pagination;
-        // width: 673px;
         width: 33%;
-        // padding: 26px 0;
         @media (max-width: 1400px) {
             width: 30%;
             font-size: 20px;
@@ -533,9 +483,6 @@
             width: auto;
         }
         @media (max-width: 375px) {
-            // font-size: 20px;
-            // line-height: 30px;
-            // width: auto;
             text-align: center;
         }
     }
@@ -548,11 +495,10 @@
         font-weight: 400;
         line-height: 28px;
         color: $pagination;
-
+        margin: 0 calc(var(--vw)*60);
         @media (min-width: 1920px) {
             margin: 0 60px;
         }
-        margin: 0 calc(var(--vw)*60);
         @media (max-width: 1400px) {
             margin: 0 calc(var(--vw)*30);
         }
@@ -562,19 +508,13 @@
             margin: 0 10px;
         }
         @media (max-width: 375px) {
-            // font-size: 12px;
-            // line-height: 15px;
-            // margin: 0 10px;
             width: auto;
             text-align: center;
         }
     }
     &__border {
         border-right: 1px solid $grey20;
-        // width: 136px;
-        // height: 28px;
     }
-
     &__btn {
         border: 1px solid $primary;
         background-color: transparent;
@@ -600,25 +540,19 @@
             margin: 20px auto 60px;
             width: 240px;
         }
-        // @media (max-width: 375px) {
-        //     margin: 20px auto 60px;
-        //     width: 240px;
-        // }
     }
 
 }
 .career-newsletter {
+    margin: 0 calc(var(--vw)*165) calc(var(--vw)*120) calc(var(--vw)*165);
+    gap: calc(var(--vw)*200);
+    display: flex;
+    background-color: $header;
+    padding: 0 0 0  40px;
     @media (min-width: 1920px) {
         margin: 0 165px 120px 165px;
         gap: 200px;
     }
-    margin: 0 calc(var(--vw)*165) calc(var(--vw)*120) calc(var(--vw)*165);
-    gap: calc(var(--vw)*200);
-
-    display: flex;
-    background-color: $header;
-    padding: 0 0 0  40px;
-
     @media (max-width: 768px) {
         padding: 0;
         flex-direction: column;
@@ -648,19 +582,18 @@
         }
     }
     &__title {
-
-        @media (min-width: 1920px) {
-            font-size: 58px;
-            font-weight: 700;
-            line-height: 72px;
-            margin-bottom: 30px;
-        }
         font-size: calc(var(--vw)*34 + 24px);
         font-weight: 700;
         line-height: calc(var(--vw)*52 + 20px);
         color: $white;
         width: auto;
         margin-bottom: calc(var(--vw)*30);
+        @media (min-width: 1920px) {
+            font-size: 58px;
+            font-weight: 700;
+            line-height: 72px;
+            margin-bottom: 30px;
+        }
         @media (max-width: 768px) {
             font-size: 42px;
             line-height: 52px;
@@ -675,18 +608,17 @@
     &__text {
         color: $grey;
         width: auto;
+        font-size: calc(var(--vw)*8 + 14px);
+        line-height: calc(var(--vw)*8 + 20px);
+        margin-bottom: calc(var(--vw)*80);
         @media (min-width: 1920px) {
             font-size: 18px;
             font-weight: 400;
             line-height: 28px;
         }
-        font-size: calc(var(--vw)*8 + 14px);
-        line-height: calc(var(--vw)*8 + 20px);
-
         @media (min-width: 1920px) {
             margin-bottom: 80px;
         }
-        margin-bottom: calc(var(--vw)*80);
         @media (max-width: 375px) {
             font-size: 16px;
             line-height: 26px;
@@ -696,11 +628,11 @@
     &__img {
         width: 30.209vw;
         height: 25vw;
+        position: relative;
         @media (min-width:1920px) {
             width: 580px;
             height: 480px;
         }
-        position: relative;
         @media (max-width: 768px) {
             width: auto;
             height: auto;
@@ -714,12 +646,10 @@
         width: 100%;
     }
     &__btn {
-        // margin: 20px auto 60px;
         width: 240px;
         margin: 0 auto;
         @media (max-width: 375px) {
             width: 100%;
-
         }
     }
 }

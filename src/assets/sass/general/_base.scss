@@ -30,9 +30,9 @@ html {
     overflow-x: hidden;
 }
 ::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
+    width: 0px;
     height: 5px;
-    background: transparent;  /* Optional: just make scrollbar invisible */
+    background: transparent;
     // position: fixed;
 }
 /* Optional: show position indicator in red */

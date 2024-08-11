@@ -11,12 +11,12 @@
         }
     }
     &__img {
+        width: 82.813vw;
+        height: 33vw;
         @media (min-width: 1920px) {
             width: 1590px;
             height: 633px;
         }
-        width: 82.813vw;
-        height: 33vw;
         @media (max-width: 375px) {
             width: 100%;
             height: auto;
@@ -81,17 +81,22 @@
     &__sub-title {
         color: $pagination;
         margin-top: 40px;
+        font-size: calc(var(--vw)*6 + 18px);
+        line-height: calc(var(--vw)*9 + 27px);
         @media (min-width: 1920px) {
             font-size: 24px;
             font-weight: 600;
             line-height: 36px;
         }
-        font-size: calc(var(--vw)*6 + 18px);
-        line-height: calc(var(--vw)*9 + 27px);
     }
     &__msg {
         color: $grey-paragraph;
         background-color: $background;
+        font-size: calc(var(--vw)*14 + 10px);
+        font-weight: 400;
+        padding: 20px;
+        line-height: calc(var(--vw)*10 + 26px); //36px;
+        margin-top: 40px;
         @media (min-width: 1920px) {
             font-size: 24px;
             font-weight: 400;
@@ -101,11 +106,6 @@
             line-height: 36px;
             margin-top: 40px;
         }
-        font-size: calc(var(--vw)*14 + 10px);
-        font-weight: 400;
-        padding: 20px;
-        line-height: calc(var(--vw)*10 + 26px); //36px;
-        margin-top: 40px;
         @media (max-width: 375px) {
             padding: 10px 16px;
         }
@@ -124,14 +124,14 @@
 
 .line-all {
     height: 1px;
-    @media (min-width: 1920px) {
-        margin-top: 60px;
-        margin-bottom: 60px;
-    }
     margin-top: calc(var(--vw)*60);
     margin-bottom: calc(var(--vw)*60);
     background-color: $grey13;
     position: relative;
+    @media (min-width: 1920px) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
 }
 
 
