@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Brains website by figma</title>
+    <meta name="descriptin" content="Сайт о криптовалютах сайт по Figma">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include('pages/landing/header.html', {'src': '.'})
+        <main class="main">
+            @@include('pages/landing/home.html')
+            @@include('pages/landing/market/index.html')
+            @@include('pages/landing/simple.html')
+            @@include('pages/landing/choice.html')
+            @@include('pages/landing/testimonials.html')
+            @@include('pages/landing/app.html')
+            @@include('pages/landing/questions.html')
+            @@include('pages/landing/footer.html',{'src': '.'})
+        </main>
+    </div>
+
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>

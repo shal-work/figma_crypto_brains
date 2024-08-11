@@ -1,0 +1,194 @@
+.wrapper {
+    background-color: $background;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+.logo {
+    background-image: url(./assets/img/Logo.png);
+    width: 150px;
+    height: 46px;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+}
+
+.sign {
+    left: -10px;
+    position: relative;
+    font-size: 20px;
+    @media (max-width: 375px) {
+        left: 0;
+    }
+}
+.sign::after {
+    top: 0px;
+    left: 10px;
+    position: relative;
+    font-family: eicons;
+    content: '\e8c1';
+    transform: rotate(45deg);
+    display: inline-block;
+    font-size: 15px;
+    // font-size: calc(var(--vw)*15);
+}
+.line {
+    height: 1px;
+    background-image: linear-gradient(to right, $background, $grey13 50%, $background);
+    position: relative;
+    @media (max-width: 375px) {
+        background-image: linear-gradient(to right, $background, $grey 50%, $background);
+    }
+}
+
+
+.elipse {
+    position: absolute;
+    background: $primary;
+    opacity: 4%;
+    border-radius: 100%;
+    filter: blur(80px); // размытие фона
+}
+.elipse__home {
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    opacity: 4%;
+    will-change: transform;
+    animation: 2.5s ease-in-out .5s infinite pulse; //продолжит, функция, задержка, бесконечно, имя
+}
+.elipse__choice {
+    width: 100%;
+    height:100%;
+    top:0;
+}
+.elipse__simple {
+    width: 100%;
+    height:100%;
+    top:0;
+    will-change: transform;
+    opacity: 4%;
+    animation: 2.5s ease-in-out .5s infinite pulse; //продолжит, функция, задержка, бесконечно, имя
+}
+.elipse__testimonials {
+    width: 100%;
+    height:100%;
+    top:0;
+    left: 0;
+    opacity: 4%;
+}
+.elipse__questions {
+    width: 100%;
+    height:100%;
+    top:0;
+    left: 0;
+    opacity: 4%;
+}
+
+.elipse__app{
+    width: 100%;
+    height:100%;
+    top:0;
+    left: 0;
+    opacity: 6%;
+}
+.elipse-deg {
+    position: absolute;
+    width: 100%;
+    // height: 332px;
+    height: 38.12%;
+    background: $primary;
+    border-radius: 100%;
+    transform: rotate(19deg);
+    filter: blur(79px); // размытие фона
+    top: 280px;
+    opacity: 4%;
+    will-change: transform;
+    animation: 3.5s ease-in-out .5s infinite pulse-deg; //продолжит, функция, задержка, бесконечно, имя
+}
+@keyframes pulse-deg {
+    from {
+        transform: scale3d(1, 1, 1) rotate(19deg);
+        opacity: 4%;
+    }
+    50% {
+        transform: scale3d(.8, 0.7, 1) rotate(19deg);
+        opacity: 14%;
+    }
+    to {
+        transform: scale3d(1, 1, 1)  rotate(19deg);
+        opacity: 4%;
+    }
+}
+@keyframes pulse {
+    from {
+        opacity: 4%;
+    }
+    50% {
+        opacity: 18%;
+    }
+    to {
+        opacity: 4%;
+    }
+}
+
+.link-zoom:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.2s;
+}
+.avatar {
+    width: 72px;
+    height: 72px;
+}
+.avatar-small {
+    width: 38px;
+    height: 38px;
+}
+.buy-of-sell__menu-item:after {
+    width: 0;
+    background: #00f;
+    height: 3px;
+    transition: all .5s ease-in-out;
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+}
+
+.buy-of-sell__menu-item.underline:after {
+    width: 100%;
+    left: 0;
+}
+
+
+.gadget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14.5px 16px 14.5px 16px;
+
+    &__arrow::before {
+        top: 0px;
+        left: 10px;
+        position: relative;
+        font-family: eicons;
+        content: '\e8c1';
+        transform: rotate(270deg);
+        display: inline-block;
+        font-size: 23px;
+    }
+    &__title {
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 32px;
+    }
+    &__points::before {
+        top: 0px;
+        right: 10px;
+        position: relative;
+        font-family: eicons;
+        content: '\e8be';
+        display: inline-block;
+        font-size: 24px;
+    }
+}

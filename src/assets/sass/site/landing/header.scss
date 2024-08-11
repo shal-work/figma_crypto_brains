@@ -1,0 +1,210 @@
+.header {
+    max-width: 1920px;
+    display: flex;
+    background: $header;
+    @media (max-width: 920px) {
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        border-bottom: 2px solid $grey20;
+    }
+    &__logo {
+        width: 150px;
+        height: 46px;
+        margin: 0 0px 0 165px;
+        position: relative;
+        cursor: pointer;
+        @media (max-width: 1400px) {
+            margin: 0 0 0 5vw;
+        }
+        @media (max-width: 1200px) {
+            margin: 0 0px 0 24px;
+        }
+        @media (max-width: 767px) {
+            background-size: 100px;
+        }
+        @media (max-width: 375px) {
+            margin: 0 0 0 6.4vw;
+        }
+    }
+    &__logo::before {
+        content: " ";
+        position: absolute;
+        border-right: 1px solid $grey;
+        width: 190px;
+        height: 46px;
+        @media (max-width: 920px) {
+            display: none;
+        }
+    }
+    &__menu {
+        width: 100%;
+        height: 120px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 767px) {
+            height: 78px;
+        }
+        @media (max-width: 250px) {
+            width: 50%;;
+        }
+    }
+    &__menu-gadget{
+        // margin: 0 220px;
+        @media (min-width: 1920px) {
+            margin: 0 220px;
+        }
+        margin: 0 calc(var(--vw)*220);
+        @media (max-width: 1200px) {
+            margin: 0 auto;
+        }
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+    &__button {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 10px;
+        width: 290px;
+        margin: 0 165px 0 0;
+        align-items: center;
+        @media (max-width: 1600px) {
+            margin: 0 25px 0 0;
+        }
+        @media (max-width: 1200px) {
+            // width: 30%;
+            // gap: 30px;
+            justify-content: flex-end;
+        }
+    }
+    &__login, &__signup, &__signup-gadget {
+        width: 140px;
+        height: 56px;
+        font-size: 18px;
+        @media (max-width: 960px) {
+            width: auto;
+            padding: 0;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+    }
+    &__signup-gadget {
+        display: none;
+        @media (max-width: 767px) {
+            display: block;
+        }
+    }
+    &__login, &__signup {
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+}
+
+.menu {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    max-width: 1030px;
+    @media (min-width: 1920px) {
+        gap:30px;
+    }
+    gap: 1.556vw;
+    @media (max-width: 1150px) {
+        gap: 0;
+    }
+    @media (max-width: 756px) {
+        display: flex;
+        flex-direction: column;
+    }
+    &__item {
+        @media (min-width: 1920px) {
+            width: 109px;
+        }
+        width: 5.464vw;
+        @media (max-width: 1150px) {
+            width: auto;
+            margin: 0 0 0 0;
+            margin-right: 20px;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        color: $grey;
+        font-size: 18px;
+    }
+    &__link:hover {
+        text-decoration: none;
+        color: $white;
+    }
+}
+.marker::after {
+    font-family: eicons;
+    content: '\e89e';
+    transform: rotate(90deg);
+    display: inline-block;
+}
+
+.navbar {
+    &__toggle {
+        display: none;
+    }
+}
+
+@media(max-width: 767px) {
+
+    .navbar {
+        &__toggle {
+            display: flex;
+            position: relative;
+            float: right;
+            background-color: transparent;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+        &__row {
+            display: flex;
+            flex-direction: column;
+        }
+        &__icon-bar {
+            display: block;
+            background-color: transparent;
+            border: 2px solid $white;
+            width: 9.6px;
+            height: 9.6px;
+            border-radius: 50%;
+            margin: 1px;
+            z-index: 1111;
+        }
+    }
+    .collapse {
+        display: none;
+        top: 0px;
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+        background-color:$background;
+        padding: 30px;
+        border: 4px solid $grey;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+    .header__menu-gadget {
+        display: flex;
+
+    }
+    .menu {
+        display: flex;
+        align-items: flex-start;
+    }
+    .navbar__header {
+        z-index: 20;
+    }
+}

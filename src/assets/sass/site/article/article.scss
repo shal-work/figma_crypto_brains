@@ -1,0 +1,104 @@
+.cards-group-article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    // grid-gap:30px;
+    margin-bottom: 60px;
+    @media (min-width: 1920px) {
+        grid-gap:30px;
+    }
+    grid-gap: calc(var(--vw)*30);
+    @media (max-width: 960px) {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+    @media (max-width:375px) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    &__item {
+        background-color:$background;
+        border-radius: 8px;
+        border: 1px solid $num;
+     }
+    &__img {
+        padding: 20px 20px 40px 20px;
+        width: 100%;
+        @media (max-width: 375px) {
+            width: calc(100vw - 32px);
+        }
+    }
+    &__img-mod {
+        width: 100%;
+    }
+    &__text {
+        @media (min-width: 1920px) {
+            padding: 20px 20px 40px 20px;
+        }
+        padding: calc(var(--vw)*20) calc(var(--vw)*20) calc(var(--vw)*40) calc(var(--vw)*20);
+        @media (max-width: 375px) {
+            width: calc(100vw - 32px);
+            padding: 0 20px;
+        }
+    }
+    &__user {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    &__time {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    &__header {
+
+        @media (min-width: 1920px) {
+            margin-bottom: 40px;
+        }
+        margin-bottom: calc(var(--vw)*25 + 15px);
+    }
+    &__avatar-block {
+        display: flex;
+    }
+    &__avatar {
+        @media (max-width: 375px) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &__title {
+        margin-bottom: 0;
+        @media (min-width: 1920px) {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 40px;
+        }
+        font-size: calc(var(--vw)*15 + 17px);
+        font-weight: 600;
+        line-height: calc(var(--vw)*11 + 27px);
+        // @media (max-width: 375px) {
+        //     font-size: 20px;
+        //     font-weight: 600;
+        //     line-height: 30px;
+        // }
+    }
+}
+
+.cards-article__img {
+    border-radius: 4px;
+}
+
+
+.article-details__title {
+    margin-bottom: 40px;
+}
+
+.blog-big-wrap{
+    background-color: $header;
+    display: block;
+    padding: 40px 40px;
+    @media (max-width: 375px) {
+        padding: 41px 0 0;
+    }
+}

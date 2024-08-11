@@ -1,0 +1,255 @@
+.market-trend {
+    @media (min-width: 1920px) {
+        margin: 120px 165px 0 165px;
+    }
+    margin: calc(var(--vw)*120) calc(var(--vw)*165) 0 calc(var(--vw)*165);
+    @media (max-width: 375px) {
+        margin: 20px 16px;
+    }
+    &__heading {
+        height: 92px;
+        justify-content: space-between;
+        @media (min-width: 1920px) {
+            margin-bottom: 60px;
+        }
+        margin-bottom: calc(var(--vw) * 60);
+        background-color: $header;
+        flex-wrap: wrap;
+        align-content: center;
+        gap: 0;
+        @media (max-width: 1200px) {
+            flex-direction: column-reverse;
+            flex-wrap: nowrap;
+            display: flex;
+            height: auto;
+        }
+    }
+    &__title{
+        font-size: 46px;
+        font-weight: 600;
+        align-content: flex-start;
+    }
+}
+/* иконка лупы */
+.text-field {
+    padding-right: 20px;
+    &__icon_search::before {
+        width: 1rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23bdbdbd' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &__icon {
+        position: relative;
+    }
+    &__icon::before {
+        content: '';
+        color: #bdbdbd;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 0;
+        bottom: 0;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &__input {
+        color: $pagination;
+        display: block;
+        width: 375px;
+        height: 54px;
+        padding: 14px 20px 14px 54px;
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        background-color: $header;
+        background-clip: padding-box;
+        border: 1px solid $grey13;
+        border-radius: 4px;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        appearance: none;
+        padding-left: 54px;
+    }
+    &__input:focus {
+        color: $grey2;
+        border-color: $grey5;
+        outline: 0;
+        box-shadow: 0 0 0 1.6px $grey13;
+    }
+}
+
+.table {
+    @media (min-width: 1920px) {
+        margin-bottom: 81px;
+    }
+    margin-bottom: calc(81 * var(--vw));
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 62px;
+        @media(max-width: 1024px) {
+            margin-bottom: 0;
+            padding: 16px 10px;
+            background-color: $header;
+        }
+    }
+
+    &__cell{
+        @media (min-width: 1920px) {
+            font-size: 18px;
+        }
+        font-size: calc(14px + 4 * var(--vw));
+        font-weight: 400;
+        line-height: 28px;
+        color: $white;
+        display: flex;
+        align-items: center;
+        &_gap {
+            gap: 12px;
+        }
+        @media (max-width: 375px) {
+            font-size: 16px;
+            font-size: calc(82 * var(--vw));
+            font-weight: 400;
+            line-height: 26px
+        }
+    }
+    &__cell-first {
+        @media (max-width: 375px) {
+            font-size: 14px;
+            font-size: calc(72 * var(--vw));
+            font-weight: 400;
+            line-height: 22px
+        }
+    }
+    &__ico{
+        @media (min-width: 1920px) {
+            width: 24px;
+            height: 24px;
+        }
+        width: calc(12 + 12 * var(--vw));
+        height: calc(12 + 12 * var(--vw));
+        @media (max-width: 375px) {
+            width: 16px;
+            height: 16px;
+        }
+    }
+    &__item{
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        margin-left: 6px;
+        @media (max-width: 375px) {
+            font-size: 12px;
+            font-size: calc(8 + 62 * var(--vw));
+            font-weight: 400;
+            line-height: 26px
+        }
+    }
+}
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    @media (min-width: 1920px) {
+        margin-bottom: 41px;
+    }
+    margin-bottom: calc(var(--vw) * 41);
+    &__cell {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: $grey-paragraph;
+
+    }
+
+    &__gadget {
+        display: flex;
+    }
+}
+
+
+.sign-sroke {
+    position: relative;
+}
+.sign-sroke::after {
+    top: 0px;
+    left: 10px;
+    position: relative;
+    content: " ";
+    display: inline-block;
+    background-image: url('./assets/img/Vector-sroke.png');
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+.sign-flag {
+    position: relative;
+}
+.sign-flag::before {
+    top: 0px;
+    left: 0px;
+    position: relative;
+    content: " ";
+    display: inline-block;
+    background-image: url('./assets/img/Flag.png');
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    z-index: 1;
+}
+
+.market-menu {
+    // justify-content: flex-start;
+    @media (max-width: 768px) {
+        justify-content: flex-start;
+        width: auto;
+        // overflow: scroll;
+        margin: 12px 0;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .market__line {
+        margin-bottom: 20px;
+    }
+}
+
+.table-header-gadget {
+    display: none;
+    @media (max-width: 1024px) {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 41px;
+        margin-bottom: calc(var(--vw) * 41);
+    }
+}
+.table-gadget {
+    display: none;
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+.table-laptop {
+    display: block;
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.table__btn {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}

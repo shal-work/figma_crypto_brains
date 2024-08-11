@@ -1,0 +1,15 @@
+// Коды eicons сдесь - https://elementor.github.io/elementor-icons/
+@font-face {
+    font-family: eicons;
+    src: url(./assets/fonts/eicons/eicons.eot?5.13.0);
+    src: url(./assets/fonts/eicons/eicons.eot?5.13.0#iefix) format("embedded-opentype"),
+    url(./assets/fonts/eicons/eicons.woff2?5.13.0) format("woff2"),
+    url(./assets/fonts/eicons/eicons.woff?5.13.0) format("woff"),
+    url(./assets/fonts/eicons/eicons.ttf?5.13.0) format("truetype"),
+    url(./assets/fonts/eicons/eicons.svg?5.13.0#eicon) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');

@@ -1,0 +1,841 @@
+.laptop {
+    display: block;
+    @media (max-width: 920px) {
+        display: none;
+    }
+}
+
+.trade {
+    display: flex;
+    @media (min-width: 1920px) {
+        margin: 24px 30px 30px 30px;
+    }
+    margin: calc(var(--vw)*24) calc(var(--vw)*30) calc(var(--vw)*30) calc(var(--vw)*30);
+    gap: 24px;
+    @media (max-width: 920px) {
+        // display: none;
+    }
+}
+.trade-content {
+    // width: 86%;
+    // @media (min-width: 1920px) {
+    //     width: 1546px;
+    // }
+    // width: calc(var(--vw)*1546);
+    width: 1546px;
+    @media (max-width: 1500px) {
+        width: 80%;
+    }
+
+    margin: 0 auto;
+    &__name {
+        display: flex;
+        gap: 20px;
+
+        margin-bottom: 24px;
+        @media (max-width: 1200px) {
+            gap: 2px;
+        }
+    }
+    &__heading {
+        display: flex;
+        align-items: center;
+        // padding-left: 24px;
+        background-color: $header;
+        position: relative;
+        @media (min-width:1920px) {
+            font-size: 20px;
+        }
+        font-size: calc(var(--vw) * 20);
+        font-weight: 400;
+        line-height: 32px;
+    }
+    &__sign::before {
+        left: 24px;
+        top: 38%;
+        position: absolute;
+        content: " ";
+        display: inline-block;
+        background-image: url(./assets/img/Flag.png);
+        width: 18px;
+        height: 18px;
+        background-repeat: no-repeat;
+        background-position: 0% 50%;
+        z-index: 10;
+    }
+    &__sign::after {
+        font-family: eicons;
+        content: "\e89e";
+        transform: rotate(90deg);
+        color: $grey;
+        position: absolute;
+        display: inline-block;
+        right: 19px;
+        font-size: 34px;
+        z-index: 10;
+        top: 16px;
+    }
+    &__price {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        background-color: $header;
+    }
+    &__price-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media (min-width: 1920px) {
+            padding: 10px 40px 10px 20px;
+            gap:6px;
+        }
+        padding:  calc(var(--vw)*10) calc(var(--vw)*40) calc(var(--vw)*10) calc(var(--vw)*20);
+        gap: calc(var(--vw)*6);
+        position: relative;
+    }
+    &__price-item:not(:last-child)::before {
+        content: " ";
+        position: absolute;
+        border-right: 1px solid $grey;
+        width: auto;
+        height: 40px;
+        // top: 25px;
+        // right: -14%;
+        right: 0;
+    }
+    &__block {
+        display: flex;
+    }
+    &__component {
+        background-color: $num;
+        padding: 20px;
+        width: 290px;
+        border-radius:8px
+    }
+    &__component-heading {
+        display: flex;
+        justify-content: space-between;
+        // margin: 24px 24px 30px 24px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    &__component-balance {
+        display: flex;
+        gap: 2px;
+    }
+    &__component-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 10px;
+    }
+    &__graph {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.buy-of-sell {
+
+    &__menu {
+        display: flex;
+        gap: 34px;
+        padding: 26px 20px 20px 20px;
+        padding: 31px 24px 31px 24px;
+        background-color: $num40;
+    }
+    &__menu-item {
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: 400;
+        // padding-bottom: 18px;
+        padding-bottom: 2px;
+        position: relative;
+        // overflow: hidden;
+        text-decoration: none;
+        display: inline-block;
+        color: $grey;
+        cursor: pointer;
+    }
+    &__menu-item:hover {
+        color: $primary;
+    }
+    &__menu-item:after {
+        width: 0;
+        background: $primary;
+        height: 2px;
+        transition: all .5s ease-in-out;
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        right: 0;
+    }
+    &__market {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+    }
+
+    &__market-item {
+        background-color: $num;
+        @media (min-width: 1920px) {
+            padding: 24px;
+        }
+        padding: calc(var(--vw) * 24);
+        width: 50%;
+    }
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        margin: 24px 24px 30px 24px;
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
+    }
+    &__btn-buy {
+        // margin: 30px 0 10px 0;
+        width: 100%;
+        border: 1px solid $green;
+        background-color: $green;
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: 400;
+        color: #FFFFFF;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    &__btn-buy:hover {
+        background-color: $green20;
+    }
+    &__btn-sell {
+        // margin: 30px 0 10px 0;
+        width: 100%;
+        border: 1px solid $red;
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: 400;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    &__fill {
+        background-color: $red;
+        color: #FFFFFF;
+    }
+    &__btn-sell:hover {
+        background-color: $red20;
+    }
+    &__contour {
+        color: $red;
+    }
+    &__text {
+        text-align: center;
+        font-size: 12px;
+        line-height: 15.08px;
+        font-weight: 400;
+        color: $grey;
+    }
+    &__watchlist, &__portfolio, &__open-order {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+}
+
+
+/* для элемента input c type="radio" */
+.market-radio {
+    display: flex;
+    @media (max-width: 1024px) {
+        justify-content: space-between;
+    }
+    &__name {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        margin-right: 30px;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 400;
+        color: $pagination;
+    }
+    &__name:before {
+        content: "";
+        border: 1px solid $grey;
+        width: 12px;
+        height: 12px;
+        margin-right: 10px;
+        border-radius:2px;
+    }
+    &__name:after {
+        content: "";
+        background: $primary;
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        // top: 11px;
+        left: 3px;
+        transition: 300ms;
+        opacity: 0;
+    }
+    &__input:checked + &__name:after {
+        opacity: 1;
+
+    }
+    &__input:checked + &__name:before {
+        opacity: 1;
+        border: 1px solid $primary;
+    }
+    &__input:checked + &__name {
+        color: $primary;
+        font-size: 18px;
+
+    }
+}
+
+.graph-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: $num;
+    @media (max-width: 1024px) {
+        padding: 0 5px;
+    }
+    &__menu {
+        display: flex;
+        gap: 42px;
+        align-items: center;
+        width: 30%;
+        @media (max-width: 1024px) {
+            gap: 10px;
+            width: auto;
+        }
+    }
+    &__name {
+        position: relative;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: $grey;
+        @media (max-width: 1024px) {
+            font-size: calc(8px + (100vw / 1024) * 6);
+        }
+    }
+    &__tabs {
+        position: relative;
+        width: 115px;
+        min-width: 85px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: $grey;
+        @media (max-width: 1024px) {
+            font-size: calc(8px + (100vw / 1024) * 6);
+            width: 100%
+        }
+    }
+    &__tabs::after {
+        font-family: eicons;
+        content: "\e89e";
+        transform: rotate(90deg);
+        color: #ADB3BF;
+        position: absolute;
+        display: inline-block;
+        right: 0px;
+        font-size: 30px;
+        @media (max-width: 1024px) {
+            font-size: calc(10px + (100vw / 1024) * 15);
+            right: 4px;
+        }
+    }
+    &__days {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        width: 70%;
+        align-items: center;
+        @media (max-width: 1024px) {
+            gap: 0;
+            justify-content: space-around;
+        }
+    }
+    &__tag {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: $grey;
+        margin: 20px 0;
+    }
+    &__buttons {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: flex-end;
+        @media (max-width: 1024px) {
+            gap: 5px;
+        }
+    }
+    &__buttons-tabs {
+        display: flex;
+        padding: 8px 14px;
+        border: 1px solid $grey20;
+        cursor: pointer;
+        @media (max-width: 1024px) {
+            padding: 4px 6px;
+        }
+    }
+}
+
+.graph {
+    display: flex;
+    &__img {
+        width: 100%;
+    }
+}
+
+.trade-orderbook {
+    background-color: $header;
+    // margin: 0 20px;
+    // max-height: 1205px;
+    // width: 14%;
+    @media (min-width: 1920px) {
+        width: 290px;
+    }
+    // width: calc(var(--vw) * 290);
+    width: 290px;
+    @media (max-width: 1500px) {
+        width: 25%;
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (min-width: 1920px) {
+            margin: 20px 20px;
+        }
+        margin: calc(var(--vw)*20) calc(var(--vw)*20);
+        @media (min-width: 1920px) {
+            margin: 20px 20px;
+        }
+        @media (max-width: 1600px) {
+            flex-direction: column;
+        }
+    }
+    &__title {
+    }
+
+    &__choice {
+    }
+    &__choice-green, &__choice-red, &__choice-equally {
+        cursor: pointer;
+    }
+    &__table {
+        margin: 20px;
+    }
+    &__table-header {
+        display: flex;
+        // justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 10px;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: 995px;
+    }
+    &__table-header-item {
+        @media (min-width: 1920px) {
+            font-size: 14px;
+        }
+        font-size: calc(var(--vw) * 14);
+        font-weight: 400;
+        line-height: 20px;
+        color: $grey-paragraph;
+    }
+    &__table-item {
+        display: flex;
+        margin-bottom: 12px;
+        gap: 15px;
+        background-color: $num;
+    }
+    &__qty {
+        @media (min-width: 1920px) {
+            font-size: 14px;
+        }
+        font-size: calc(var(--vw) * 14);
+        font-weight: 400;
+        line-height: 20px;
+        color: $pagination;
+    }
+    &__total {
+        @media (min-width: 1920px) {
+            font-size: 14px;
+        }
+        font-size: calc(var(--vw) * 14);
+        font-weight: 400;
+        line-height: 20px;
+        color: $pagination;
+    }
+    &__table-slice {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        gap:17px;
+        background-color: $num;
+        padding: 6px 20px;
+    }
+    &__price {
+        @media (min-width: 1920px) {
+            font-size: 14px;
+        }
+        font-size: calc(var(--vw) * 14);
+        font-weight: 400;
+        line-height: 20px;
+        color: $pagination;
+    }
+    &__line {
+        height: 1px;
+        background-color: $grey10;
+        position: relative;
+        margin-bottom: 20px;
+    }
+}
+
+.slice-active {
+    // font-size: 18px;
+    @media (min-width:1920px) {
+        font-size: 18px;
+    }
+    font-size: calc(var(--vw) * 18);
+    font-weight: 400;
+    line-height: 28px;
+}
+
+/* ПОЛОСА ПРОКРУТКИ */
+/* фон самого скроллбара */
+.trade-orderbook__content::-webkit-scrollbar {
+    width: 12px;
+ }
+
+/* индикатор прокрутки, перетаскиваемый элемен */
+ .trade-orderbook__content::-webkit-scrollbar-thumb {
+    border-radius: 10px; /* закругления плашки R не меньше ½ ширины*/
+    height: 50px;
+    background-color: $num; /* цвет плашки */
+    border: 1px solid $grey-paragraph; /* padding вокруг плашки цвет скрола */
+ }
+
+ /* пустое пространство под индикатором прокрутки. */
+ .trade-orderbook__content::-webkit-scrollbar-track {
+    background-color: $num;
+ }
+
+
+
+
+.select-single {
+    padding: 20px 15px;
+}
+
+.select {
+    position: relative;
+    @media (min-width: 1920px) {
+        width: 290px;
+    }
+    width: calc(100px + var(--vw)*190);
+    border: 1px solid $header;
+    border-radius: 6px;
+    background-color: $header;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 400;
+    line-height: 32px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    padding-left: 44px;
+}
+
+option {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.primary {
+    color: $primary;
+}
+
+.block-input {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    @media (max-width: 1224px) {
+        flex-direction: column;
+    }
+    &__text {
+        flex-shrink: 0;
+        padding: 10px 15px;
+        border: 1px solid $grey5;
+        border-radius: 4px;
+        background-color: transparent;
+        color: $pagination;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+    }
+}
+
+.balance {
+    display: flex;
+    gap: 20px;
+    @media (max-width: 1024px) {
+        gap: 0px;
+        justify-content: space-between;
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: $grey-paragraph;
+    }
+    &__total {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        color: $grey;
+    }
+}
+
+.price {
+    text-align: center;
+    margin-bottom: 30px;
+    &__text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: $grey;
+    }
+    &__block {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        @media (max-width:1024px) {
+            gap: 10px;
+        }
+        &_size {
+            gap: 10px;
+        }
+    }
+    &__btn {
+        border: 1px solid $grey;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        border-radius: 6px;
+        background-color: transparent;
+        padding: 2px 19px;
+        @media (max-width:1024px) {
+            padding: 2px 8px;
+        }
+        &_size {
+            padding: 2px 8px;
+        }
+    }
+    &__btn:hover {
+        background-color: $num40;
+    }
+}
+
+.watchlist-head, .portfolio-head, .open-order-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    &__item {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: $grey-paragraph;
+    }
+}
+
+.watchlist-head {
+    &__item {
+        width: calc(100%/5);
+    }
+}
+.portfolio-head, .open-order-head {
+    &__item {
+        width: calc(100%/7);
+    }
+}
+
+.watchlist {
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 36px;
+    }
+    &__item {
+        width: calc(100%/5);
+    }
+    &__coin-name {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    &__text {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        color:$white;
+    }
+    &__price,
+    &__high,
+    &__low {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        color:$pagination;
+    }
+}
+
+
+.portfolio {
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 36px;
+    }
+    &__item {
+        width: calc(100%/7);
+    }
+    &__coin-name {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    &__text {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        color:$white;
+    }
+    &__invested,
+    &__return,
+    &__qty,
+    &__avg,
+    &__current,
+    &__action {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        color:$pagination;
+    }
+}
+
+.plus {
+    color: $green;
+}
+.plus::before {
+    content:'+₹ ';
+}
+.ruble::before {
+    content:'₹ ';
+}
+.ruble-plus::before {
+    content:'+ ₹ ';
+}
+.percent::after {
+    content:'%';
+}
+.bitcoin::before {
+    content:'₿ ';
+}
+
+.open-order {
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 36px;
+    }
+    &__item {
+        width: calc(100%/7);
+    }
+    &__coin-name {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    &__text {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        color:$white;
+    }
+    &__qty,
+    &__price,
+    &__date-time,
+    &__action,
+    &__type,
+    &__status {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        color:$pagination;
+    }
+}
+
+.underline:after {
+    width: 100%;
+    left: 0;
+}
+
+.price-item {
+    &__name {
+        font-size: 14px;
+        @media (min-width: 1920px) {
+            font-size: 14px;
+        }
+        font-size: calc(var(--vw)*14);
+        font-weight: 400;
+        line-height: 20px;
+        color: $grey-paragraph;
+    }
+    &__value {
+        @media (min-width: 1920px) {
+            font-size: 18px;
+        }
+        font-size: calc(var(--vw)*18);
+        font-weight: 400;
+        line-height: 28px;
+        color: $pagination;
+    }
+    &__text {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+.buy-of-sell {
+    @media (max-width: 1024px) {
+        width: auto;
+    }
+}

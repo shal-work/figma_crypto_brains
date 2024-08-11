@@ -1,0 +1,115 @@
+.trade-gadget {
+    display: none;
+}
+@media (max-width: 920px) {
+
+
+    .trade-gadget {
+        display: block;
+        position: relative;
+        // &__header {
+        //     display: flex;
+        //     justify-content: space-between;
+        //     align-items: center;
+        //     padding: 14.5px 16px 14.5px 16px;
+        // }
+        // &__arrow::before {
+        //     top: 0px;
+        //     left: 10px;
+        //     position: relative;
+        //     font-family: eicons;
+        //     content: '\e8c1';
+        //     transform: rotate(270deg);
+        //     display: inline-block;
+        //     font-size: 23px;
+        // }
+        // &__title {
+        //     font-size: 26px;
+        //     font-weight: 600;
+        //     line-height: 32px;
+        // }
+        // &__points::before {
+        //     top: 0px;
+        //     right: 10px;
+        //     position: relative;
+        //     font-family: eicons;
+        //     content: '\e8be';
+        //     display: inline-block;
+        //     font-size: 24px;
+        // }
+        &__content {
+            display: flex;
+            align-items: center;
+            padding: 14.5px 16px 14.5px 16px;
+            justify-content: space-between;
+            margin-bottom: 38px;
+        }
+        &__coin-name {
+            display: flex;
+        }
+        &__item {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        &__text {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+            color: $grey-paragraph;
+        }
+        &__row {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        &__value {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 30px;
+            color: $pagination;
+        }
+        &__vector {
+            display: flex;
+        }
+        &__flag {
+            display: flex;
+        }
+        &__flag::before {
+            top: 0;
+            position: relative;
+            content: " ";
+            display: inline-block;
+            background-image: url(./assets/img/Flag.png);
+            width: 16px;
+            height: 22px;
+            background-repeat: no-repeat;
+            background-position: 0% 50%;
+            z-index: 10;
+            background-size:contain;
+        }
+        &__block {
+            padding: 0 16px;
+            margin-bottom: 20px;
+        }
+
+        &__days {
+            display: flex;
+            justify-content: space-around;
+            background-color: $num40;
+        }
+
+        &__graph {
+            overflow-x: scroll;
+            margin-bottom: 20px;
+        }
+        &__img {
+            width: 200%;
+        }
+        &__btn {
+            display: flex;
+            gap: 20px;
+        }
+    }
+
+}

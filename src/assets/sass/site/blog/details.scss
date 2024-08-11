@@ -1,0 +1,197 @@
+.details {
+    display: block;
+    position: relative;
+    // border: 1px solid white;
+    margin-bottom: 50px;
+    &__header {
+        @media (max-width:576px) {
+            flex-direction: column;
+            margin: 7px 0 20px 0;
+            row-gap: 20px;
+        }
+    }
+    &__img {
+        @media (min-width: 1920px) {
+            width: 1590px;
+            height: 633px;
+        }
+        width: 82.813vw;
+        height: 33vw;
+        @media (max-width: 375px) {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__img-bitcoin {
+        width: 100%;
+    }
+    &__post {
+        @media (max-width: 1024px) {
+            top: -12vw;
+        }
+        @media (max-width: 768px) {
+            position: static;
+            width: auto;
+            margin: 0 auto;
+        }
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4px;
+        @media (max-width: 992px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    &__footer-list {
+        @media (max-width:768px) {
+            flex-direction: column;
+            row-gap: 20px;
+            align-items: center;
+        }
+        @media (max-width:375px) {
+            display: flex;
+        }
+    }
+    &__user-avatar {
+        display: flex;
+        width: 38px;
+        align-items: center;
+        @media (max-width:576px) {
+            width: 30px;
+        }
+
+    }
+    &__avatar {
+        width: 100%;
+        height: auto;
+    }
+    &__main-footer {
+        position: relative;
+        top: -174px;
+        @media (max-width: 1024px) {
+            top: 0;
+        }
+    }
+
+}
+
+.blog-content {
+    &__sub-title {
+        color: $pagination;
+        margin-top: 40px;
+        @media (min-width: 1920px) {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 36px;
+        }
+        font-size: calc(var(--vw)*6 + 18px);
+        line-height: calc(var(--vw)*9 + 27px);
+    }
+    &__msg {
+        color: $grey-paragraph;
+        background-color: $background;
+        @media (min-width: 1920px) {
+            font-size: 24px;
+            font-weight: 400;
+            color: $grey-paragraph;
+            background-color: $background;
+            padding: 20px;
+            line-height: 36px;
+            margin-top: 40px;
+        }
+        font-size: calc(var(--vw)*14 + 10px);
+        font-weight: 400;
+        padding: 20px;
+        line-height: calc(var(--vw)*10 + 26px); //36px;
+        margin-top: 40px;
+        @media (max-width: 375px) {
+            padding: 10px 16px;
+        }
+    }
+    &__msg-name {
+        text-align: right;
+        @media (min-width: 1920px) {
+            padding-top: 20px;
+        }
+        @media (max-width: 375px) {
+            padding: 10px 16px;
+        }
+
+    }
+}
+
+.line-all {
+    height: 1px;
+    @media (min-width: 1920px) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    margin-top: calc(var(--vw)*60);
+    margin-bottom: calc(var(--vw)*60);
+    background-color: $grey13;
+    position: relative;
+}
+
+
+.heart::after {
+    font-family: eicons;
+    content: '\e923';
+    display: inline-block;
+}
+
+
+
+.blog-related {
+    position: relative;
+    top: -174px;
+    margin-top: 120px;
+    @media (max-width: 768px) {
+        top: 0;
+        margin-top: 60px;
+    }
+    &__title {
+        font-size: 46px;
+        font-weight: 600;
+        line-height: 57px;
+        text-align: center;
+        margin-bottom: 60px;
+        @media (max-width: 375px) {
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+    &__block {
+        display: flex;
+        overflow: hidden;
+        width: 300%;
+    }
+    &__item {
+        width: 375px;
+    }
+    &__img {
+        width: 100%;
+    }
+    &__img-businessman {
+        // width: 100%;
+        @media (max-width: 375px) {
+            width: 100%;
+        }
+    }
+}
+
+.blog__pagination_position {
+    position: absolute;
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.like__share {
+    @media (max-width: 375px) {
+        display: none;
+    }
+}

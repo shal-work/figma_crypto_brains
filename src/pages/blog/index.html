@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Brains website by figma</title>
+    <meta name="descriptin" content="Сайт о криптовалютах сайт по Figma">
+    <link rel="stylesheet" type="text/css" href="../../style.css" />
+</head>
+
+<body>
+
+    <div class="wrapper">
+        @@include('../landing/header.html', {'src':'../..'})
+        <div class="blog">
+
+            @@include('main.html')
+
+            @@include('cards.html')
+        </div>
+
+        <!-- @@include('../landing/footer.html', {'src':'../..'}) -->
+        @@include('../landing/footer.html', {'src':'../..'})
+    </div>
+
+    <script src="../../script.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+.market {
+
+    @media (min-width: 1920px) {
+        margin: 120px 165px 0px 165px;
+    }
+
+    margin: calc(var(--vw)*120)
+            calc(var(--vw)*165)
+            0px
+            calc(var(--vw)*165);
+
+    @media (max-width: 1650px) {
+        margin: 80px
+        calc(var(--vw)*75)
+        0px
+        calc(var(--vw)*75);
+    }
+    &__heading {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 60px;
+        @media (max-width: 1650px) {
+            gap: 20%;
+        }
+        @media (max-width: 375px) {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+
+    &__block {
+        @media (max-width: 1500px) {
+            overflow: scroll;
+        }
+        @media (max-width: 375px) {
+            overflow: scroll;
+        }
+    }
+
+    &__logo {
+        @media (min-width: 1920px) {
+            width: 951px;
+            font-size: 58px;
+        }
+        width: 50.42vw;
+        font-size: calc(var(--vw)*58);
+        font-weight: 700;
+        white-space: nowrap;
+        @media (max-width: 1650px) {
+            width: auto;
+        }
+        @media (max-width: 375px) {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 52px;
+            white-space: nowrap;
+        }
+    }
+
+    &__line {
+        margin-bottom: 60px;
+    }
+    &__coins-row{
+        display: flex;
+        flex-direction: row;
+        gap:30px;
+        justify-content: space-between;
+        @media (min-width: 1920px) {
+            margin-bottom: 60px;
+        }
+        margin-bottom: calc(var(--vw)*60);
+
+        @media (max-width: 1500px) {
+            overflow: auto ;
+        }
+        @media (max-width: 375px) {
+            overflow: auto ;
+        }
+    }
+    &__coin {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 30px;
+        border: 1px solid $header;
+        border-radius: 8px;
+        gap: 10px;
+    }
+    &__icon {
+        margin-bottom: 20px;
+    }
+    &__row {
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    &__graph {
+    }
+
+    &__button {
+        width: 240px;
+        height: 56px;
+        border: 1px solid $primary;
+        background-color: $primary20;
+        font-size: 20px;
+        @media (max-width: 375px) {
+            width: 100%;
+        }
+    }
+    &__button-text {
+        font-size: 20px !important;
+        font-weight: 400;
+        line-height: 32px;
+    }
+
+}
+.market-menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 622px;
+    align-items: center;
+    gap: 30px;
+    justify-content: flex-end;
+
+    &__item {
+        white-space: nowrap;
+        margin: 12px 0;
+    }
+    &__link {
+        text-decoration: none;
+        color: $grey;
+    }
+    &__link:hover {
+        color: $white
+    }
+
+}

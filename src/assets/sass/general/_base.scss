@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+:root {
+    --index: calc(1vw + 1vh);
+    --vw: calc(100vw/1920);
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+}
+* {
+    font-family: "Source Sans 3", sans-serif;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    color: $white;
+    font-size: 20px;
+}
+
+
+// прячем прокрутку
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    height: 5px;
+    background: transparent;  /* Optional: just make scrollbar invisible */
+    // position: fixed;
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    // background: #FF0000;
+    background: $grey40;
+    // background: #4a4b4c;
+}
