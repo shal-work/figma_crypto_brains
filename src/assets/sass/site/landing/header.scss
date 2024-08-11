@@ -85,6 +85,10 @@
         width: 140px;
         height: 56px;
         font-size: 18px;
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: center;
         @media (max-width: 960px) {
             width: auto;
             padding: 0;
