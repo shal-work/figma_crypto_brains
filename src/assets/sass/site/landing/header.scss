@@ -99,7 +99,14 @@
     &__signup-gadget {
         display: none;
         @media (max-width: 767px) {
-            display: block;
+            width: 140px;
+            height: 56px;
+            font-size: 18px;
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            // display: block;
         }
     }
     &__login, &__signup {

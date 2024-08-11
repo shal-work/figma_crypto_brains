@@ -27,7 +27,4 @@
 /* НЕ перенос слов на новую строку */
 .text-nobreak {
     white-space: nowrap;
-    @media (max-width: 375px) {
-        white-space: pre-wrap;
-    }
 }
