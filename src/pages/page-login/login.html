@@ -22,7 +22,7 @@
                     <form class="login__form" action="#" enctype="multipart/form-data" method="POST">
                         <div class="form__control">
                             <label class="form__label" for="user_phone">Email or Phone</label>
-                            <input class="form__input" name="user_phone" required type="text" placeholder="Type Here">
+                            <input class="form__input" id="user_phone" required type="text" placeholder="Type Here">
                         </div>
 
                         <div class="form__control">
@@ -33,11 +33,11 @@
                             </div>
                         </div>
 
-                        <button class="btn login__button" name="submit" type="submit">Login</button>
+                        <button class="btn login__button" id="submit" type="submit">Login</button>
 
                         <a class="login__forgot" href="forgot_password.html">Forgot Password?</a>
-                        <label class="login__account" for="user_register">Don't Have an Account?
-                            <a class="login__link" href="sign_up.html" id="user_register">Sign Up Here</a>
+                        <label class="login__account">Don't Have an Account?
+                            <a class="login__link" href="sign_up.html">Sign Up Here</a>
                         </label>
                     </form>
                 </div>
