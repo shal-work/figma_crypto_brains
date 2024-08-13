@@ -80,17 +80,6 @@
 .cards-article__img {
     border-radius: 4px;
 }
-
-
 .article-details__title {
     margin-bottom: 40px;
-}
-
-.blog-big-wrap{
-    background-color: $header;
-    display: block;
-    padding: 40px 40px;
-    @media (max-width: 375px) {
-        padding: 41px 0 0;
-    }
 }

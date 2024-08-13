@@ -4,6 +4,9 @@
     @media (min-width: 1920px) {
         margin: 120px 165px 0 165px;
     }
+    @media (max-width: 620px) {
+        margin: 0 16px 10px 16px;
+    }
     @media (max-width: 375px) {
         margin: 0 16px 10px 16px;
     }

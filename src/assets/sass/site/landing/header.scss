@@ -76,8 +76,9 @@
             margin: 0 25px 0 0;
         }
         @media (max-width: 1200px) {
-            // width: 30%;
-            // gap: 30px;
+            margin-right: 1%;
+            width: 25%;
+            gap: calc(var(--vw)*5 + 20px);
             justify-content: flex-end;
         }
     }
@@ -127,12 +128,10 @@
     @media (min-width: 1920px) {
         gap:30px;
     }
-    @media (max-width: 1150px) {
-        gap: 0;
-    }
     @media (max-width: 756px) {
         display: flex;
         flex-direction: column;
+        gap: 30px;
     }
     &__item {
         width: 5.464vw;
