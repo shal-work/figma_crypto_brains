@@ -75,7 +75,7 @@
         width: 100%;
         height: 56px;
         border: 1px solid $primary;
-        background-color: $primary20;
+        background-color: $primary;
         font-size: 20px;
         margin: 0 0 40px 0;
     }
@@ -87,24 +87,6 @@
         margin-bottom: 40px;
         text-align: center;
     }
-    &__footer {
-        display: block;
-        font-size: 16px;
-        color: $grey-paragraph;
-        padding-top: 0px;
-        padding-bottom: 20px;
-        flex-shrink: 0;
-        width: 510px;
-        margin-top: auto;
-        text-align: center;
-        @media (max-aspect-ratio: 1920/1300) {
-            margin-top: initial;
-        }
-        @media (max-width: 920px) {
-            width: 100%;
-            margin-top: auto;
-        }
-    }
     &__account {
         display: block;
         font-size: 16px;
@@ -113,14 +95,28 @@
         text-align: center;
         // margin-bottom: 98px;
     }
-    &__link {
-        color: $white;
-        font-size: 16px;
-    }
     &__i-agree {
         display: inline;
     }
+}
 
+.login-footer {
+    display: block;
+    font-size: 16px;
+    color: $grey-paragraph;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    flex-shrink: 0;
+    width: 510px;
+    margin-top: auto;
+    text-align: center;
+    @media (max-aspect-ratio: 1920/1300) {
+        margin-top: initial;
+    }
+    @media (max-width: 920px) {
+        width: 100%;
+        margin-top: auto;
+    }
 }
 
 .form {

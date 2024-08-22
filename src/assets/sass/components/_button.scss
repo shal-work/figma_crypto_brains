@@ -12,9 +12,18 @@
     font-size: 20px;
     line-height: 1.5;
     transition: all 0.2s;
+    &-primary {
+        border: 1px solid $primary;
+        background-color: transparent;
+        &:hover {
+            background-color: $primary20;
+            border: 1px solid $primary20;
+            color: $white;
+        }
+    }
     &:hover {
-        background-color: $primary;
+        background-color: $primary20;
+        border: 1px solid $primary20;
         color: $white;
     }
-
 }

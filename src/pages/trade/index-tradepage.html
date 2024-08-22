@@ -30,35 +30,35 @@
                             </select>
                         </div>
                         <div class="trade-content__price">
-                            <div class="trade-content__price-item">
+                            <div class="price-item">
                                 <div class="price-item__name fz-16">Current Price</div>
                                 <div class="price-item__text">
                                     <div class="price-item__value ruble">28,214,25.341</div>
                                 </div>
                             </div>
-                            <div class="trade-content__price-item">
+                            <div class="price-item">
                                 <div class="price-item__name fz-16">24h Chage</div>
                                 <div class="price-item__text">
                                     <div class="price-item__value green ruble-plus">2564.24</div>
-                                    <div class="market__vector">
-                                        <img class="market__ico" src="../../assets/img/Vector.png" alt="Vector">
-                                        <div class="market__item green fz-16">5.76%</div>
+                                    <div class="market-vector">
+                                        <img class="market-vector__ico" src="../../assets/img/Vector.png" alt="Vector">
+                                        <div class="market-vector__value green fz-16">5.76%</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="trade-content__price-item">
+                            <div class="price-item">
                                 <div class="price-item__name fz-16">24h Low</div>
                                 <div class="price-item__text">
                                     <div class="price-item__value ruble">26,854,94.79</div>
                                 </div>
                             </div>
-                            <div class="trade-content__price-item">
+                            <div class="price-item">
                                 <div class="price-item__name fz-16">24h High</div>
                                 <div class="price-item__text">
                                     <div class="price-item__value ruble">29,985,75.24</div>
                                 </div>
                             </div>
-                            <div class="trade-content__price-item">
+                            <div class="price-item">
                                 <div class="price-item__name fz-16">24h Volume (BTC)</div>
                                 <div class="price-item__text">
                                     <div class="price-item__value ruble">2,216,846,568.49</div>
@@ -68,7 +68,6 @@
                     </div>
 
                     <div class="trade-content__block">
-
                          <!-- trade-content__component -->
                         <div class="trade-content__component">
                             <div class="trade-content__component-heading">
@@ -78,14 +77,12 @@
                                     <input class="market-radio__input" id="limit-buy-component" type="radio" name="market-limit-buy-component">
                                     <label class="market-radio__name"  for="limit-buy-component">Limit</label>
                                 </div>
-                                <div class="trade-content__component-balance">
+                                <div class="balance balance_mod">
                                     <div class="balance__text">Available Balance-</div>
                                     <div class="balance__total ruble">2,247,35.05</div>
                                 </div>
                             </div>
                             <div class="block-input f-column">
-                                <!-- <input class="block-input__text" type="text" value="Price (INR)" onfocus="this.value=''" onfocus name="price">
-                                <input class="block-input__text" type="text" value="QTY (BTC)" onfocus="this.value=''" name="percent"> -->
                                 <input class="block-input__text" type="text" value="Price (INR)" name="price">
                                 <input class="block-input__text" type="text" value="QTY (BTC)" name="percent">
                             </div>
@@ -99,10 +96,10 @@
                                 </div>
                             </div>
                             <div class="trade-content__component-btn">
-                                <button class="btn buy-of-sell__btn-buy">Buy BTC</button>
-                                <button class="btn buy-of-sell__btn-sell buy-of-sell__contour">Sell BTC</button>
+                                <button class="btn btn-primary trade-content__btn-buy">Buy BTC</button>
+                                <button class="btn btn-primary trade-content__btn-sell trade-content__contour">Sell BTC</button>
                             </div>
-                            <p class="buy-of-sell__text">Fees Includes- (0.1 %)</p>
+                            <p class="trade-content__text">Fees Includes- (0.1 %)</p>
                         </div>
 
                         <div class="trade-content__graph">
@@ -172,8 +169,6 @@
                                     </div>
                                 </div>
                                 <div class="block-input">
-                                    <!-- <input class="block-input__text"  type="text" value="Price (INR)" onfocus="this.value=''" onfocus name="price">
-                                    <input class="block-input__text"  type="text" value="QTY (BTC)" onfocus="this.value=''" name="percent"> -->
                                     <input class="block-input__text"  type="text" value="Price (INR)" name="price">
                                     <input class="block-input__text"  type="text" value="QTY (BTC)" name="percent">
                                 </div>
@@ -186,11 +181,10 @@
                                         <button class="price__btn" type="button">100 %</button>
                                     </div>
                                 </div>
-                                <!-- <button class="btn buy-of-sell__btn-buy">Buy BTC</button> -->
                                 <div class="trade-content__component-btn">
-                                    <button class="btn buy-of-sell__btn-buy">Buy BTC</button>
+                                    <button class="btn trade-content__btn-buy">Buy BTC</button>
                                 </div>
-                                <p class="buy-of-sell__text">Fees Includes- (0.1 %)</p>
+                                <p class="trade-content__text">Fees Includes- (0.1 %)</p>
                             </div>
                             <div class="buy-of-sell__market-item">
                                 <div class="buy-of-sell__heading">
@@ -206,8 +200,6 @@
                                     </div>
                                 </div>
                                 <div class="block-input">
-                                    <!-- <input class="block-input__text"  type="text" value="Price (INR)" onfocus="this.value=''" onfocus name="price">
-                                    <input class="block-input__text"  type="text" value="QTY (BTC)" onfocus="this.value=''" name="percent"> -->
                                     <input class="block-input__text"  type="text" value="Price (INR)" name="price">
                                     <input class="block-input__text"  type="text" value="QTY (BTC)" name="percent">
                                 </div>
@@ -221,9 +213,9 @@
                                     </div>
                                 </div>
                                 <div class="trade-content__component-btn">
-                                    <button class="btn buy-of-sell__btn-sell buy-of-sell__fill">Sell BTC</button>
+                                    <button class="btn btn-primary trade-content__btn-sell trade-content__fill">Sell BTC</button>
                                 </div>
-                                <p class="buy-of-sell__text">Fees Includes- (0.1 %)</p>
+                                <p class="trade-content__text">Fees Includes- (0.1 %)</p>
                             </div>
                         </div>
                         <!-- watchlist -->
@@ -242,9 +234,9 @@
                                         <div class="watchlist__text"> Bitcoin / BTC </div>
                                     </div>
                                     <div class="watchlist__price watchlist__item ruble">28,247,35.05</div>
-                                    <div class="watchlist__change market__vector watchlist__item">
-                                        <img class="market__ico" src="../../assets/img/Vector.png" alt="Vector">
-                                        <div class="market__item green percent">5.76</div>
+                                    <div class="watchlist__change market-vector watchlist__item">
+                                        <img class="market-vector__ico" src="../../assets/img/Vector.png" alt="Vector">
+                                        <div class="market-vector__value green percent">5.76</div>
                                     </div>
                                     <div class="watchlist__high watchlist__item ruble">29,654,85.246</div>
                                     <div class="watchlist__low watchlist__item ruble">27,459,81.14</div>
@@ -255,9 +247,9 @@
                                         <div class="watchlist__text"> Bitcoin / BTC </div>
                                     </div>
                                     <div class="watchlist__price watchlist__item ruble">28,247,35.05</div>
-                                    <div class="watchlist__change market__vector watchlist__item">
-                                        <img class="market__ico" src="../../assets/img/Vector.png" alt="Vector">
-                                        <div class="market__item green percent">5.76</div>
+                                    <div class="watchlist__change market-vector watchlist__item">
+                                        <img class="market-vector__ico" src="../../assets/img/Vector.png" alt="Vector">
+                                        <div class="market-vector__value green percent">5.76</div>
                                     </div>
                                     <div class="watchlist__high watchlist__item ruble">29,654,85.246</div>
                                     <div class="watchlist__low watchlist__item ruble">27,459,81.14</div>
@@ -268,9 +260,9 @@
                                         <div class="watchlist__text"> Bitcoin / BTC </div>
                                     </div>
                                     <div class="watchlist__price watchlist__item ruble">28,247,35.05</div>
-                                    <div class="watchlist__change market__vector watchlist__item">
-                                        <img class="market__ico" src="../../assets/img/Vector.png" alt="Vector">
-                                        <div class="market__item green percent">5.76</div>
+                                    <div class="watchlist__change market-vector watchlist__item">
+                                        <img class="market-vector__ico" src="../../assets/img/Vector.png" alt="Vector">
+                                        <div class="market-vector__value green percent">5.76</div>
                                     </div>
                                     <div class="watchlist__high watchlist__item ruble">29,654,85.246</div>
                                     <div class="watchlist__low watchlist__item ruble">27,459,81.14</div>
@@ -281,9 +273,9 @@
                                         <div class="watchlist__text"> Bitcoin / BTC </div>
                                     </div>
                                     <div class="watchlist__price watchlist__item ruble">28,247,35.05</div>
-                                    <div class="watchlist__change market__vector watchlist__item">
-                                        <img class="market__ico" src="../../assets/img/Vector.png" alt="Vector">
-                                        <div class="market__item green percent">5.76</div>
+                                    <div class="watchlist__change market-vector watchlist__item">
+                                        <img class="market-vector__ico" src="../../assets/img/Vector.png" alt="Vector">
+                                        <div class="market-vector__value green percent">5.76</div>
                                     </div>
                                     <div class="watchlist__high watchlist__item ruble">29,654,85.246</div>
                                     <div class="watchlist__low watchlist__item ruble">27,459,81.14</div>
@@ -294,9 +286,9 @@
                                         <div class="watchlist__text"> Bitcoin / BTC </div>
                                     </div>
                                     <div class="watchlist__price watchlist__item ruble">28,247,35.05</div>
-                                    <div class="watchlist__change market__vector watchlist__item">
-                                        <img class="market__ico" src="../../assets/img/Vector.png" alt="Vector">
-                                        <div class="market__item green percent">5.76</div>
+                                    <div class="watchlist__change market-vector watchlist__item">
+                                        <img class="market-vector__ico" src="../../assets/img/Vector.png" alt="Vector">
+                                        <div class="market-vector__value green percent">5.76</div>
                                     </div>
                                     <div class="watchlist__high watchlist__item ruble">29,654,85.246</div>
                                     <div class="watchlist__low watchlist__item ruble">27,459,81.14</div>
@@ -307,9 +299,9 @@
                                         <div class="watchlist__text"> Bitcoin / BTC </div>
                                     </div>
                                     <div class="watchlist__price watchlist__item ruble">28,247,35.05</div>
-                                    <div class="watchlist__change market__vector watchlist__item">
-                                        <img class="market__ico" src="../../assets/img/Vector.png" alt="Vector">
-                                        <div class="market__item green percent">5.76</div>
+                                    <div class="watchlist__change market-vector watchlist__item">
+                                        <img class="market-vector__ico" src="../../assets/img/Vector.png" alt="Vector">
+                                        <div class="market-vector__value green percent">5.76</div>
                                     </div>
                                     <div class="watchlist__high watchlist__item ruble">29,654,85.246</div>
                                     <div class="watchlist__low watchlist__item ruble">27,459,81.14</div>
@@ -406,7 +398,7 @@
                                     </div>
                                     <div class="open-order__action green open-order__item">Buy</div>
                                     <div class="open-order__type open-order__item">Limit</div>
-                                    <div class="wopen-order__status green open-order__item">Completed</div>
+                                    <div class="open-order__status green open-order__item">Completed</div>
                                 </div>
                                 <div class="open-order__row">
                                     <div class="open-order__coin-name open-order__item">
@@ -420,7 +412,7 @@
                                     </div>
                                     <div class="open-order__action green open-order__item">Buy</div>
                                     <div class="open-order__type open-order__item">Limit</div>
-                                    <div class="wopen-order__status green open-order__item">Completed</div>
+                                    <div class="open-order__status green open-order__item">Completed</div>
                                 </div>
                                 <div class="open-order__row">
                                     <div class="open-order__coin-name open-order__item">
@@ -434,7 +426,7 @@
                                     </div>
                                     <div class="open-order__action green open-order__item">Buy</div>
                                     <div class="open-order__type open-order__item">Limit</div>
-                                    <div class="wopen-order__status green open-order__item">Completed</div>
+                                    <div class="open-order__status green open-order__item">Completed</div>
                                 </div>
                                 <div class="open-order__row">
                                     <div class="open-order__coin-name open-order__item">
@@ -448,7 +440,7 @@
                                     </div>
                                     <div class="open-order__action green open-order__item">Buy</div>
                                     <div class="open-order__type open-order__item">Limit</div>
-                                    <div class="wopen-order__status green open-order__item">Completed</div>
+                                    <div class="open-order__status green open-order__item">Completed</div>
                                 </div>
                                 <div class="open-order__row">
                                     <div class="open-order__coin-name open-order__item">
@@ -462,7 +454,7 @@
                                     </div>
                                     <div class="open-order__action green open-order__item">Buy</div>
                                     <div class="open-order__type open-order__item">Limit</div>
-                                    <div class="wopen-order__status green open-order__item">Completed</div>
+                                    <div class="open-order__status green open-order__item">Completed</div>
                                 </div>
                                 <div class="open-order__row">
                                     <div class="open-order__coin-name open-order__item">
@@ -476,10 +468,8 @@
                                     </div>
                                     <div class="open-order__action green open-order__item">Buy</div>
                                     <div class="open-order__type open-order__item">Limit</div>
-                                    <div class="wopen-order__status green open-order__item">Completed</div>
+                                    <div class="open-order__status green open-order__item">Completed</div>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
@@ -680,9 +670,9 @@
                     <div class="trade-gadget__text">Current Value of Coin</div>
                     <div class="trade-gadget__row">
                         <div class="trade-gadget__value ruble">24,564,27.20</div>
-                        <div class="trade-gadget__vector">
-                            <img class="market__ico" src="../../assets/img/Vector.png" alt="Vector">
-                            <div class="market__item green">5.76%</div>
+                        <div class="trade-gadget__vector market-vector">
+                            <img class="market-vector__ico" src="../../assets/img/Vector.png" alt="Vector">
+                            <div class="market-vector__value green">5.76%</div>
                         </div>
                     </div>
 
@@ -690,7 +680,7 @@
                 <div class="trade-gadget__flag"></div>
             </div>
             <div class="trade-gadget__block">
-                <div class="trade-gadget__days">
+                <div class="trade-gadget__days graph-header">
                     <div class="graph-header__tag primary mt-10 mb-10 ">1D</div>
                     <div class="graph-header__tag mt-10 mb-10 ">2D</div>
                     <div class="graph-header__tag mt-10 mb-10 ">7D</div>
@@ -703,8 +693,8 @@
                     <img class="trade-gadget__img" src="../../assets/img/Graph.png" alt="Graph.png">
                 </div>
                 <div class="trade-gadget__btn">
-                    <button class="btn buy-of-sell__btn-buy">Buy BTC</button>
-                    <button class="btn buy-of-sell__btn-sell background-red">Sell BTC</button>
+                    <button class="btn btn-primary trade-gadget__btn-buy">Buy BTC</button>
+                    <button class="btn btn-primary background-red trade-gadget__btn-sell">Sell BTC</button>
                 </div>
             </div>
         </div>

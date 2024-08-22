@@ -17,8 +17,10 @@
 
         <div class="market-trend">
             <div class="market-trend__title mb-60">Featured Coins</div>
-            @@include('../landing/market/market.html', {'src':'../..', 'trade': '.'})
-            <div class="market__line line"></div>
+            <div class="market market_block-trend">
+                @@include('../landing/market/market.html', {'src':'../..', 'trade': '.'})
+                <div class="market__line line"></div>
+            </div>
             @@include('./market-trend.html')
 
             @@include('./table.html',{'src':'../..'})

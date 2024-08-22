@@ -81,10 +81,10 @@ $('#open-order').click(()=>{
 // работа с бургером
 //Добавляем класс active, для замены бургера на крестик (это в css)
 $('.navbar__toggle').on('click', function() {
-    $('.mode__burger').toggleClass('active');
+    $('.mode-burger').toggleClass('active');
 });
 
-$('.navbar__header').dropdown();
+$('.navbar').dropdown();
 
 //После клика по пункту меню скрываем адаптивное меню, остается только бургер
 $('.collapse').on('click', function() {

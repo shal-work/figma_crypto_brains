@@ -10,6 +10,7 @@
     height: 46px;
     background-repeat: no-repeat;
     background-position: 0% 50%;
+    cursor: pointer;
 }
 
 .sign {
@@ -46,63 +47,63 @@
     opacity: 4%;
     border-radius: 100%;
     filter: blur(80px);
-}
-.elipse__home {
-    width: 80%;
-    height: 80%;
-    top: 10%;
-    opacity: 4%;
-    will-change: transform;
-    animation: 2.5s ease-in-out .5s infinite pulse;
-}
-.elipse__choice {
-    width: 100%;
-    height:100%;
-    top:0;
-}
-.elipse__simple {
-    width: 100%;
-    height:100%;
-    top:0;
-    will-change: transform;
-    opacity: 4%;
-    animation: 2.5s ease-in-out .5s infinite pulse;
-}
-.elipse__testimonials {
-    width: 100%;
-    height:100%;
-    top:0;
-    left: 0;
-    opacity: 4%;
-}
-.elipse__questions {
-    width: 100%;
-    height:100%;
-    top:0;
-    left: 0;
-    opacity: 4%;
+    &-home {
+        width: 80%;
+        height: 80%;
+        top: 10%;
+        opacity: 4%;
+        will-change: transform;
+        animation: 2.5s ease-in-out .5s infinite pulse;
+    }
+    &-choice {
+        width: 100%;
+        height:100%;
+        top:0;
+    }
+    &-simple {
+        width: 100%;
+        height:100%;
+        top:0;
+        will-change: transform;
+        opacity: 4%;
+        animation: 2.5s ease-in-out .5s infinite pulse;
+    }
+    &-testimonials {
+        width: 100%;
+        height:100%;
+        top:0;
+        left: 0;
+        opacity: 4%;
+    }
+    &-questions {
+        width: 100%;
+        height:100%;
+        top:0;
+        left: 0;
+        opacity: 4%;
+    }
+    &-app {
+        width: 100%;
+        height:100%;
+        top:0;
+        left: 0;
+        opacity: 6%;
+    }
+    &-deg {
+        position: absolute;
+        width: 100%;
+        height: 38.12%;
+        background: $primary;
+        border-radius: 100%;
+        transform: rotate(19deg);
+        filter: blur(79px);
+        top: 280px;
+        opacity: 4%;
+        will-change: transform;
+        animation: 3.5s ease-in-out .5s infinite pulse-deg;
+    }
 }
 
-.elipse__app{
-    width: 100%;
-    height:100%;
-    top:0;
-    left: 0;
-    opacity: 6%;
-}
-.elipse-deg {
-    position: absolute;
-    width: 100%;
-    height: 38.12%;
-    background: $primary;
-    border-radius: 100%;
-    transform: rotate(19deg);
-    filter: blur(79px);
-    top: 280px;
-    opacity: 4%;
-    will-change: transform;
-    animation: 3.5s ease-in-out .5s infinite pulse-deg;
-}
 @keyframes pulse-deg {
     from {
         transform: scale3d(1, 1, 1) rotate(19deg);
@@ -142,22 +143,6 @@
     width: 38px;
     height: 38px;
 }
-.buy-of-sell__menu-item:after {
-    width: 0;
-    background: #00f;
-    height: 3px;
-    transition: all .5s ease-in-out;
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    right: 0;
-}
-
-.buy-of-sell__menu-item.underline:after {
-    width: 100%;
-    left: 0;
-}
-
 
 .gadget-header {
     display: flex;
@@ -188,5 +173,32 @@
         content: '\e8be';
         display: inline-block;
         font-size: 24px;
+    }
+}
+
+.fading-dotted {
+    position: relative;
+    &__back {
+        padding: 0;
+        height: 10px;
+        background-image: linear-gradient(to right, #131517, rgba(154, 195, 33, 0), #131517);
+        position: relative;
+        top: 5px;
+        @media (max-width: 375px) {
+            height: 5px;
+            top: 3px;
+        }
+    }
+    &__line {
+        padding: 0;
+        height: 2.0px;
+        border: none;
+        background: linear-gradient(to right, transparent 50%, rgba(154, 195, 33, 0.8) 50%);
+        background-size: 16px;
+        position: static;
+        @media (max-width: 375px) {
+            height: 1px;
+            background-size: 8px;
+        }
     }
 }

@@ -1,6 +1,20 @@
 .blog {
     margin: calc(var(--vw)*120) calc(var(--vw)*165) 0 calc(var(--vw)*165);
     position: relative;
+    &-pagination {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        &_position {
+            position: absolute;
+            position: relative;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+
+        }
+    }
+
     @media (min-width: 1920px) {
         margin: 120px 165px 0 165px;
     }
@@ -48,15 +62,6 @@
         line-height: 32px;
         margin-bottom: 13px;
         align-items: center;
-    }
-    &__date-block {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-left: 10px;
-        @media (max-width: 375px) {
-            margin-left: 0;
-        }
     }
     &__text {
         color:$grey-paragraph;
@@ -114,9 +119,7 @@
     }
 }
 .blog-content {
-    &__article {
-        margin-bottom: 40px;
-    }
+    margin-bottom: 40px;
     &__title {
         font-size: calc(var(--vw)*17 + 29px);
         margin-bottom: calc(var(--vw)*11 + 18px);
@@ -161,11 +164,7 @@
     }
 }
 
-.blog__pagination {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
+
 
 .line-clamp {
     width: 100%;

@@ -19,12 +19,11 @@
         @media (max-width: 1650px) {
             gap: 20%;
         }
-        @media (max-width: 576px) {
+        @media (max-width: 1200px) {
             flex-direction: column;
             gap: 40px;
         }
     }
-
     &__block {
         @media (max-width: 1500px) {
             overflow: scroll;
@@ -33,10 +32,9 @@
             overflow: scroll;
         }
     }
-
     &__logo {
         width: 50.42vw;
-        font-size: calc(var(--vw)*58);
+        font-size: calc(var(--vw)*16 + 42px);
         font-weight: 700;
         white-space: nowrap;
         @media (min-width: 1920px) {
@@ -53,7 +51,6 @@
             white-space: nowrap;
         }
     }
-
     &__line {
         margin-bottom: 60px;
     }
@@ -90,32 +87,39 @@
         margin: 0 auto;
         justify-content: center;
     }
-    &__button {
-        width: 240px;
-        height: 56px;
-        border: 1px solid $primary;
-        background-color: $primary20;
-        font-size: 20px;
-        @media (max-width: 375px) {
-            width: 100%;
-        }
-    }
+    // &__button {
+    //     width: 240px;
+    //     height: 56px;
+    //     border: 1px solid $primary;
+    //     background-color: $primary;
+    //     font-size: 20px;
+    //     z-index: 10;
+    //     position: relative;
+    //     @media (max-width: 375px) {
+    //         width: 100%;
+    //     }
+    // }
     &__button-text {
         font-size: 20px !important;
         font-weight: 400;
         line-height: 32px;
     }
-
+    &__link {
+        color: $white;
+        font-size: 16px;
+    }
+    &_block-trend {
+        margin: 0;
+    }
 }
 .market-menu {
     display: flex;
     flex-direction: row;
     list-style: none;
-    width: 622px;
     align-items: center;
     gap: 30px;
     justify-content: flex-end;
-
+    padding-left: 24px;
     &__item {
         white-space: nowrap;
         margin: 12px 0;
@@ -127,5 +131,41 @@
     &__link:hover {
         color: $white
     }
+    @media (max-width: 768px) {
+        justify-content: flex-start;
+        width: auto;
+        margin: 12px 0;
+    }
+}
 
+
+.market-trend-heading {
+    display: flex;
+    flex-direction: row;
+    @media (max-width: 1500px) {
+        overflow: scroll;
+    }
+    @media (max-width: 375px) {
+        overflow: scroll;
+    }
+    @media (max-width: 1650px) {
+        gap: 20%;
+    }
+    @media (max-width: 576px) {
+        // flex-direction: column;
+        gap: 40px;
+    }
+}
+
+.market-button {
+    width: 240px;
+    height: 56px;
+    border: 1px solid $primary;
+    background-color: $primary;
+    font-size: 20px;
+    z-index: 10;
+    position: relative;
+    @media (max-width: 375px) {
+        width: 100%;
+    }
 }

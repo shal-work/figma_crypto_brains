@@ -148,7 +148,7 @@
 
 .ico-playstore, .ico-appstore {
     display: none;
-    &__black {
+    &_black {
         @media (max-width: 920px) {
             display: block;
         }
@@ -160,7 +160,7 @@
     @media (max-width: 920px) {
         display: none;
     }
-    &__black {
+    &_black {
         @media (max-width: 920px) {
             display: block;
         }

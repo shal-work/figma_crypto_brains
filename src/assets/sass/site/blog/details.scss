@@ -67,14 +67,14 @@
         width: 100%;
         height: auto;
     }
-    &__main-footer {
-        position: relative;
-        top: -174px;
-        @media (max-width: 1024px) {
-            top: 0;
-        }
-    }
+}
 
+.details-footer {
+    position: relative;
+    top: -174px;
+    @media (max-width: 1024px) {
+        top: 0;
+    }
 }
 
 .blog-content {
@@ -181,16 +181,9 @@
     }
 }
 
-.blog__pagination_position {
-    position: absolute;
-    position: relative;
-    display: flex;
-    width: 100%;
-    justify-content: center;
 
-}
 
-.like__share {
+.like-share {
     @media (max-width: 375px) {
         display: none;
     }
