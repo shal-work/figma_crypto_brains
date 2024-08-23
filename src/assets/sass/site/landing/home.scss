@@ -81,7 +81,7 @@
             white-space: pre-wrap;
 
         }
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             font-size: 38px;
             font-weight: 700;
             line-height: 48px;
@@ -91,7 +91,7 @@
     }
     &__dotted-line {
         margin: -5px 130px 24px 145px;
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             margin: 0;
         }
     }
@@ -103,7 +103,7 @@
         top:21px;
         height: 16px;
         z-index: 2;
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             top: 2px;
         }
     }
@@ -116,7 +116,7 @@
         top:10px;
         position: relative;
         z-index: 1;
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             top: 0;
         }
     }
@@ -139,7 +139,7 @@
             line-height: 28px;
             margin: 20px 0 20px 0;
         }
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             font-size: 18px;
             font-weight: 400;
             line-height: 28px;
@@ -174,7 +174,7 @@
     &__txt {
         font-size: calc(var(--vw)*6 + 14px);
 
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             font-size: 20px
         }
     }
@@ -185,7 +185,7 @@
     color: #1B70F1;
     font-size: 24px;
     margin: 0 0 10px 10px;
-    @media (max-width: 375px) {
+    @media (max-width: 420px) {
         font-size: 20px;
         font-weight: 600;
         line-height: 30px;
@@ -221,7 +221,7 @@
     @media (min-width: 1920px) {
         padding: 10px 20px;
     }
-    @media (max-width: 375px) {
+    @media (max-width: 420px) {
         display: none;
     }
     &__row {

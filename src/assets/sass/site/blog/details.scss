@@ -17,7 +17,7 @@
             width: 1590px;
             height: 633px;
         }
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             width: 100%;
             height: auto;
         }
@@ -50,7 +50,7 @@
             row-gap: 20px;
             align-items: center;
         }
-        @media (max-width:375px) {
+        @media (max-width: 420px) {
             display: flex;
         }
     }
@@ -106,7 +106,7 @@
             line-height: 36px;
             margin-top: 40px;
         }
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             padding: 10px 16px;
         }
     }
@@ -115,7 +115,7 @@
         @media (min-width: 1920px) {
             padding-top: 20px;
         }
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             padding: 10px 16px;
         }
 
@@ -157,7 +157,7 @@
         line-height: 57px;
         text-align: center;
         margin-bottom: 60px;
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             font-size: 32px;
             line-height: 40px;
         }
@@ -175,7 +175,7 @@
     }
     &__img-businessman {
         // width: 100%;
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             width: 100%;
         }
     }
@@ -184,7 +184,7 @@
 
 
 .like-share {
-    @media (max-width: 375px) {
+    @media (max-width: 420px) {
         display: none;
     }
 }

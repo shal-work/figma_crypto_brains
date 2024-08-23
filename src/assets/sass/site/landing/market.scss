@@ -28,7 +28,7 @@
         @media (max-width: 1500px) {
             overflow: scroll;
         }
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             overflow: scroll;
         }
     }
@@ -44,7 +44,7 @@
         @media (max-width: 1650px) {
             width: auto;
         }
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             font-size: 42px;
             font-weight: 700;
             line-height: 52px;
@@ -66,7 +66,7 @@
         @media (max-width: 1500px) {
             overflow: auto ;
         }
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             overflow: auto ;
         }
     }
@@ -95,7 +95,7 @@
     //     font-size: 20px;
     //     z-index: 10;
     //     position: relative;
-    //     @media (max-width: 375px) {
+    //     @media (max-width: 420px) {
     //         width: 100%;
     //     }
     // }
@@ -145,7 +145,7 @@
     @media (max-width: 1500px) {
         overflow: scroll;
     }
-    @media (max-width: 375px) {
+    @media (max-width: 420px) {
         overflow: scroll;
     }
     @media (max-width: 1650px) {
@@ -165,7 +165,7 @@
     font-size: 20px;
     z-index: 10;
     position: relative;
-    @media (max-width: 375px) {
+    @media (max-width: 420px) {
         width: 100%;
     }
 }

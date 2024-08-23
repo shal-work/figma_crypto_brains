@@ -13,7 +13,7 @@
             display: flex;
             margin: 30px auto;
         }
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             margin: 0 auto 26px;
         }
     }
@@ -36,7 +36,7 @@
     row-gap: 40px;
 
     margin-bottom: 60px;
-    @media (max-width: 375px) {
+    @media (max-width: 420px) {
         display: flex;
         flex-direction: column;
         margin-top: 20px;
@@ -50,7 +50,7 @@
     }
     &__text {
         padding: 20px 20px 40px 20px;
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             width: calc(100vw - 32px);
             padding: calc(var(--vw) * 10 + 10px);
         }
@@ -66,7 +66,7 @@
         font-weight: 400;
         line-height: 24px;
         color: $grey;
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             font-size: 12px;
             line-height: 15px;
         }
@@ -75,7 +75,7 @@
         font-size: 16px;
         font-weight: 400;
         color: $grey;
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             font-size: 12px;
             line-height: 15px;
         }
@@ -86,7 +86,7 @@
         line-height: 36px;
         color: $pagination;
         margin-bottom: 40px;
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             // font-size: 20px;
             font-size: calc(100vw / 375 * 20);
             // line-height: 30px;
@@ -95,7 +95,7 @@
         }
     }
     &__img {
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             width: calc(100vw - 32px);
         }
     }
@@ -103,7 +103,7 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             font-size: calc(100vw / 375 * 6 + 10px);
         }
 

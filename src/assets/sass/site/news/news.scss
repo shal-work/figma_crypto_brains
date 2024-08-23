@@ -11,7 +11,7 @@
         @media (max-width: 1200px) {
             width: 100%;
         }
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             // display: none;
         }
     }
@@ -25,7 +25,7 @@
             grid-template-columns: repeat(auto-fit, minmax(343px, 1fr));
             justify-items: center;
         }
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             display: none;
         }
     }
@@ -128,7 +128,7 @@
     &__cards {
         width: 343px;
         width: 375px;
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             width: 100%;
         }
     }
@@ -162,7 +162,7 @@
         padding: 14px 20px;
         background-color: #131517;
         position: relative;
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             padding: calc(var(--vw)*4 + 10px) calc(var(--vw)*10 + 10px);
         }
     }

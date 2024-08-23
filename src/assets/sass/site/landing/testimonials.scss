@@ -5,7 +5,7 @@
     @media (min-width: 1920px) {
         padding: 120px 165px;
     }
-    @media (max-width: 375px) {
+    @media (max-width: 420px) {
         padding: 60px 16px;
     }
     &__header {
@@ -19,7 +19,7 @@
         @media (max-width: 768px)  {
             flex-direction: column;
         }
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             flex-direction: column;
         }
     }
@@ -39,7 +39,7 @@
             line-height: 53px;
             text-align: center;
         }
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             width: auto;
             font-size: 42px;
             font-weight: 700;
@@ -70,7 +70,7 @@
             padding: 0 8px;
         }
 
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             width: auto;
             font-size: 16px;
             font-weight: 400;
@@ -93,7 +93,7 @@
         @media (min-width: 1920px) {
             margin-bottom: 60px;
         }
-        @media (max-width: 375px)  {
+        @media (max-width: 400px)  {
             margin-bottom: 0;
         }
     }
@@ -107,7 +107,7 @@
             overflow: hidden;
             width: auto;
         }
-        @media (max-width: 375px)  {
+        @media (max-width: 400px)  {
             overflow: hidden;
             width: auto;
         }
@@ -116,7 +116,7 @@
         display: flex;
         flex-direction: row;
         gap: 30px;
-        @media (max-width: 375px)  {
+        @media (max-width: 400px)  {
             width: auto;
         }
     }
@@ -128,7 +128,7 @@
         @media (max-width: 768px)  {
             padding: 0px;
         }
-        @media (max-width: 375px)  {
+        @media (max-width: 400px)  {
             padding: 0 16px;
             width: 320px;
         }
@@ -138,14 +138,14 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        @media (max-width: 375px)  {
+        @media (max-width: 400px)  {
             justify-content: space-between;
             padding: 0 10px;
         }
     }
     &__avatar {
         width: 13%;
-        @media (max-width: 375px)  {
+        @media (max-width: 400px)  {
             width: auto;
         }
     }
@@ -158,7 +158,7 @@
             width: 25%;
             width: calc(320 * (100vw / 768));
         }
-        @media (max-width: 375px)  {
+        @media (max-width: 400px)  {
             width: auto;
         }
     }
@@ -174,7 +174,7 @@
         font-size: 72px;
         width: 13%;
         color: $grey13;
-        @media (max-width: 375px)  {
+        @media (max-width: 400px)  {
             width: auto;
         }
     }
@@ -193,7 +193,7 @@
             // padding: 0 30px 0 0;
             font-size: 18px;
         }
-        @media (max-width: 375px)  {
+        @media (max-width: 400px)  {
             width: auto;
             font-size: 18px;
             line-height: 28px;

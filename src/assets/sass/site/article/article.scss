@@ -10,7 +10,7 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 20px;
     }
-    @media (max-width:375px) {
+    @media (max-width: 420px) {
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
     }
@@ -22,7 +22,7 @@
     &__img {
         padding: 20px 20px 40px 20px;
         width: 100%;
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             width: calc(100vw - 32px);
         }
     }
@@ -34,7 +34,7 @@
         @media (min-width: 1920px) {
             padding: 20px 20px 40px 20px;
         }
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             width: calc(100vw - 32px);
             padding: 0 20px;
         }
@@ -83,7 +83,7 @@
         display: flex;
     }
     &__avatar {
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             width: 24px;
             height: 24px;
         }

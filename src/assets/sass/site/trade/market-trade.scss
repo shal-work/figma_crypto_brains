@@ -3,7 +3,7 @@
     @media (min-width: 1920px) {
         margin: 120px 165px 0 165px;
     }
-    @media (max-width: 375px) {
+    @media (max-width: 420px) {
         margin: 20px 16px;
     }
     &__heading {
@@ -114,7 +114,7 @@
         @media (min-width: 1920px) {
             font-size: 18px;
         }
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             font-size: 16px;
             font-size: calc(82 * var(--vw));
             font-weight: 400;
@@ -125,7 +125,7 @@
         }
     }
     &__cell-first {
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             font-size: 14px;
             font-size: calc(72 * var(--vw));
             font-weight: 400;
@@ -139,7 +139,7 @@
             width: 24px;
             height: 24px;
         }
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             width: 16px;
             height: 16px;
         }
@@ -149,7 +149,7 @@
         font-weight: 600;
         line-height: 24px;
         margin-left: 6px;
-        @media (max-width: 375px) {
+        @media (max-width: 420px) {
             font-size: 12px;
             font-size: calc(8 + 62 * var(--vw));
             font-weight: 400;
