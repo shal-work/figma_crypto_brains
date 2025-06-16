@@ -2,10 +2,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 60px;
-    grid-gap: calc(var(--vw)*30);
-    @media (min-width: 1920px) {
-        grid-gap:30px;
-    }
+    grid-gap: min(20px, max(var(--vw)* 20, 8px));
+    row-gap: min(40px, max(var(--vw)* 40, 20px));
+    column-gap: min(30px, max(var(--vw)* 30, 20px));
     @media (max-width: 960px) {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 20px;
@@ -15,47 +14,44 @@
         gap: 20px;
     }
     &__item {
-        background-color:$background;
+        background-color:var(--background);
         border-radius: 8px;
-        border: 1px solid $num;
+        border: 1px solid var(--num);
      }
     &__img {
-        padding: 20px 20px 40px 20px;
+        padding: 30px 29px 20px;
         width: 100%;
+        height: 100%;
         @media (max-width: 420px) {
             width: calc(100vw - 32px);
         }
     }
     &__img-mod {
         width: 100%;
+        height: auto;
     }
     &__text {
-        padding: calc(var(--vw)*20) calc(var(--vw)*20) calc(var(--vw)*40) calc(var(--vw)*20);
-        @media (min-width: 1920px) {
-            padding: 20px 20px 40px 20px;
-        }
+        padding-top: min(20px, max(var(--vw)* 20, 8px));
+        padding-bottom: min(30px, max(var(--vw)* 30, 12px));
+        padding-left: min(30px, max(var(--vw)* 30, 12px));
+        padding-right: min(30px, max(var(--vw)* 30, 12px));
         @media (max-width: 420px) {
             width: calc(100vw - 32px);
             padding: 0 20px;
         }
     }
     &__user, &__time {
-        color: $grey;
+        color: var(--grey);
         position: relative;
         margin-right: 22px;
-        font-size: calc(var(--vw)*2 + 12px);
+        font-size: min(18px, max(var(--vw)* 18, 14px));
         font-weight: 400;
-        line-height: 22px;
-        @media (min-width: 1920px) {
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 22px;
-        }
+        line-height: min(28px, max(var(--vw)* 28, 20px));
     }
     &__user::before {
         content: " ";
         position: absolute;
-        border-right: 1px solid $grey13;
+        border-right: 1px solid var(--grey13-contrast);
         width: 1px;
         right: 0px;
         margin-top: 8px;
@@ -72,12 +68,8 @@
     &__header {
         display: flex;
         justify-content: space-between;
-        line-height: 32px;
         align-items: center;
-        margin-bottom: calc(var(--vw)*25 + 15px);
-        @media (min-width: 1920px) {
-            margin-bottom: 40px;
-        }
+        margin-bottom: min(40px, max(var(--vw)* 40, 24px));
     }
     &__avatar-block {
         display: flex;
@@ -90,14 +82,9 @@
     }
     &__title {
         margin-bottom: 0;
-        font-size: calc(var(--vw)*15 + 17px);
+        font-size:  min(32px, max(var(--vw)* 32, 24px));
         font-weight: 600;
-        line-height: calc(var(--vw)*11 + 27px);
-        @media (min-width: 1920px) {
-            font-size: 32px;
-            font-weight: 600;
-            line-height: 40px;
-        }
+        line-height: 100%;
     }
 }
 

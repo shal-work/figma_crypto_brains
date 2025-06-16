@@ -1,11 +1,7 @@
 .news-details {
-    margin: calc(var(--vw)*120) calc(var(--vw)*135) 0 calc(var(--vw)*135);
     display: block;
     position: relative;
     top: 0;
-    @media (min-width: 1920px) {
-        margin: 120px 135px 0 135px;
-    }
     @media (max-width: 992px) {
         margin: 40px 0 20px;
     }
@@ -54,12 +50,12 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
-        color:  $grey;
+        color:  var(--grey);
     }
     &__time {
         font-size: 16px;
         font-weight: 400;
-        color: $grey;
+        color: var(--grey);
     }
     &__block {
         display: flex;
@@ -69,7 +65,7 @@
         align-items: center;
     }
     &__text {
-        color: $grey-paragraph;
+        color: var(--grey-paragraph);
         font-weight: 400;
         font-size: calc(var(--vw) * 8 + 12px);
         line-height: calc(var(--vw) * 12 + 22px);
@@ -79,21 +75,12 @@
     }
     &__img {
         width: 100%;
-        @media (max-width: 420px) {
-            display: none;
-        }
-    }
-    &__img-gadget {
-        display: none;
-        @media (max-width: 420px) {
-            display: block;
-            width: 100%;
-        }
+        height: auto;
     }
 }
 
 .news-details-wrap {
-    background-color: $header;
+    background-color: var(--header);
     display: block;
     padding: 40px 60px;
     @media (max-width: 992px) {
@@ -101,11 +88,7 @@
     }
 }
 
-.mt-40 {
-    @media (max-width: 420px) {
-        margin-top: 20px;
-    }
-}
+
 
 .line-grey {
     height: 1px;
@@ -121,10 +104,8 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-right: 27px;
-    @media (max-width: 420px) {
-        // display: none;
-    }
+    margin-right: min(30px, max(var(--vw)* 30, 18px));
+    margin-left: min(30px, max(var(--vw)* 30, 18px));
 }
 
 .news-page {
@@ -135,26 +116,20 @@
     &__heading {
         justify-content: space-between;
         margin-bottom: 60px;
-        @media (max-width: 1200px) {
-            flex-direction: column;
+        // flex-wrap: wrap;
+        overflow-x: scroll;
+        @media (max-width: 920px) {
             margin-bottom: 40px;
-        }
-        @media (max-width: 992px) {
-            gap: 12px;
-            overflow: scroll;
-        }
-        @media (max-width: 420px) {
-            flex-direction: row;
         }
     }
     &__menu {
         @media (max-width: 1200px) {
             justify-content: flex-start;
-            overflow: auto;
             padding: 0;
         }
-        @media (max-width: 420px) {
-            overflow: visible;
+        @media (max-width: 768px) {
+            width: auto;
+            overflow-x: visible;
         }
     }
     &__menu-link {
@@ -166,7 +141,7 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
-        color: $pagination;
+        color: var(--pagination);
         white-space: nowrap;
     }
 }

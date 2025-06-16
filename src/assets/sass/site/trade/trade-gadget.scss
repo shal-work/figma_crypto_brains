@@ -2,41 +2,9 @@
     display: none;
 }
 @media (max-width: 920px) {
-
-
     .trade-gadget {
         display: block;
         position: relative;
-        // &__header {
-        //     display: flex;
-        //     justify-content: space-between;
-        //     align-items: center;
-        //     padding: 14.5px 16px 14.5px 16px;
-        // }
-        // &__arrow::before {
-        //     top: 0px;
-        //     left: 10px;
-        //     position: relative;
-        //     font-family: eicons;
-        //     content: '\e8c1';
-        //     transform: rotate(270deg);
-        //     display: inline-block;
-        //     font-size: 23px;
-        // }
-        // &__title {
-        //     font-size: 26px;
-        //     font-weight: 600;
-        //     line-height: 32px;
-        // }
-        // &__points::before {
-        //     top: 0px;
-        //     right: 10px;
-        //     position: relative;
-        //     font-family: eicons;
-        //     content: '\e8be';
-        //     display: inline-block;
-        //     font-size: 24px;
-        // }
         &__content {
             display: flex;
             align-items: center;
@@ -46,6 +14,10 @@
         }
         &__coin-name {
             display: flex;
+            // width: 32px;
+            // height: 32px;
+            max-width: 32px;
+            max-height: 32px;
         }
         &__item {
             display: flex;
@@ -56,7 +28,7 @@
             font-size: 16px;
             font-weight: 400;
             line-height: 26px;
-            color: $grey-paragraph;
+            color: var(--grey-paragraph);
         }
         &__row {
             display: flex;
@@ -67,7 +39,7 @@
             font-size: 20px;
             font-weight: 600;
             line-height: 30px;
-            color: $pagination;
+            color: var(--pagination);
         }
         &__vector {
             display: flex;
@@ -95,14 +67,14 @@
         &__days {
             display: flex;
             justify-content: space-around;
-            background-color: $num40;
+            background-color: var(--num40);
         }
         &__graph {
             overflow-x: scroll;
             margin-bottom: 20px;
         }
         &__img {
-            width: 200%;
+            // width: 200%;
         }
         &__btn {
             display: flex;
@@ -111,8 +83,8 @@
         &__btn-buy {
             // margin: 30px 0 10px 0;
             width: 100%;
-            border: 1px solid $green;
-            background-color: $green;
+            border: 1px solid var(--green-contrast);
+            background-color: var(--green-contrast);
             font-size: 20px;
             line-height: 32px;
             font-weight: 400;
@@ -121,13 +93,14 @@
             padding-bottom: 12px;
         }
         &__btn-buy:hover {
-            background-color: $green20;
-            border: 1px solid $green20;
+            background-color: var(--green20);
+            border: 1px solid var(--green20);
         }
         &__btn-sell {
             // margin: 30px 0 10px 0;
             width: 100%;
-            border: 1px solid $red;
+            border: 1px solid var(--red-contrast3);
+            color: #fff;
             font-size: 20px;
             line-height: 32px;
             font-weight: 400;
@@ -135,7 +108,8 @@
             padding-bottom: 12px;
         }
         &__btn-sell:hover {
-            background-color: $red20;
+            background-color: var(--red-contrast);
+            border: 1px solid var(--red-contrast);
         }
 
     }

@@ -29,7 +29,7 @@ $.prototype.slidersPush = function (
             element.children[0].style.height = 'auto';
             element.style.margin = '0 10px' ;
         });
-    } else if (screenWidth >= 767 && screenWidth < 900) {
+    } else if (screenWidth >= 768 && screenWidth < 900) {
         let deltaWidth = (900 - screenWidth)/2;    
         widthImg = (400 - deltaWidth);
         itemImg.forEach(element => {
@@ -37,7 +37,7 @@ $.prototype.slidersPush = function (
             element.children[0].style.height = 'auto';
             element.style.margin = '0' ;
         });
-    } else if (screenWidth >= 480 && screenWidth < 767) {
+    } else if (screenWidth >= 480 && screenWidth < 768) {
         let deltaWidth = (screenWidth - 64 - 400)/2;  
         widthImg = 400 + deltaWidth + deltaWidth;  
         itemImg.forEach(element => {

@@ -1,17 +1,17 @@
-@import './general/gi';
-@import './components/ui';
-@import 'main';
-@import './site/landing/landing';
-@import './site/login/login';
-@import './site/blog/main-blog';
-@import './site/article/main-article';
-@import './site/news/main-news';
+@use './general/gi';
+@use './components/ui';
+@use 'main';
+@use './site/landing/landing';
+@use './site/login/login';
+@use './site/blog/main-blog';
+@use './site/article/main-article';
+@use './site/news/main-news';
+@use './site/trade/trade';
+@use './site/referral/referral';
+@use './site/team/taem';
+@use './site/career/career';
+@use './helpers/classes';
 
-@import './site/trade/trade';
-@import './site/referral/referral';
-@import './site/team/taem';
-@import './site/career/career';
-@import './helpers/classes';
 
 
 .fadeOut {
@@ -22,24 +22,59 @@
 }
 
 .blue {
-    color: $primary;
+    color: var(--primary-contrast);
 }
 .grey {
-    color: $grey;
+    color: var(--grey);
 }
 .red {
-    color: $red;
+    // color: var(--red);
+    color: var(--red-contrast2);
 }
 .background-red {
-    background-color: $red;
+    background-color: var(--red-contrast3);
 }
 
 .green {
-    color: $green;
+    color: var(--green);
 }
 .white {
-    color: $white;
+    color: var(--white);
 }
 input[type=radio] {
     display: none;
+}
+
+.w-32 {
+    width: 32px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+    @media (max-width: 420px) {
+        margin-top: 10px;
+    }
+}
+.mb-40 {
+    margin-bottom: 40px;
+    @media (max-width: 420px) {
+        margin-bottom: 20px;
+    }
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mt-40 {
+    @media (max-width: 420px) {
+        margin-top: 20px;
+    }
+}
+
+.blog-img {
+    width: 100%;
+    height: 100%;
 }

@@ -21,7 +21,6 @@ $.prototype.fadeOut = function(dur, fin) { //Д.З.4-8
 
 
 $.prototype.fadeToggle = function(dur, display, fin) { //Д.З.4-8
-    
     for (let i = 0; i < this.length; i++) {
         if (window.getComputedStyle(this[i]).display === 'none') {
             this.fadeInBody(dur, display, fin, i);
@@ -29,7 +28,6 @@ $.prototype.fadeToggle = function(dur, display, fin) { //Д.З.4-8
             this.fadeOutBody(dur, fin, i);
         }
     }
-
     return this;
 };
 

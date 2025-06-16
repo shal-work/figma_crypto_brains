@@ -31,7 +31,7 @@
         display: flex;
         align-items: center;
         // padding-left: 24px;
-        background-color: $header;
+        background-color: var(--header);
         position: relative;
         font-size: calc(var(--vw) * 20);
         font-weight: 400;
@@ -57,7 +57,7 @@
         font-family: eicons;
         content: "\e89e";
         transform: rotate(90deg);
-        color: $grey;
+        color: var(--grey);
         position: absolute;
         display: inline-block;
         right: 19px;
@@ -69,13 +69,13 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
-        background-color: $header;
+        background-color: var(--header);
     }
     &__block {
         display: flex;
     }
     &__component {
-        background-color: $num;
+        background-color: var(--num);
         padding: 20px;
         // width: 290px;
         // width: 20%;
@@ -110,8 +110,8 @@
     &__btn-buy {
         // margin: 30px 0 10px 0;
         width: 100%;
-        border: 1px solid $green;
-        background-color: $green;
+        border: 1px solid var(--green-contrast);
+        background-color: var(--green-contrast);
         font-size: 20px;
         line-height: 32px;
         font-weight: 400;
@@ -120,37 +120,38 @@
         padding-bottom: 12px;
     }
     &__btn-buy:hover {
-        background-color: $green20;
-        border: 1px solid $green20;
+        background-color: var(--green);
+        border: 1px solid var(--green);
     }
     &__btn-sell {
         // margin: 30px 0 10px 0;
         width: 100%;
-        border: 1px solid $red;
+        border: 1px solid var(--red);
         font-size: 20px;
         line-height: 32px;
         font-weight: 400;
         padding-top: 12px;
         padding-bottom: 12px;
-        // color: $red;
+        // color: var(--red);
     }
     &__btn-sell:hover {
-        background-color: $red20;
-        border: 1px solid $red20;
+        background-color: var(--red20);
+        border: 1px solid var(--red20);
     }
     &__fill {
-        background-color: $red;
+        // background-color: var(--red);
+        background-color: var(--red-contrast);
         color: #FFFFFF;
     }
     &__contour {
-        color: $red;
+        color: var(--red);
     }
     &__text {
         text-align: center;
         font-size: 12px;
         line-height: 15.08px;
         font-weight: 400;
-        color: $grey;
+        color: var(--grey);
     }
 }
 
@@ -168,7 +169,7 @@
     &:not(:last-child)::before {
         content: " ";
         position: absolute;
-        border-right: 1px solid $grey;
+        border-right: 1px solid var(--grey);
         width: auto;
         height: 40px;
         // top: 25px;
@@ -180,7 +181,7 @@
         font-size: calc(var(--vw)*14);
         font-weight: 400;
         line-height: 20px;
-        color: $grey-paragraph;
+        color: var(--grey-paragraph);
         @media (min-width: 1920px) {
             font-size: 14px;
         }
@@ -189,7 +190,7 @@
         font-size: calc(var(--vw)*18);
         font-weight: 400;
         line-height: 28px;
-        color: $pagination;
+        color: var(--pagination);
         @media (min-width: 1920px) {
             font-size: 18px;
         }
@@ -208,7 +209,7 @@
         gap: 34px;
         padding: 26px 20px 20px 20px;
         padding: 31px 24px 31px 24px;
-        background-color: $num40;
+        background-color: var(--num40);
     }
     &__menu-item {
         font-size: 20px;
@@ -220,15 +221,15 @@
         // overflow: hidden;
         text-decoration: none;
         display: inline-block;
-        color: $grey;
+        color: var(--grey);
         cursor: pointer;
     }
     &__menu-item:hover {
-        color: $primary;
+        color: var(--primary);
     }
     &__menu-item:after {
         width: 0;
-        background: $primary;
+        background: var(--primary);
         height: 2px;
         transition: all .5s ease-in-out;
         content: "";
@@ -241,7 +242,7 @@
         left: 0;
     }
     &__market-item {
-        background-color: $num;
+        background-color: var(--num);
         padding: calc(var(--vw) * 24);
         width: 50%;
         @media (min-width: 1920px) {
@@ -264,8 +265,8 @@
     // &__btn-buy {
     //     // margin: 30px 0 10px 0;
     //     width: 100%;
-    //     border: 1px solid $green;
-    //     background-color: $green;
+    //     border: 1px solid var(--green);
+    //     background-color: var(--green);
     //     font-size: 20px;
     //     line-height: 32px;
     //     font-weight: 400;
@@ -274,12 +275,12 @@
     //     padding-bottom: 12px;
     // }
     // &__btn-buy:hover {
-    //     background-color: $green20;
+    //     background-color: var(--green20);
     // }
     // &__btn-sell {
     //     // margin: 30px 0 10px 0;
     //     width: 100%;
-    //     border: 1px solid $red;
+    //     border: 1px solid var(--red);
     //     font-size: 20px;
     //     line-height: 32px;
     //     font-weight: 400;
@@ -287,21 +288,21 @@
     //     padding-bottom: 12px;
     // }
     // &__fill {
-    //     background-color: $red;
+    //     background-color: var(--red);
     //     color: #FFFFFF;
     // }
     // &__btn-sell:hover {
-    //     background-color: $red20;
+    //     background-color: var(--red20);
     // }
     // &__contour {
-    //     color: $red;
+    //     color: var(--red);
     // }
     // &__text {
     //     text-align: center;
     //     font-size: 12px;
     //     line-height: 15.08px;
     //     font-weight: 400;
-    //     color: $grey;
+    //     color: var(--grey);
     // }
     &__watchlist, &__portfolio, &__open-order {
         display: flex;
@@ -330,11 +331,11 @@
         font-size: 18px;
         line-height: 28px;
         font-weight: 400;
-        color: $pagination;
+        color: var(--pagination);
     }
     &__name:before {
         content: "";
-        border: 1px solid $grey;
+        border: 1px solid var(--grey);
         width: 12px;
         height: 12px;
         margin-right: 10px;
@@ -342,7 +343,7 @@
     }
     &__name:after {
         content: "";
-        background: $primary;
+        background: var(--primary-contrast2);
         width: 6px;
         height: 6px;
         position: absolute;
@@ -357,10 +358,10 @@
     }
     &__input:checked + &__name:before {
         opacity: 1;
-        border: 1px solid $primary;
+        border: 1px solid var(--primary-contrast2);
     }
     &__input:checked + &__name {
-        color: $primary;
+        color: var(--primary-contrast2);
         font-size: 18px;
 
     }
@@ -370,7 +371,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
-    background-color: $num;
+    background-color: var(--num);
     @media (max-width: 1024px) {
         padding: 0 5px;
     }
@@ -389,7 +390,7 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;
-        color: $grey;
+        color: var(--grey);
         @media (max-width: 1024px) {
             font-size: calc(8px + (100vw / 1024) * 6);
         }
@@ -401,7 +402,7 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;
-        color: $grey;
+        color: var(--grey);
         @media (max-width: 1024px) {
             font-size: calc(8px + (100vw / 1024) * 6);
             width: 100%
@@ -436,7 +437,7 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;
-        color: $grey;
+        color: var(--grey);
         margin: 20px 0;
     }
     &__buttons {
@@ -451,7 +452,7 @@
     &__buttons-tabs {
         display: flex;
         padding: 8px 14px;
-        border: 1px solid $grey20;
+        border: 1px solid var(--grey20);
         cursor: pointer;
         @media (max-width: 1024px) {
             padding: 4px 6px;
@@ -468,7 +469,7 @@
 }
 
 .trade-orderbook {
-    background-color: $header;
+    background-color: var(--header);
     width: 290px;
     @media (min-width: 1920px) {
         width: 290px;
@@ -520,7 +521,7 @@
         font-size: calc(var(--vw) * 14);
         font-weight: 400;
         line-height: 20px;
-        color: $grey-paragraph;
+        color: var(--grey-paragraph);
         @media (min-width: 1920px) {
             font-size: 14px;
         }
@@ -529,13 +530,13 @@
         display: flex;
         margin-bottom: 12px;
         gap: 15px;
-        background-color: $num;
+        background-color: var(--num);
     }
     &__qty {
         font-size: calc(var(--vw) * 14);
         font-weight: 400;
         line-height: 20px;
-        color: $pagination;
+        color: var(--pagination);
         @media (min-width: 1920px) {
             font-size: 14px;
         }
@@ -544,7 +545,7 @@
         font-size: calc(var(--vw) * 14);
         font-weight: 400;
         line-height: 20px;
-        color: $pagination;
+        color: var(--pagination);
         @media (min-width: 1920px) {
             font-size: 14px;
         }
@@ -554,21 +555,21 @@
         align-items: center;
         margin-bottom: 12px;
         gap:17px;
-        background-color: $num;
+        background-color: var(--num);
         padding: 6px 20px;
     }
     &__price {
         font-size: calc(var(--vw) * 14);
         font-weight: 400;
         line-height: 20px;
-        color: $pagination;
+        color: var(--pagination);
         @media (min-width: 1920px) {
             font-size: 14px;
         }
     }
     &__line {
         height: 1px;
-        background-color: $grey10;
+        background-color: var(--grey10);
         position: relative;
         margin-bottom: 20px;
     }
@@ -593,13 +594,13 @@
  .trade-orderbook__content::-webkit-scrollbar-thumb {
     border-radius: 10px;
     height: 50px;
-    background-color: $num;
-    border: 1px solid $grey-paragraph;
+    background-color: var(--num);
+    border: 1px solid var(--grey-paragraph);
  }
 
  /* пустое пространство под индикатором прокрутки. */
  .trade-orderbook__content::-webkit-scrollbar-track {
-    background-color: $num;
+    background-color: var(--num);
  }
 
 
@@ -610,9 +611,9 @@
 .select {
     position: relative;
     width: calc(100px + var(--vw)*190);
-    border: 1px solid $header;
+    border: 1px solid var(--header);
     border-radius: 6px;
-    background-color: $header;
+    background-color: var(--header);
     color: #ffffff;
     font-family: inherit;
     font-size: inherit;
@@ -635,7 +636,7 @@ option {
 }
 
 .primary {
-    color: $primary;
+    color: var(--primary-contrast2);
 }
 
 .block-input {
@@ -652,10 +653,10 @@ option {
     &__text {
         flex-shrink: 0;
         padding: 10px 15px;
-        border: 1px solid $grey5;
+        border: 1px solid var(--grey5);
         border-radius: 4px;
         background-color: transparent;
-        color: $pagination;
+        color: var(--pagination);
         font-family: inherit;
         font-size: inherit;
         font-weight: inherit;
@@ -673,13 +674,14 @@ option {
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
-        color: $grey-paragraph;
+        // color: var(--grey-paragraph);
+        color: var(--grey-paragraph-contrast);
     }
     &__total {
         font-size: 16px;
         font-weight: 600;
         line-height: 24px;
-        color: $grey;
+        color: var(--grey);
     }
     &_mod {
         gap: 6px;
@@ -693,7 +695,7 @@ option {
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;
-        color: $grey;
+        color: var(--grey);
     }
     &__block {
         margin-top: 20px;
@@ -708,7 +710,7 @@ option {
         }
     }
     &__btn {
-        border: 1px solid $grey;
+        border: 1px solid var(--grey);
         cursor: pointer;
         font-size: 16px;
         font-weight: 400;
@@ -725,7 +727,7 @@ option {
         }
     }
     &__btn:hover {
-        background-color: $num40;
+        background-color: var(--num40);
     }
 }
 
@@ -737,7 +739,7 @@ option {
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
-        color: $grey-paragraph;
+        color: var(--grey-paragraph);
     }
 }
 
@@ -771,7 +773,7 @@ option {
         font-size: 20px;
         font-weight: 400;
         line-height: 32px;
-        color:$white;
+        color:var(--white);
     }
     &__price,
     &__high,
@@ -779,7 +781,7 @@ option {
         font-size: 18px;
         font-weight: 400;
         line-height: 28px;
-        color:$pagination;
+        color:var(--pagination);
     }
 }
 
@@ -803,7 +805,7 @@ option {
         font-size: 20px;
         font-weight: 400;
         line-height: 32px;
-        color:$white;
+        color:var(--white);
     }
     &__invested,
     &__return,
@@ -814,12 +816,12 @@ option {
         font-size: 18px;
         font-weight: 400;
         line-height: 28px;
-        color:$pagination;
+        color:var(--pagination);
     }
 }
 
 .plus {
-    color: $green;
+    color: var(--green);
 }
 .plus::before {
     content:'+₹ ';
@@ -856,7 +858,7 @@ option {
         font-size: 20px;
         font-weight: 400;
         line-height: 32px;
-        color:$white;
+        color:var(--white);
     }
     &__qty,
     &__price,
@@ -867,7 +869,7 @@ option {
         font-size: 18px;
         font-weight: 400;
         line-height: 28px;
-        color:$pagination;
+        color:var(--pagination);
     }
 }
 

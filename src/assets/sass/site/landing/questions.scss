@@ -1,31 +1,27 @@
 .questions {
-
-    margin: calc(var(--vw) * 120) calc(var(--vw) * 165) calc(var(--vw) *120) calc(var(--vw) *165);
+    // margin: calc(var(--vw) * 120) calc(var(--vw) * 165) calc(var(--vw) *120) calc(var(--vw) *165);
+    margin-top: 6.25vw;
     position: relative;
     @media (min-width: 1920px) {
-        margin: 120px 165px 120px 165px;
+        // margin: 120px 165px 120px 165px;
     }
     @media (max-width: 420px) {
-        margin: 0;
+        // margin: 0;
     }
     &__title {
-        font-size: 58px;
         font-weight: 700;
-        color: $white;
+        font-size: min(58px, max(var(--vw)* 48, 34px));
+        line-height: min(100px, max(var(--vw)* 100, 40px));
+        color: var(--white);
         text-align: center;
         z-index: 10;
         position: relative;
         margin-bottom: 30px;
-        @media (max-width: 420px) {
-            font-size: 42px;
-            font-weight: 700;
-            line-height: 53px;
-        }
     }
     &__text {
         font-size: 18px;
         font-weight: 400;
-        color: $grey;
+        color: var(--grey);
         text-align: center;
         margin-bottom: calc(var(--vw) *60);
         z-index: 10;
@@ -66,79 +62,97 @@
         }
     }
     &__block {
-        width: 100%;
+        width: 50%;
+        @media (max-width: 1024px) {
+            width: 100%;
+        }
     }
     &__faq {
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
         margin-bottom: 30px;
         width: 100%;
         cursor: pointer;
         border: 1px solid transparent;
         border-image: linear-gradient(to right, #ffffff1a 0%, #ffffff66 48.42%, #ffffff1a 100%) 1;
+        position: relative;
+        overflow: hidden;
     }
     &__faq-title {
         display: flex;
         font-size: 24px;
         font-weight: 400;
         line-height: 36px;
-        color: $white;
-        margin: 20px 40px 20px 0px;
+        color: var(--white);
+        // margin: 20px;
+        padding: 20px 60px 20px 20px;
         position: relative;
+        align-items: center;
+        z-index: 10;
+        background-color: var(--background);
+        &::after {
+            content: '+';
+            transform: rotate(0deg);
+            transition: 0.2s;
+            display: inline-block;
+            position: absolute;
+            right: 20px;
+        }
         @media (max-width: 1024px) {
             font-weight: 600;
             align-items: center;
             font-size: 18px;
             line-height: 28px;
-            margin: 20px 60px 20px 20px;
         }
         @media (max-width: 420px) {
             align-items: center;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             line-height: 28px;
-            margin: 20px 60px 20px 20px;
+            padding: 20px 40px 20px 20px;
         }
     }
-    &__faq-title::after {
-        content: '+';
-        transform: rotate(0deg);
-        transition: 0.2s;
-        display: inline-block;
-        position: absolute;
-        right: -12px;
-        @media (max-width: 1024px) {
-            right: -20px;
-        }
-    }
-
     &__faq-text {
         font-size: 18px;
         font-weight: 400;
-        color: $grey;
+        color: var(--grey);
         opacity: 0;
         display: none;
+        transform: translateY(-200%);
         margin: 20px 64px 20px 20px;
     }
 }
 
-.faq-active {
-    height: auto;
-}
 
-.faq-text-active {
-    opacity: 1;
-    display: block;
-}
-
-.faq-title-active::after {
-    content: '+';
-    transform: rotate(45deg);
-    transition: 0.2s;
-    display: inline-block;
-    position: absolute;
-    right: -12px;
-    @media (max-width: 1024px) {
-        right: -20px;
+.faq {
+    &-active {
+        height: auto;
+    }
+    &-text-active {
+        opacity: 1;
+        display: block;
+        animation:  0.2s fadeInUp  linear forwards;
+    }
+    &-title-active::after {
+        content: '+';
+        transform: rotate(-45deg);
+        transition: 0.2s;
+        display: inline-block;
+        position: absolute;
     }
 }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -200%, 0)
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+
+

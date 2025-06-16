@@ -1,26 +1,19 @@
 .market-trend {
-    margin: calc(var(--vw)*120) calc(var(--vw)*165) 0 calc(var(--vw)*165);
-    @media (min-width: 1920px) {
-        margin: 120px 165px 0 165px;
-    }
-    @media (max-width: 420px) {
-        margin: 20px 16px;
-    }
+    padding-top: 40px;
+    
     &__heading {
-        padding: 19px 0;
+        padding: 19px 24px;
         justify-content: space-between;
         margin-bottom: calc(var(--vw) * 60);
-        background-color: $header;
+        background-color: var(--header);
         flex-wrap: wrap;
         align-content: center;
         gap: 0;
         @media (min-width: 1920px) {
             margin-bottom: 60px;
         }
-        @media (max-width: 1200px) {
+        @media (max-width: 1300px) {
             flex-direction: column-reverse;
-            flex-wrap: nowrap;
-            display: flex;
             align-items: flex-start;
             overflow: hidden;
         }
@@ -29,18 +22,25 @@
         font-size: 46px;
         font-weight: 600;
         text-align: center;
+        margin-bottom: 60px;
+        line-height: 46px;
     }
     &__menu {
-        @media (max-width: 768px) {
-            overflow: scroll;
-            width: 100%;
-        }
-
+        padding: 6px 0;
+    }
+    &__item {
+        white-space: nowrap;
+        margin: 12px 0;
+        margin-right: min(30px, max(var(--vw)* 30, 12px));
     }
 }
 /* иконка лупы */
 .text-field {
-    padding-right: 20px;
+    // padding-right: 20px;
+    padding: 6px 0;
+    @media (max-width: 1320px ) {
+        margin: 0 auto;
+    }
     &__icon_search::before {
         width: 1rem;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23bdbdbd' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E");
@@ -63,7 +63,7 @@
         transform: translateY(-50%);
     }
     &__input {
-        color: $pagination;
+        color: var(--pagination);
         display: block;
         width: 375px;
         height: 54px;
@@ -72,19 +72,22 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
-        background-color: $header;
+        background-color: var(--header);
         background-clip: padding-box;
-        border: 1px solid $grey13;
+        border: 1px solid var(--grey13-contrast);
         border-radius: 4px;
         transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
         appearance: none;
         padding-left: 54px;
+        @media (max-width: 640px) {
+            width: 100%;
+        }
     }
     &__input:focus {
-        color: $grey2;
-        border-color: $grey5;
+        color: var(--grey2);
+        border-color: var(--grey5);
         outline: 0;
-        box-shadow: 0 0 0 1.6px $grey13;
+        box-shadow: 0 0 0 1.6px var(--grey13-contrast);
     }
 }
 
@@ -100,23 +103,19 @@
         @media(max-width: 1024px) {
             margin-bottom: 0;
             padding: 16px 10px;
-            background-color: $header;
+            background-color: var(--header);
         }
     }
 
     &__cell{
-        font-size: calc(14px + 4 * var(--vw));
+        font-size: min(18px, max(var(--vw)* 18, 14px));
         font-weight: 400;
         line-height: 28px;
-        color: $white;
+        color: var(--white);
         display: flex;
         align-items: center;
-        @media (min-width: 1920px) {
-            font-size: 18px;
-        }
         @media (max-width: 420px) {
-            font-size: 16px;
-            font-size: calc(82 * var(--vw));
+            font-size: min(14px, max(100vw/420  * 14, 12px));
             font-weight: 400;
             line-height: 26px
         }
@@ -126,19 +125,14 @@
     }
     &__cell-first {
         @media (max-width: 420px) {
-            font-size: 14px;
-            font-size: calc(72 * var(--vw));
+            font-size: min(14px, max(100vw/420  * 14, 12px));
             font-weight: 400;
             line-height: 22px
         }
     }
-    &__ico{
-        width: calc(12 + 12 * var(--vw));
-        height: calc(12 + 12 * var(--vw));
-        @media (min-width: 1920px) {
-            width: 24px;
-            height: 24px;
-        }
+    &__ico {
+        width: 24px;
+        height: 24px;
         @media (max-width: 420px) {
             width: 16px;
             height: 16px;
@@ -151,7 +145,6 @@
         margin-left: 6px;
         @media (max-width: 420px) {
             font-size: 12px;
-            font-size: calc(8 + 62 * var(--vw));
             font-weight: 400;
             line-height: 26px
         }
@@ -170,7 +163,7 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
-        color: $grey-paragraph;
+        color: var(--grey-paragraph);
 
     }
 
@@ -215,12 +208,6 @@
     z-index: 1;
 }
 
-@media (max-width: 1024px) {
-    .market__line {
-        margin-bottom: 20px;
-    }
-}
-
 .table-header-gadget {
     display: none;
     @media (max-width: 1024px) {
@@ -248,7 +235,7 @@
 .table__btn {
     display: block;
     margin: 0 auto;
-    background-color: $primary;
+    background-color: var(--primary);
     width: 240px;
     padding: 12px 20px;
     @media (max-width: 768px) {

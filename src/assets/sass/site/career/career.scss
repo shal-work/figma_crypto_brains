@@ -3,7 +3,8 @@
         width: 100%;
         height: 100%;
         top: 7%;
-        opacity: 4%;
+        // opacity: 4%;
+        opacity: 0.04;
     }
 }
 
@@ -12,14 +13,15 @@
     margin-bottom: 200px;
     align-items: center;
     position: relative;
-    margin: calc(var(--vw)*152) 0 calc(var(--vw)*200) calc(var(--vw)*165);
-    @media (min-width: 1920px) {
-        margin: 152px 0 120px 165px;
-    }
+    padding-top: min(165px, max(var(--vw)* 165, 24px));
+    // margin: calc(var(--vw)*152) 0 calc(var(--vw)*200) calc(var(--vw)*165);
+    // @media (min-width: 1920px) {
+    //     margin: 152px 0 120px 165px;
+    // }
     @media (max-width: 768px) {
         flex-direction: column-reverse;
-        margin-bottom: 80px;
-        margin: 60px 16px 80px 16px;
+        // margin-bottom: 80px;
+        // margin: 60px 16px 80px 16px;
         gap: 30px;
     }
     &__logo {
@@ -61,8 +63,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        // width: 51%;
         position: relative;
+        width: 56%;
         @media (max-width:992px) {
             width: 50%;
         }
@@ -75,74 +77,33 @@
         }
     }
     &__title {
-        width: 120%;
-        font-size: calc(var(--vw)*84);
-        font-weight: 600;
-        line-height: calc(var(--vw)*106);
-        color: $white;
-        letter-spacing: -1px;
-        @media (min-width: 1920px) {
-            font-size: 84px;
-            line-height: 106px;
-            color: $white;
-            letter-spacing: -1px;
-        }
+        font-weight: 400;
+        font-size: min(84px, max(var(--vw)* 84, 36px));
+        line-height: 100%;
+        color: var(--white);
+        letter-spacing: -2px;
         @media (max-width: 768px) {
-            letter-spacing: 0;
-            font-size: 48px;
-            font-weight: 600;
-            line-height: 60px;
-            width: auto;
-            text-align: center;
-        }
-        @media (max-width: 420px) {
-            font-size: 48px;
-            font-weight: 600;
-            line-height: 60px;
-            width: auto;
             text-align: center;
         }
     }
     &__title-grey {
-        font-size: calc(var(--vw)*84);
-        font-weight: 600;
-        line-height: calc(var(--vw)*106);
-        letter-spacing: -1px;
-        color: $grey;
-        @media (min-width: 1920px) {
-            font-size: 84px;
-            line-height: 106px;
-            color: $white;
-            letter-spacing: -1px;
-        }
+        font-weight: 400;
+        font-size: min(84px, max(var(--vw)* 84, 36px));
+        line-height: 100%;
+        letter-spacing: -2px;
+        color: var(--grey);
         @media (max-width: 768px) {
-            font-size: 48px;
-            font-weight: 600;
-            line-height: 46px;
             text-align: center;
-            color: $white;
-        }
-        @media (max-width: 420px) {
-            font-size: 48px;
-            font-weight: 600;
-            line-height: 46px;
-            text-align: center;
-            color: $white;
+            color: var(--white);
         }
     }
     &__line-block {
         position: relative;
-        left: -130px;
         width: 92%;
-        @media (max-width: 992px) {
-            left: -50px;
-        }
         @media (max-width: 768px) {
-            left: 0px;
             top: 59px;
         }
         @media (max-width: 394px) {
-            left: 0px;
             top: 100px;
         }
     }
@@ -151,7 +112,7 @@
         font-size: calc(var(--vw)*8 + 14px);
         font-weight: 400;
         line-height: calc(var(--vw)*8 + 20px);
-        color: $grey;
+        color: var(--grey);
         @media (min-width: 1920px) {
             margin: 30px 0 80px;
             font-size: 18px;
@@ -228,12 +189,12 @@
     &__result-item:not(:last-child)::before {
         content: " ";
         position: absolute;
-        border-right: 1px solid $grey20;
+        border-right: 1px solid var(--grey20);
         width: 188px;
         height: 67%;
         @media (max-width: 420px) {
             border-right: 0px;
-            border-bottom: 1px solid $grey20;
+            border-bottom: 1px solid var(--grey20);
             height: 86px;
             width: 60px;
         }
@@ -241,7 +202,7 @@
     &__trusted-user-value,
     &__coins-purchased-value,
     &__years-experience-value {
-        color: $white;
+        color: var(--white);
         font-size: calc(var(--vw)*46);
         font-weight: 700;
         line-height: calc(var(--vw)*58);
@@ -269,7 +230,7 @@
         font-size: 20px;
         font-weight: 400;
         line-height: 32px;
-        color: $pagination;
+        color: var(--pagination);
         white-space: nowrap;
         @media (max-width: 420px) {
             font-size: 16px;
@@ -277,32 +238,17 @@
             line-height: 26px;
         }
     }
-    &__img {
-        width: 80vw;
-        height: 728px;
-        height: 38vw;
+    &__picture {
+        width: auto;
+        height: 100%;
         position: relative;
-        @media (min-width:1920px) {
-            width: 945px;
-            height: 728px;
-        }
         @media (max-width: 768px) {
-            width: auto;
-            height: auto;
-        }
-        @media (max-width: 420px) {
-            width: auto;
-            height: auto;
+            width: 100%;  
         }
     }
-    &__img-working {
+    &__img {
         width: 100%;
-        @media (min-width:1920px) {
-            width: auto;
-        }
-        @media (max-width: 420px) {
-            position: static;
-        }
+        height: auto;
     }
 
 }
@@ -317,7 +263,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    color: $pagination;
+    color: var(--pagination);
     width: 100%;
     @media (max-width: 992px) {
         width: auto;
@@ -349,12 +295,12 @@
         }
     }
     &__title {
-        color: $white;
+        color: var(--white);
         width: auto;
         font-size: calc(var(--vw)*58);
         font-weight: 600;
         line-height: calc(var(--vw)*72);
-        color: $white;
+        color: var(--white);
         @media (min-width: 1920px) {
             font-size: 58px;
             line-height: 72px;
@@ -424,25 +370,15 @@
 .career-open {
     display: flex;
     flex-direction: column;
-    margin: calc(var(--vw)*120) calc(var(--vw)*200);
-    gap: calc(var(--vw)*30);
-    @media (min-width: 1920px) {
-        margin: 120px 300px;
-        gap: 30px;
-    }
-    @media (max-width: 1800px) {
-        margin: calc(var(--vw)*60) calc(var(--vw)*150);
-    }
+    gap: 30px;
     @media (max-width: 420px) {
-        margin: 0;
         gap: 20px;
     }
     &__title {
-
         font-size: calc(var(--vw)*58);
         font-weight: 600;
         line-height: calc(var(--vw)*72);
-        color: $white;
+        color: var(--white);
         text-align: center;
         margin-bottom: calc(var(--vw)*60);
         @media (min-width: 1920px) {
@@ -460,21 +396,20 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid $num;
+        border: 1px solid var(--num);
         padding: 19px 20px;
         @media (max-width: 960px) {
             flex-direction: column;
             gap: 20px;
             padding: 20px 12px;
-            background-color: $header;
+            background-color: var(--header);
         }
     }
-
     &__post {
         font-size: 24px;
         font-weight: 600;
         line-height: 36px;
-        color: $pagination;
+        color: var(--pagination);
         width: 33%;
         @media (max-width: 1400px) {
             width: 30%;
@@ -496,7 +431,7 @@
         font-size: 18px;
         font-weight: 400;
         line-height: 28px;
-        color: $pagination;
+        color: var(--pagination);
         margin: 0 calc(var(--vw)*60);
         @media (min-width: 1920px) {
             margin: 0 60px;
@@ -515,15 +450,15 @@
         }
     }
     &__border {
-        border-right: 1px solid $grey20;
+        border-right: 1px solid var(--grey20);
     }
     &__btn {
-        border: 1px solid $primary;
+        border: 1px solid var(--primary);
         background-color: transparent;
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
-        color: $primary;
+        color: var(--primary-contrast);
         padding: 11px 34px;
         @media (max-width: 420px) {
             display: none;
@@ -531,12 +466,12 @@
     }
     &__search {
         margin: 60px auto 120px;
-        border: 1px solid $primary;
-        background-color: $primary;
+        border: 1px solid var(--primary);
+        background-color: var(--primary);
         font-size: 20px;
         font-weight: 400;
         line-height: 32px;
-        color: $white;
+        color: var(--white);
         padding: 11px 34px;
         @media (max-width: 960px) {
             margin: 20px auto 60px;
@@ -546,32 +481,23 @@
 
 }
 .career-newsletter {
-    margin: 0 calc(var(--vw)*165) calc(var(--vw)*120) calc(var(--vw)*165);
+    // margin: 0 calc(var(--vw)*165) calc(var(--vw)*120) calc(var(--vw)*165);
     gap: calc(var(--vw)*200);
     display: flex;
-    background-color: $header;
-    padding: 0 0 0  40px;
-    @media (min-width: 1920px) {
-        margin: 0 165px 120px 165px;
-        gap: 200px;
-    }
+    background-color: var(--header);
+    padding: 56px 40px;
+
     @media (max-width: 768px) {
         padding: 0;
         flex-direction: column;
         gap: 0px;
         margin-bottom: 60px;
     }
-    @media (max-width: 420px) {
-        padding: 0;
-        flex-direction: column;
-        gap: 40px;
-        margin-bottom: 60px;
-    }
     &__item {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 47%;
+        width: 50%;
         @media (max-width: 768px) {
             width: auto;
             text-align: center;
@@ -587,7 +513,7 @@
         font-size: calc(var(--vw)*34 + 24px);
         font-weight: 700;
         line-height: calc(var(--vw)*52 + 20px);
-        color: $white;
+        color: var(--white);
         width: auto;
         margin-bottom: calc(var(--vw)*30);
         @media (min-width: 1920px) {
@@ -608,7 +534,7 @@
         }
     }
     &__text {
-        color: $grey;
+        color: var(--grey);
         width: auto;
         font-size: calc(var(--vw)*8 + 14px);
         line-height: calc(var(--vw)*8 + 20px);
@@ -627,25 +553,17 @@
             margin-bottom: 20px;
         }
     }
-    &__img {
-        width: 30.209vw;
-        height: 25vw;
+    &__picture {
+        width: 50%;
+        height: 100%;
         position: relative;
-        @media (min-width:1920px) {
-            width: 580px;
-            height: 480px;
-        }
         @media (max-width: 768px) {
-            width: auto;
-            height: auto;
-        }
-        @media (max-width: 420px) {
-            width: auto;
-            height: auto;
+            width: 100%;  
         }
     }
-    &__img-working {
+    &__img {
         width: 100%;
+        height: auto;
     }
     &__btn {
         width: 240px;

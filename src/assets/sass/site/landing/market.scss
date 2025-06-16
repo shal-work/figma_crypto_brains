@@ -1,17 +1,18 @@
 .market {
-    margin: calc(var(--vw)*120)
-            calc(var(--vw)*165)
-            0px
-            calc(var(--vw)*165);
-    @media (min-width: 1920px) {
-        margin: 120px 165px 0px 165px;
-    }
-    @media (max-width: 1650px) {
-        margin: 80px
-        calc(var(--vw)*75)
-        0px
-        calc(var(--vw)*75);
-    }
+    // margin: calc(var(--vw)*120)
+    //         calc(var(--vw)*165)
+    //         0px
+    //         calc(var(--vw)*165);
+    margin-top: calc(var(--vw)*120);
+    // @media (min-width: 1920px) {
+    //     margin: 120px 165px 0px 165px;
+    // }
+    // @media (max-width: 1650px) {
+    //     margin: 80px
+    //     calc(var(--vw)*75)
+    //     0px
+    //     calc(var(--vw)*75);
+    // }
     &__heading {
         display: flex;
         flex-direction: row;
@@ -51,23 +52,13 @@
             white-space: nowrap;
         }
     }
-    &__line {
-        margin-bottom: 60px;
-    }
     &__coins-row {
         display: flex;
         flex-direction: row;
-        gap:30px;
-        justify-content: space-between;
+        overflow: auto ;
         margin-bottom: calc(var(--vw)*60);
         @media (min-width: 1920px) {
             margin-bottom: 60px;
-        }
-        @media (max-width: 1500px) {
-            overflow: auto ;
-        }
-        @media (max-width: 420px) {
-            overflow: auto ;
         }
     }
     &__coin {
@@ -75,41 +66,61 @@
         flex-direction: column;
         align-items: center;
         padding: 40px 30px;
-        border: 1px solid $header;
+        padding: min(40px, max(var(--vw)* 40, 20px)) min(25px, max(var(--vw)* 25, 12px));
+        border: 1px solid var(--header);
         border-radius: 8px;
         gap: 10px;
+        position: relative;
+        // min-width: 242px;
+        margin-right: 30px;
+    }
+    &__coin:last-child {
+        margin-right: 0;
     }
     &__icon {
         margin-bottom: 20px;
+        max-width: 48px;
+        max-height: 48px;
+        width: 100%;
+        height: 100%;
+        @media (max-width: 412px) {
+            max-width: 31px;
+            max-height: 31px;
+        }
     }
     &__row {
         display: flex;
         margin: 0 auto;
         justify-content: center;
     }
-    // &__button {
-    //     width: 240px;
-    //     height: 56px;
-    //     border: 1px solid $primary;
-    //     background-color: $primary;
-    //     font-size: 20px;
-    //     z-index: 10;
-    //     position: relative;
-    //     @media (max-width: 420px) {
-    //         width: 100%;
-    //     }
-    // }
     &__button-text {
         font-size: 20px !important;
         font-weight: 400;
         line-height: 32px;
     }
     &__link {
-        color: $white;
+        color: var(--white);
         font-size: 16px;
     }
     &_block-trend {
         margin: 0;
+    }
+    &__line {
+        margin-bottom: 60px;
+    }
+    &__graph {
+        max-width: 180px;
+        max-height: 100px;
+        width: 180px;
+        height: 100px;
+        @media (max-width: 412px) {
+            max-width: 152px;
+            max-height: 84px;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
     }
 }
 .market-menu {
@@ -117,55 +128,60 @@
     flex-direction: row;
     list-style: none;
     align-items: center;
-    gap: 30px;
     justify-content: flex-end;
-    padding-left: 24px;
+    overflow-x: scroll;
     &__item {
         white-space: nowrap;
         margin: 12px 0;
+        margin-right: min(30px, max(var(--vw)* 30, 18px));
+    }
+    &__item:last-child {
+        margin-right: 0;
     }
     &__link {
         text-decoration: none;
-        color: $grey;
+        color: var(--grey);
+        font-size: min(20px, max(var(--vw)* 20, 16px));
     }
+
     &__link:hover {
-        color: $white
+        color: var(--white);
     }
+    // @media (max-width: 1200px) {
+    //     width: 100%;
+    //     justify-content: space-between;
+    //     &__item:nth-last-child(-n+5) {
+    //         display: none;
+    //     }
+    // }
     @media (max-width: 768px) {
-        justify-content: flex-start;
-        width: auto;
+        width: 100%;
+        justify-content: space-between;
         margin: 12px 0;
+        gap: 0;
     }
 }
 
 
-.market-trend-heading {
+.market-trend-block {
     display: flex;
     flex-direction: row;
-    @media (max-width: 1500px) {
-        overflow: scroll;
-    }
-    @media (max-width: 420px) {
-        overflow: scroll;
-    }
-    @media (max-width: 1650px) {
-        gap: 20%;
-    }
-    @media (max-width: 576px) {
-        // flex-direction: column;
-        gap: 40px;
-    }
 }
 
 .market-button {
     width: 240px;
     height: 56px;
-    border: 1px solid $primary;
-    background-color: $primary;
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
     font-size: 20px;
     z-index: 10;
     position: relative;
     @media (max-width: 420px) {
         width: 100%;
     }
+}
+
+.icon-bitcoin {
+    width: 100%;
+    height: 100%;
 }

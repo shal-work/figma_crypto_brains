@@ -1,20 +1,30 @@
 .wrapper {
-    background-color: $background;
-    max-width: 1920px;
+    background-color: var(--background);
+    // max-width: 1920px;
     margin: 0 auto;
     overflow-x: hidden;
 }
-.logo {
-    background-image: url(./assets/img/Logo.png);
-    width: 150px;
-    height: 46px;
-    background-repeat: no-repeat;
-    background-position: 0% 50%;
-    cursor: pointer;
+.logo-link {
+    max-width: 150px;
+    max-height: 46px;
+    @media (max-width: 412px) {
+        // max-width: 91px;
+        // max-height: 28px;
+        // max-width: 160px;
+        // max-height: 49px;
+    }
+    &__img {
+        width: auto;
+        height: auto;
+        @media (max-width:412px) {
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
 
 .sign {
-    left: -10px;
+    // left: -10px;
     position: relative;
     font-size: 20px;
     @media (max-width: 420px) {
@@ -33,25 +43,25 @@
 }
 .line {
     height: 1px;
-    background-image: linear-gradient(to right, $background, $grey13 50%, $background);
+    background-image: linear-gradient(to right, var(--background), var(--grey13) 50%, var(--background));
     position: relative;
     @media (max-width: 420px) {
-        background-image: linear-gradient(to right, $background, $grey 50%, $background);
+        background-image: linear-gradient(to right, var(--background), var(--grey) 50%, var(--background));
     }
 }
 
 
 .elipse {
     position: absolute;
-    background: $primary;
-    opacity: 4%;
+    background: var(--primary);
+    // opacity: 4%;
+    opacity: 0.04;
     border-radius: 100%;
     filter: blur(80px);
     &-home {
-        width: 80%;
-        height: 80%;
-        top: 10%;
-        opacity: 4%;
+        width: 100%;
+        height: 100%;
+        opacity: 0.04;
         will-change: transform;
         animation: 2.5s ease-in-out .5s infinite pulse;
     }
@@ -65,7 +75,8 @@
         height:100%;
         top:0;
         will-change: transform;
-        opacity: 4%;
+        // opacity: 4%;
+        opacity: 0.04;
         animation: 2.5s ease-in-out .5s infinite pulse;
     }
     &-testimonials {
@@ -73,32 +84,36 @@
         height:100%;
         top:0;
         left: 0;
-        opacity: 4%;
+        // opacity: 4%;
+        opacity: 0.04;
     }
     &-questions {
         width: 100%;
         height:100%;
         top:0;
         left: 0;
-        opacity: 4%;
+        // opacity: 4%;
+        opacity: 0.04;
     }
     &-app {
         width: 100%;
         height:100%;
         top:0;
         left: 0;
-        opacity: 6%;
+        // opacity: 6%;
+        opacity: 0.06;
     }
     &-deg {
         position: absolute;
         width: 100%;
         height: 38.12%;
-        background: $primary;
+        background: var(--primary);
         border-radius: 100%;
         transform: rotate(19deg);
         filter: blur(79px);
         top: 280px;
-        opacity: 4%;
+        // opacity: 4%;
+        opacity: 0.04;
         will-change: transform;
         animation: 3.5s ease-in-out .5s infinite pulse-deg;
     }
@@ -107,26 +122,32 @@
 @keyframes pulse-deg {
     from {
         transform: scale3d(1, 1, 1) rotate(19deg);
-        opacity: 4%;
+        // opacity: 4%;
+        opacity: 0.04;
     }
     50% {
         transform: scale3d(.8, 0.7, 1) rotate(19deg);
-        opacity: 14%;
+        // opacity: 14%;
+        opacity: 0.14;
     }
     to {
         transform: scale3d(1, 1, 1)  rotate(19deg);
-        opacity: 4%;
+        // opacity: 4%;
+        opacity: 0.04;
     }
 }
 @keyframes pulse {
     from {
-        opacity: 4%;
+        // opacity: 4%;
+        opacity: 0.04;
     }
     50% {
-        opacity: 18%;
+        // opacity: 18%;
+        opacity: 0.18;
     }
     to {
-        opacity: 4%;
+        // opacity: 4%;
+        opacity: 0.04;
     }
 }
 
@@ -135,10 +156,16 @@
     transform: scale(1.2);
     transition: 0.2s;
 }
+
+.user-avatar {
+    width: 38px;
+    height: 38px;
+}
 .avatar {
     width: 72px;
     height: 72px;
 }
+
 .avatar-small {
     width: 38px;
     height: 38px;
@@ -201,4 +228,17 @@
             background-size: 8px;
         }
     }
+}
+
+// прячем заголовок h1 
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    white-space: nowrap;
+    clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);
 }

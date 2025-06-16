@@ -1,13 +1,9 @@
 .choice {
-    margin: 120px 165px 0;
-    margin: calc(var(--vw )* 120) calc(var(--vw) * 165) 0;
+    // margin: 120px 165px 0;
+    // margin: calc(var(--vw )* 120) calc(var(--vw) * 165) 0;
+    padding-top: calc(var(--vw )* 120);
+    padding-bottom: calc(var(--vw )* 120);
     position: relative;
-    @media (max-width: 640px) {
-        margin: 0 20px;
-    }
-    @media (max-width: 420px) {
-        margin: 0;
-    }
     &__header {
         position: relative;
         z-index: 10;
@@ -20,7 +16,7 @@
         line-height: calc(24px + 49 * var(--vw));
         text-align: center;
         margin-bottom: calc(12px + 18 * var(--vw));
-        color: $white;
+        color: var(--white);
         @media (min-width: 1920px) {
             font-size: 58px;
             line-height: 73px;
@@ -38,7 +34,7 @@
         line-height: calc(24px + 4 * var(--vw));
         text-align: center;
         margin-bottom: calc(20px + 40 * var(--vw));
-        color: $grey;
+        color: var(--grey);
         @media (min-width: 1920px) {
             font-size: 18px;
             line-height: 28px;
@@ -60,14 +56,14 @@
         display: flex;
         flex-direction: row;
 
-        gap: calc(135 * var(--vw));
+        // gap: calc(135 * var(--vw));
         position: relative;
         z-index: 10;
         @media (min-width: 1920px) {
-            gap: 135px;
+            // gap: 135px;
         }
         @media (max-width: 1600px) {
-            gap: 5px;
+            // gap: 5px;
         }
         @media (max-width: 1200px) {
             flex-direction: column-reverse;
@@ -82,6 +78,8 @@
     &__cards {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        padding-right: min(134px, max(var(--vw)* 134, 40px));
         @media (max-width: 640px) {
             flex-direction: row;
             width: 400%;
@@ -94,30 +92,29 @@
     &__item {
         display: flex;
         flex-direction: row;
-        gap: 20px;
+        // gap: 20px;
         align-items: center;
-        @media (max-width: 1600px) {
-            gap: 0;
-        }
+        justify-content: flex-start;
         @media (max-width: 1200px) {
-            gap: 20px;
+            row-gap: 20px;
             align-items: center;
+
         }
         @media (max-width: 640px) {
             flex-direction: column;
             align-items: center;
-            // margin: 0 16px;
+            padding: 0 20px;
         }
         @media (max-width: 420px) {
             flex-direction: column;
             align-items: center;
-            margin: 0 16px;
+            padding: 0 16px;
         }
     }
     &__button {
-        height: 65%;
+        // height: 65%;
         @media (max-width: 1200px) {
-            height: 40%;
+            // height: 40%;
             justify-content: center;
         }
         @media (max-width: 640px) {
@@ -139,33 +136,32 @@
     }
     &__item-number {
         font-size: 58px;
-        color: $num;
-        width: 9%;
+        color: var(--num-contrast);
         text-align: center;
+        margin-right: 20px;
         @media (max-width: 640px) {
-            color: $grey-paragraph;
-            width: auto;
+            color: var(--grey-paragraph);
+            margin-right: 0;
         }
         @media (max-width: 420px) {
-            color: $grey-paragraph;
-            width: auto;
+            color: var(--grey-paragraph);
         }
     }
     &__item-column{
         display: flex;
         flex-direction: column;
-        width: 69%;
+        margin-right: 26px;
         @media (max-width: 640px) {
-            width: 100%;
+           margin-right: 0;
         }
     }
     &__item-title {
         font-size: 24px;
         font-weight: 600;
         line-height: 36px;
-        color: $grey;
+        color: var(--grey);
         @media (max-width: 420px) {
-            color: $white;
+            color: var(--white);
             text-align: center;
             font-size: 20px;
             font-weight: 600;
@@ -176,9 +172,9 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
-        color: $grey-paragraph;
+        color: var(--grey-paragraph);
         @media (max-width: 420px) {
-            color: $pagination;
+            color: var(--pagination);
             text-align: center;
             font-size: 14px;
             line-height: 22px;
@@ -186,9 +182,11 @@
     }
     &__item-line {
         height: 2px;
-        background-image: linear-gradient(to right, $grey13, $background);
+        background-image: linear-gradient(to right, var(--grey13-contrast), var(--background));
         position: relative;
-        margin: 40px 0;
+        // margin: 40px 0;
+        margin: min(40px, max(var(--vw)* 40, 20px)) 0;
+        margin: 20px 0;
         @media (max-width: 640px) {
             display: none;
         }
@@ -197,23 +195,22 @@
         }
     }
     &__item-link {
-
         font-size: calc(12px + 6 * var(--vw));
         padding: 7px 15px;
         display: flex;
         align-content: center;
         justify-content: center;
-        flex-wrap: wrap;
-        width: 22%;
+        // flex-wrap: wrap;
+        // width: 22%;
         @media (min-width: 1920px) {
             font-size: 18px;
         }
         @media (max-width: 640px) {
-            width: 94%;
-            font-size: 18px;
-        }
-        @media (max-width: 420px) {
             width: 100%;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            left: 0;
         }
     }
     &__item-link:hover {
@@ -226,18 +223,29 @@
         @media (max-width: 640px) {
             display: block;
             margin-top: 40px;
+            width: 100%;
         }
         @media (max-width: 420px) {
             display: block;
             margin-top: 40px;
         }
     }
-}
-
-.picture-bank {
-    width: 100%;
-    @media (min-width: 1920px) {
-        width: auto;
+    &__picture {
+        width: 100%;
+        height: 100%;
     }
-
+    &__picture {
+        // width: 50%;
+        // height: 100%;
+        flex: 0 0 50%;
+        @media (max-width: 1200px) {
+            margin-bottom: 60px;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
 }
+
+

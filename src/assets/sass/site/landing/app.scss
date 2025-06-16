@@ -2,33 +2,33 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    margin: 6.25vw 8.6vw;
-    gap: 3.355vw;
-    @media (min-width: 1920px) {
-        gap: 61px;
-        margin: 120px 165px 120px 165px;
-    }
+    margin-top: 6.25vw;
+    padding-bottom: min(64px, max(calc(var(--vw)* 64), 30px));
+    align-items: center;
     @media (max-width: 920px) {
-        margin: 0 16px 120px 16px;
         flex-direction: column;
     }
     &__content {
         width: 42.95vw;
         flex-shrink: 0;
+        flex: 0 0 50%;
+        margin-right:  3.355vw;
         @media (min-width: 1920px) {
             width: 780px;
+            margin-right:  61px;
         }
         @media (max-width: 920px) {
             width: 100%;
             text-align: center;
+            margin-right:  0;
+            margin-bottom:  61px;
         }
     }
 
     &__title {
-
         font-size: 3.021vw;
         font-weight: 700;
-        color: $white;
+        color: var(--white);
         margin-bottom: 30px;
         line-height: 5.28vw;
         @media (min-width: 1920px) {
@@ -39,14 +39,14 @@
             font-size: 42px;
             font-weight: 700;
             line-height: 53px;
-            color: $white;
+            color: var(--white);
         }
     }
 
     &__text {
         font-size: 0.94vw;
         font-weight: 400;
-        color: $grey;
+        color: var(--grey);
         @media (min-width: 1920px) {
             font-size: 18px;
         }
@@ -95,10 +95,10 @@
             font-size: 18px;
         }
         @media (max-width: 920px) {
-            background-color: $white;
+            background-color: var(--white);
             justify-content: center;
             width: 100%;
-            color: $header;
+            color: var(--header);
             border-radius:8px;
         }
     }
@@ -111,33 +111,32 @@
         display: flex;
         flex-direction: row;
         position: relative;
+        flex: 0 0 50%;
+        height: 536px;
         @media (max-width: 920px) {
             justify-content: center;
         }
     }
     &__smart-phone {
-        z-index: 10;
-        width: 18vw;
+        // z-index: 10;
+        // width: 18vw;
+        
         @media (min-width: 1920px) {
-            width: 100%;
+            // width: 100%;
         }
         @media (max-width: 920px) {
-            width: 30%;
+            width: 100%;
+            height: auto;
             left: 21px;
             position: relative;
         }
     }
 
     &__laptop {
-        z-index: 10;
-        margin-left: -5.73vw;
-        width: 44vw;
-        @media (min-width: 1920px) {
-            width: 120%;
-            margin-left: -110px;
-        }
-        @media (max-width: 920px) {
-            width: 80%;
+        margin-left: -110px;
+         @media (max-width: 920px) {
+            width: 100%;
+            height: auto;
             margin-left: 0px;
             left: 0px;
             position: relative;

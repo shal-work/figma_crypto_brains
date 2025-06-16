@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Brains website by figma</title>
-    <meta name="descriptin" content="Сайт о криптовалютах сайт по Figma">
+    <meta name="description" content="Сайт о криптовалютах сайт по Figma">
     <link rel="stylesheet" type="text/css" href="../../style.css">
     <link rel="icon" href="../../favicon.ico">
 </head>
@@ -13,10 +13,11 @@
 <body>
 
     <div class="wrapper">
+        <h1 class="visually-hidden">Crypto Brains web-site for verstaem.online</h1>
         @@include('../landing/header.html', {'src':'../..'})
 
-        <div class="market-trend">
-            <div class="market-trend__title mb-60">Featured Coins</div>
+        <div class="market-trend container">
+            <h2 class="market-trend__title reset">Featured Coins</h2>
             <div class="market market_block-trend">
                 @@include('../landing/market/market.html', {'src':'../..', 'trade': '.'})
                 <div class="market__line line"></div>

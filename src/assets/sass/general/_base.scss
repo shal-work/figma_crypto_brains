@@ -1,15 +1,24 @@
 *{
-    margin: 0;
-    padding: 0;
+    // margin: 0;
+    // padding: 0;
     box-sizing: border-box;
 }
 *, ::after, ::before {
     box-sizing: border-box;
 }
+body {
+    margin: 0;
+}
 :root {
     --index: calc(1vw + 1vh);
     --vw: calc(100vw/1920);
+    // --container-padding-x: 165px;
+    --container-padding-x: min(165px, max(var(--vw)* 165, 24px));
+    // --container-width: 1920px;
+    --container-width: min(1920px, max(var(--vw)* 1920, 24px));
 }
+
+
 
 a, a:link, a:visited {
     text-decoration: none;
@@ -19,8 +28,9 @@ a, a:link, a:visited {
     font-style: normal;
     font-optical-sizing: auto;
     font-weight: 400;
-    color: $white;
+    color: var(--white);
     font-size: 20px;
+    line-height: 24px;
 }
 
 
@@ -38,6 +48,25 @@ html {
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
     // background: #FF0000;
-    background: $grey40;
+    background: var(--grey40);
     // background: #4a4b4c;
+}
+.reset {
+    margin: 0; //при верстке по БЭМ нежелательно применять общие сброс стилей в *
+    padding: 0; //при верстке по БЭМ нежелательно применять общие сброс стилей в *
+}
+.container {
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    margin: 0 auto;
+    padding-left: var(--container-padding-x);
+    padding-right: var(--container-padding-x);
+    width: 100%;
+    @media (max-width: 1024px) {
+    //     max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    }
+    @media (max-width: 412px) {
+        // max-width: 412px;
+        // padding-left: 0;
+        // padding-right: 0;
+    }
 }

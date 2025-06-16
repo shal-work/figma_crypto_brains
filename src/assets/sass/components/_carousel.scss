@@ -1,7 +1,7 @@
 .carousel {
     display: block;
     margin: 0 auto;
-    width: 900px;
+    // width: 900px;
     position: relative;
     &__indicators {
         position: relative;
@@ -14,23 +14,23 @@
         margin-right: 15%;
         margin-left: 15%;
         list-style: none;
-        li {
-            box-sizing: content-box;
-            flex: 0 1 auto;
-            width: 40px;
-            height: 4px;
-            margin-right: 3px;
-            margin-left: 3px;
-            cursor: pointer;
-            background-color: #CFD3DA;
-            background-clip: padding-box;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            opacity: .3;
-            transition: opacity .6s ease;
-        }
-        .active {
-            opacity: 1;
-        }
+    }
+    &__item {
+        box-sizing: content-box;
+        flex: 0 1 auto;
+        width: 40px;
+        height: 4px;
+        margin-right: 3px;
+        margin-left: 3px;
+        cursor: pointer;
+        background-color: #CFD3DA;
+        background-clip: padding-box;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        opacity: .3;
+        transition: opacity .6s ease;
+    }
+    &__active {
+        opacity: 1;
     }
 }

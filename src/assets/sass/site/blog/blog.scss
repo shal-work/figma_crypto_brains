@@ -1,5 +1,6 @@
 .blog {
-    margin: calc(var(--vw)*120) calc(var(--vw)*165) 0 calc(var(--vw)*165);
+    // margin: calc(var(--vw)*120) calc(var(--vw)*165) 0 calc(var(--vw)*165);
+    padding-top: min(122px, max(var(--vw)* 120, 40px));
     position: relative;
     &-pagination {
         display: flex;
@@ -11,18 +12,7 @@
             display: flex;
             width: 100%;
             justify-content: center;
-
         }
-    }
-
-    @media (min-width: 1920px) {
-        margin: 120px 165px 0 165px;
-    }
-    @media (max-width: 620px) {
-        margin: 0 16px 10px 16px;
-    }
-    @media (max-width: 420px) {
-        margin: 0 16px 10px 16px;
     }
 }
 
@@ -30,31 +20,36 @@
     display: block;
     position: relative;
     height: 55vw;
-    margin-bottom: 50px;
+    margin-bottom: min(60px, max(var(--vw)* 60, 24px));
     @media (min-width: 1920px) {
         height: 884px;
     }
     @media (max-width: 920px) {
-        display: none;
+        // display: none;
     }
     &__img {
-        width: 82.813vw;
-        height: 33vw;
-        @media (min-width: 1920px) {
-            width: 1590px;
-            height: 633px;
-        }
+        // width: 82.813vw;
+        // height: 33vw;
+        margin: 0 auto;
+        // @media (min-width: 1920px) {
+        //     width: 1590px;
+        //     height: 633px;
+        // }
+        width: 100%;
+        height: 100%;
     }
     &__img-bitcoin {
         width: 100%;
+        height: auto;
     }
 }
 .blog-post {
     display: block;
     position: relative;
-    max-width: 1320px;
-    width: 83%;
-    margin: 0 8.46%;
+    // max-width: 1320px;
+    // width: 83%;
+    width: 100%;
+    // margin: 0 8.46%;
     top: -174px;
     &__header {
         display: flex;
@@ -64,7 +59,7 @@
         align-items: center;
     }
     &__text {
-        color:$grey-paragraph;
+        color:var(--grey-paragraph);
         font-weight: 400;
         font-size: calc(var(--vw)*8 + 12px);
         line-height: calc(var(--vw)*12 + 22px);
@@ -77,7 +72,7 @@
         }
     }
     &__date {
-        color:$grey;
+        color:var(--grey);
         font-size: calc(var(--vw)*8 + 12px);
         line-height: calc(var(--vw)*12 + 22px);
         font-weight: 600;
@@ -92,7 +87,7 @@
     }
     &__time {
         font-weight: 400;
-        color:$grey;
+        color:var(--grey);
         font-size: calc(var(--vw)*8 + 10px);
         line-height: calc(var(--vw)*12 + 16px);
         @media (min-width: 1920px) {
@@ -102,11 +97,19 @@
     }
 }
 .blog-wrap {
-    background-color: $header;
+    background-color: var(--header);
     display: block;
     padding: calc(var(--vw)*40) calc(var(--vw)*30);
+    margin: 0 auto;
+    margin-bottom: min(60px, max(var(--vw)* 60, 24px));
+    width: 60.813vw;
+
     @media (min-width: 1920px) {
         padding: 40px 30px;
+        width: 1241px;
+    }
+    @media (max-width: 768px) {
+        width: 100%;
     }
     @media (max-width: 420px) {
         padding: 0px;
@@ -121,23 +124,15 @@
 .blog-content {
     margin-bottom: 40px;
     &__title {
-        font-size: calc(var(--vw)*17 + 29px);
-        margin-bottom: calc(var(--vw)*11 + 18px);
-        line-height: calc(var(--vw)*16 + 34px);
-        @media (min-width: 1920px) {
-            font-size: 46px;
-            margin-bottom: 30px;
-            line-height: 58px;
-        }
+        font-size: min(46px, max(var(--vw)* 46, 24px));
+        margin-bottom: min(30px, max(var(--vw)* 30, 24px));
+        line-height: min(58px, max(var(--vw)* 58, 24px));
         @media (max-width: 420px) {
-            //для details.scss
-            font-size: calc(100vw / 375 * 22 + 10px);
-            line-height: calc(100vw / 375 * 20 + 20px);
             text-align: justify;
         }
     }
     &__text {
-        color: $grey;
+        color: var(--grey);
         margin-top: 20px;
         font-size: calc(var(--vw)*5.15 + 13px);
         line-height: calc(var(--vw)*19 + 19px);
@@ -145,6 +140,48 @@
             font-size: 18px;
             line-height: 28px;
         }
+    }
+        &__sub-title {
+        color: var(--pagination);
+        margin-top: 40px;
+        font-size: calc(var(--vw)*6 + 18px);
+        line-height: calc(var(--vw)*9 + 27px);
+        @media (min-width: 1920px) {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 36px;
+        }
+    }
+    &__msg {
+        color: var(--grey-paragraph);
+        background-color: var(--background);
+        font-size: calc(var(--vw)*14 + 10px);
+        font-weight: 400;
+        padding: 20px;
+        line-height: calc(var(--vw)*10 + 26px); //36px;
+        margin-top: 40px;
+        @media (min-width: 1920px) {
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--grey-paragraph);
+            background-color: var(--background);
+            padding: 20px;
+            line-height: 36px;
+            margin-top: 40px;
+        }
+        @media (max-width: 420px) {
+            padding: 10px 16px;
+        }
+    }
+    &__msg-name {
+        text-align: right;
+        @media (min-width: 1920px) {
+            padding-top: 20px;
+        }
+        @media (max-width: 420px) {
+            padding: 10px 16px;
+        }
+
     }
 }
 .blog-creator {
@@ -154,7 +191,7 @@
 }
 
 .user-name {
-    color: $grey;
+    color: var(--grey);
     font-size: calc(var(--vw)*8 + 10px);
     font-weight: 400;
     @media (min-width: 1920px) {

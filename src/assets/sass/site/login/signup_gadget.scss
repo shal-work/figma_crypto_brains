@@ -9,7 +9,7 @@
     }
     &__img {
         max-width: 343px;
-        margin-bottom: 60px;
+        margin-bottom: 12px;
     }
     &__img-item {
         width: 100%;
@@ -22,7 +22,9 @@
         width: 100%;
     }
     &__logo {
-        margin: 0 0 10px 0;
+        padding: 0 0 10px 0;
+        width: 100%;
+        text-align: center;
     }
     &__title {
         font-size: 32px;
@@ -38,20 +40,19 @@
         max-width: 660px;
     }
     &__btn-item {
-        border: 1px solid $primary;
-        border: 1px solid $primary;
+        border: 1px solid var(--primary-contrast);
         width: 100%;
-        color: $primary;
+        color: var(--primary-contrast);
     }
     &__btn-login {
         width: 100%;
-        border: 1px solid $primary;
+        border: 1px solid var(--primary-contrast);
         background-color: transparent;
     }
     &__btn-signup {
         width: 100%;
-        border: 1px solid $primary;
-        background-color: $primary;
-        color: $white;
+        border: 1px solid var(--primary);
+        background-color: var(--primary);
+        color: var(--white);
     }
 }

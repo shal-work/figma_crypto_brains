@@ -1,43 +1,6 @@
-.referral {
-    margin: 0 165px 160px 165px;
-    margin: 0 calc(var(--vw)*165) calc(var(--vw)*160) calc(var(--vw)*165);
-    @media (min-width: 1920px) {
-        margin: 0 165px 160px 165px;
-    }
-    @media (max-width: 420px) {
-        margin: 0 16px 60px 16px;
-    }
-    // &__button {
-    //     border: 1px solid #1B70F1;
-    //     background-color: rgba(27, 113, 241, 0.8784313725);
-    //     width: calc(var(--vw)*100 + 140px);
-    //     height: calc(var(--vw)*20 + 36px);
-    //     font-size: calc(var(--vw)*15 + 5px);
-    //     @media (min-width: 1920px) {
-    //         width: 240px;
-    //         height: 56px;
-    //         font-size: 20px;
-    //     }
-    //     @media (max-width: 768px) {
-    //         font-weight: 400;
-    //         font-size: 20px;
-    //         line-height: 32px;
-    //         width: 300px;
-    //         height: auto;
-    //     }
-    //     @media (max-width: 420px) {
-    //         font-weight: 400;
-    //         font-size: 20px;
-    //         line-height: 32px;
-    //         width: 100%;
-    //         height: auto;
-    //     }
-    // }
-}
-
 .referral-btn {
-    border: 1px solid $primary;
-    background-color: $primary;
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
     width: calc(var(--vw)*100 + 140px);
     height: calc(var(--vw)*20 + 36px);
     font-size: calc(var(--vw)*15 + 5px);
@@ -91,14 +54,13 @@
             align-items: center;
         }
     }
-    &__img {
-        width: 50.98vw;
-        @media (max-width: 420px) {
-            width: 303px;
-        }
-    }
-    &__img-working {
+    &__picture {
         width: 100%;
+        height: 100%;
+    }
+    &__img {
+        width: 100%;
+        height: auto;
     }
     &__line-block {
         left: calc(var(--vw) * -130);
@@ -119,25 +81,12 @@
     }
     &__title {
         font-weight: 600;
-        font-size: calc(var(--vw)*84);
-        line-height: calc(var(--vw)*100);
-        color: $grey2;
+        font-size: min(58px, max(var(--vw)* 58, 24px));
+        line-height: min(100px, max(var(--vw)* 100, 60px));
+        color: var(--grey2);
         position: relative;
         overflow: hidden;
-        @media (min-width: 1920px) {
-            font-size: 84px;
-            line-height: 100px;
-        }
         @media (max-width: 768px) {
-            font-weight: 600;
-            font-size: 48px;
-            line-height: 60.34px;
-            text-align: center;
-        }
-        @media (max-width: 420px) {
-            font-weight: 600;
-            font-size: 48px;
-            line-height: 60.34px;
             text-align: center;
         }
     }
@@ -148,25 +97,14 @@
         font-size: 18px;
         font-weight: 400;
         line-height: 28px;
-        color: $grey;
+        color: var(--grey);
         margin-bottom: calc(var(--vw) * 80);
-        font-size: calc(var(--vw)*8 + 10px);
-        line-height: calc(var(--vw)*18 + 10px);
+        font-size: min(18px, max(var(--vw)* 18, 14px));
+        line-height: min(28px, max(var(--vw)* 28, 22px));
         @media (min-width: 1920px) {
             margin-bottom: 80px;
-            font-size: 18px;
-            line-height: 28px;
         }
         @media (max-width: 768px) {
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 28px;
-            text-align: center;
-        }
-        @media (max-width: 420px) {
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 28px;
             text-align: center;
         }
     }
@@ -181,51 +119,37 @@
         margin-top: 80px;
     }
     &__title {
-        font-size: calc(var(--vw)*58);
-        line-height: calc(var(--vw)*72);
-        margin-bottom: calc(var(--vw)*80);
-        color: $white;
+        font-weight: 600;
+        font-size: min(58px, max(var(--vw)* 58, 24px));
+        line-height: min(100px, max(var(--vw)* 100, 60px));
+        margin-bottom: min(80px, max(var(--vw)* 80, 40px));
+        color: var(--white);
         text-align: center;
-        @media (min-width: 1920px) {
-            font-size: 58px;
-            font-weight: 600;
-            line-height: 72.91px;
-            margin-bottom: 80px;
-        }
-        @media (max-width: 768px) {
-            font-size: 42px;
-            font-weight: 600;
-            line-height: 52.79px;
-            margin-bottom: 40px;
-        }
     }
     &__heading {
         display: flex;
         justify-content: space-around;
-        background-color:$header;
+        background-color:var(--header);
         padding: 20px 30px;
         width: auto;
         gap: calc(var(--vw) * 80);
-        margin-bottom: calc(var(--vw) * 78);
+        margin-bottom: min(78px, max(var(--vw)* 78, 40px));
         @media (min-width: 1920px) {
             gap: 80px;
-            margin-bottom: 78px;
         }
         @media (max-width: 768px) {
             padding: 12px 16px;
             gap: 20px;
-            margin-bottom: 20px;
         }
         @media (max-width: 420px) {
             overflow-x: scroll;
             padding: 12px 16px;
             gap: 20px;
-            margin-bottom: 40px;
         }
     }
     &__item {
         font-weight: 400;
-        color: $pagination;
+        color: var(--pagination);
         white-space: nowrap;
         text-align: center;
         font-size: calc(var(--vw)*14 + 10px);
@@ -249,8 +173,8 @@
         }
     }
     &__item:hover {
-        color: $white;
-        background-color:$num;
+        color: var(--white);
+        background-color:var(--num);
         cursor: pointer;
     }
     &__content {
@@ -277,37 +201,32 @@
         flex-direction: column;
         justify-content: center;
         gap: calc(var(--vw) * 30);
-        width: 47.918vw;
+        // width: 47.918vw;
+        // width: 50%;
         @media (min-width: 1920px) {
             width: 920px;
             gap: 30px;
         }
         @media (max-width: 768px) {
             width: 100%;
-            gap:20px;
+            gap: 20px;
             align-items: center;
         }
      }
-    &__content-img {
-        width: 26.564vw;
-        padding: calc(var(--vw)*36) calc(var(--vw)*50);
-        @media (min-width: 1920px) {
-            width: 510px;
-            padding: 36px 50px;
-        }
-        @media (max-width: 768px) {
-            margin: 0 auto;
-            width: 295px;
-        }
-    }
-    &__content-character {
+    &__picture {
         width: 100%;
+        height: 100%;
+    }
+    &__img {
+        width: 100%;
+        height: auto;
     }
     &__content-num {
         font-size: 46px;
         font-weight: 600;
         line-height: 58px;
-        color: $grey20;
+        color: var(--grey);
+        color: var(--grey20-contrast);
         @media (max-width: 420px) {
             font-size: 32px;
             font-weight: 600;
@@ -316,22 +235,13 @@
     }
     &__content-title {
         font-weight: 600;
-        color: $white;
-        font-size: calc(var(--vw)*36);
-        line-height: calc(var(--vw)*45);
-        @media (min-width: 1920px) {
-            font-size: 36px;
-            line-height: 45px;
-        }
-        @media (max-width: 768px) {
-            font-size: 26px;
-            font-weight: 600;
-            line-height: 32px;
-        }
+        font-size: min(36px, max(var(--vw)* 36, 26px));
+        line-height: min(45px, max(var(--vw)* 45, 32px));
+        color: var(--white);
     }
     &__content-text {
         font-weight: 400;
-        color: $grey;
+        color: var(--grey);
         font-size: calc(var(--vw)*8 + 10px);
         line-height: calc(var(--vw)*18 + 10px);
         @media (min-width: 1920px) {
@@ -346,8 +256,6 @@
         }
     }
     &__btn {
-        left: 10px;
-        position: relative;
         margin-top: calc(var(--vw)*50);
         @media (min-width: 1920px) {
             margin-top: 50px;
@@ -357,7 +265,6 @@
         }
         @media (max-width: 420px) {
             width: 100%;
-            left: 0;
         }
     }
     &__elipse {
@@ -367,7 +274,8 @@
         right: 0;
         position: absolute;
         background: #1B70F1;
-        opacity: 20%;
+        // opacity: 20%;
+        opacity: 0.2;
         border-radius: 100%;
         filter: blur(80px);
     }
@@ -375,17 +283,19 @@
 
 
 .backlight {
-    color: $white;
-    background-color:$num;
+    color: var(--white);
+    background-color:var(--num);
 }
 
 
 .newsletter {
-    margin: calc(var(--vw)*120) calc(var(--vw)*165);
-    background-color: $header;
-    @media (min-width: 1920px) {
-        margin: 120px 165px;
-    }
+    // margin: calc(var(--vw)*120) calc(var(--vw)*165);
+    margin-top: calc(var(--vw)*120);
+    padding: calc(var(--vw)*120) 0;
+    background-color: var(--header);
+    // @media (min-width: 1920px) {
+    //     margin: 120px 165px;
+    // }
     @media (max-width: 420px) {
         font-size: 42px;
         font-weight: 600;
@@ -398,35 +308,24 @@
 
     &__title {
         font-weight: 700;
-        color: $white;
+        color: var(--white);
         margin-bottom: 30px;
-        font-size: calc(var(--vw)*58);
-        line-height: calc(var(--vw)*73);
-        margin-bottom: calc(var(--vw)*30);
-        @media (min-width: 1920px) {
-            font-size: 58px;
-            line-height: 73px;
-            margin-bottom: 30px;
-        }
+        font-size: min(58px, max(var(--vw)* 48, 24px));
+        line-height: min(100px, max(var(--vw)* 100, 40px));
+        margin-bottom: min(30px, max(var(--vw)* 30, 20px));
         @media (max-width: 420px) {
-            font-size: 42px;
             font-weight: 600;
-            line-height: 53px;
-            margin-bottom: 20px;
         }
     }
-
     &__text {
         font-weight: 400;
-        color: $grey;
+        color: var(--grey);
         font-size: calc(12px + var(--vw)*6);
         line-height: calc(18px + var(--vw)*10);
-        margin-bottom: calc(var(--vw)*80);
-        @media (min-width: 1920px) {
-            font-size: 18px;
-            line-height: 28px;
-            margin-bottom: 80px;
-        }
+        
+        font-size: min(18px, max(var(--vw)* 18, 14px));
+        line-height: min(38px, max(var(--vw)* 38, 20px));
+        margin-bottom: min(80px, max(var(--vw)* 80, 60px));
     }
     &__btn {
         text-align: center;
