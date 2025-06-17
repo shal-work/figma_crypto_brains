@@ -20,10 +20,15 @@
      }
     &__img {
         padding: 30px 29px 20px;
+
+
         width: 100%;
         height: 100%;
-        @media (max-width: 420px) {
-            width: calc(100vw - 32px);
+        @media (max-width: 412px) {
+            padding-top: min(30px, max(100vw/412 * 30, 12px));
+            padding-bottom: min(20px, max(100vw/412 * 20, 12px));
+            padding-left: min(29px, max(100vw/412 * 29, 12px));
+            padding-right: min(29px, max(100vw/412 * 29, 12px));
         }
     }
     &__img-mod {
@@ -36,7 +41,6 @@
         padding-left: min(30px, max(var(--vw)* 30, 12px));
         padding-right: min(30px, max(var(--vw)* 30, 12px));
         @media (max-width: 420px) {
-            width: calc(100vw - 32px);
             padding: 0 20px;
         }
     }

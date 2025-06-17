@@ -14,8 +14,6 @@
         }
         &__coin-name {
             display: flex;
-            // width: 32px;
-            // height: 32px;
             max-width: 32px;
             max-height: 32px;
         }
@@ -73,15 +71,11 @@
             overflow-x: scroll;
             margin-bottom: 20px;
         }
-        &__img {
-            // width: 200%;
-        }
         &__btn {
             display: flex;
             gap: 20px;
         }
         &__btn-buy {
-            // margin: 30px 0 10px 0;
             width: 100%;
             border: 1px solid var(--green-contrast);
             background-color: var(--green-contrast);
@@ -97,7 +91,6 @@
             border: 1px solid var(--green20);
         }
         &__btn-sell {
-            // margin: 30px 0 10px 0;
             width: 100%;
             border: 1px solid var(--red-contrast3);
             color: #fff;

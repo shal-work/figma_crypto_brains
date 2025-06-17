@@ -1,18 +1,5 @@
 .market {
-    // margin: calc(var(--vw)*120)
-    //         calc(var(--vw)*165)
-    //         0px
-    //         calc(var(--vw)*165);
     margin-top: calc(var(--vw)*120);
-    // @media (min-width: 1920px) {
-    //     margin: 120px 165px 0px 165px;
-    // }
-    // @media (max-width: 1650px) {
-    //     margin: 80px
-    //     calc(var(--vw)*75)
-    //     0px
-    //     calc(var(--vw)*75);
-    // }
     &__heading {
         display: flex;
         flex-direction: row;
@@ -71,7 +58,6 @@
         border-radius: 8px;
         gap: 10px;
         position: relative;
-        // min-width: 242px;
         margin-right: 30px;
     }
     &__coin:last-child {
@@ -143,17 +129,9 @@
         color: var(--grey);
         font-size: min(20px, max(var(--vw)* 20, 16px));
     }
-
     &__link:hover {
         color: var(--white);
     }
-    // @media (max-width: 1200px) {
-    //     width: 100%;
-    //     justify-content: space-between;
-    //     &__item:nth-last-child(-n+5) {
-    //         display: none;
-    //     }
-    // }
     @media (max-width: 768px) {
         width: 100%;
         justify-content: space-between;
@@ -161,7 +139,6 @@
         gap: 0;
     }
 }
-
 
 .market-trend-block {
     display: flex;

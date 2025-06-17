@@ -118,12 +118,6 @@
         }
     }
     &__smart-phone {
-        // z-index: 10;
-        // width: 18vw;
-        
-        @media (min-width: 1920px) {
-            // width: 100%;
-        }
         @media (max-width: 920px) {
             width: 100%;
             height: auto;

@@ -1,15 +1,9 @@
 .footer {
-    // margin: calc(var(--vw) * 120) 0 0 0 ;
     margin-top: calc(var(--vw) * 120);
     padding-top: calc(var(--vw) * 120);
     padding-bottom: calc(var(--vw) * 60);
     background-color: var(--header);
-    // padding: calc(var(--vw) * 120) calc(var(--vw) *165);
     position: relative;
-    @media (min-width: 1920px) {
-        // margin: 120px 0 0 0;
-        // padding: 120px 165px;
-    }
     @media (max-width: 420px) {
         margin: 70px 0 20px 0 ;
         padding: 0 12px;
@@ -147,12 +141,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        // gap: 46px;
         width: 100%;
-        // @media (max-width: 922px) {
-        //     flex-direction: column;
-        //     align-items: flex-start;
-        // }
         @media (max-width: 954px) {
             flex-direction: column-reverse;
             justify-content: space-between;
@@ -162,9 +151,6 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        // @media (max-width: 768px) {
-        //     flex-direction: column;
-        // }
         @media (max-width: 768px) {
             display: none;
         }
@@ -175,7 +161,6 @@
        line-height: 22px;
        color: #FDFDFD;
        margin-right: 46px;
-    //    margin-right: min(46px, max(var(--vw) * 46, 26px));
        @media (max-width: 768px) {
             text-align: center;
             color: var(--grey-paragraph);
@@ -196,11 +181,9 @@
         border-radius:100%;
         border-color:#FDFDFD;
         background-color: var(--white);
-        // opacity: 40%;
         opacity: 0.4;
         display: inline-block;
         right: -24px;
-        // right: max(-22px, min(var(--vw) * -22, -5px));
         position: relative;
         @media (max-width: 954px) {
             display: none;
@@ -213,11 +196,9 @@
         border-radius:100%;
         border-color:#FDFDFD;
         background-color: var(--white);
-        // opacity: 40%;
         opacity: 0.4;
         display: inline-block;
         right: -24px;
-        // right: max(-22px, min(var(--vw) * -22, -5px));
         position: relative;
     }
     &__text-addition {

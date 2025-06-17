@@ -1,5 +1,4 @@
 .blog {
-    // margin: calc(var(--vw)*120) calc(var(--vw)*165) 0 calc(var(--vw)*165);
     padding-top: min(122px, max(var(--vw)* 120, 40px));
     position: relative;
     &-pagination {
@@ -24,17 +23,8 @@
     @media (min-width: 1920px) {
         height: 884px;
     }
-    @media (max-width: 920px) {
-        // display: none;
-    }
     &__img {
-        // width: 82.813vw;
-        // height: 33vw;
         margin: 0 auto;
-        // @media (min-width: 1920px) {
-        //     width: 1590px;
-        //     height: 633px;
-        // }
         width: 100%;
         height: 100%;
     }
@@ -46,10 +36,7 @@
 .blog-post {
     display: block;
     position: relative;
-    // max-width: 1320px;
-    // width: 83%;
     width: 100%;
-    // margin: 0 8.46%;
     top: -174px;
     &__header {
         display: flex;
@@ -158,7 +145,7 @@
         font-size: calc(var(--vw)*14 + 10px);
         font-weight: 400;
         padding: 20px;
-        line-height: calc(var(--vw)*10 + 26px); //36px;
+        line-height: calc(var(--vw)*10 + 26px);
         margin-top: 40px;
         @media (min-width: 1920px) {
             font-size: 24px;

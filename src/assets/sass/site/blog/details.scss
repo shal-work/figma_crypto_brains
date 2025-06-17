@@ -1,7 +1,6 @@
 .details {
     display: block;
     position: relative;
-    // border: 1px solid white;
     margin-bottom: 50px;
     &__header {
         @media (max-width:576px) {
@@ -98,6 +97,7 @@
     @media (max-width: 768px) {
         top: 0;
         margin-top: 60px;
+        overflow: hidden;
     }
     &__title {
         font-size: 46px;
@@ -112,20 +112,19 @@
     }
     &__block {
         display: flex;
-        overflow: hidden;
-        width: 300%;
+        width: 400%;
+        column-gap: min(30px, max(var(--vw)* 30, 1px));
     }
     &__item {
         width: 375px;
     }
     &__img {
         width: 100%;
+        height: 100%;
     }
     &__img-businessman {
-        // width: 100%;
-        @media (max-width: 420px) {
-            width: 100%;
-        }
+        width: 100%;
+        height: auto;
     }
 }
 

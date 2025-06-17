@@ -201,8 +201,6 @@
         flex-direction: column;
         justify-content: center;
         gap: calc(var(--vw) * 30);
-        // width: 47.918vw;
-        // width: 50%;
         @media (min-width: 1920px) {
             width: 920px;
             gap: 30px;
@@ -274,7 +272,6 @@
         right: 0;
         position: absolute;
         background: #1B70F1;
-        // opacity: 20%;
         opacity: 0.2;
         border-radius: 100%;
         filter: blur(80px);
@@ -289,13 +286,9 @@
 
 
 .newsletter {
-    // margin: calc(var(--vw)*120) calc(var(--vw)*165);
     margin-top: calc(var(--vw)*120);
     padding: calc(var(--vw)*120) 0;
     background-color: var(--header);
-    // @media (min-width: 1920px) {
-    //     margin: 120px 165px;
-    // }
     @media (max-width: 420px) {
         font-size: 42px;
         font-weight: 600;

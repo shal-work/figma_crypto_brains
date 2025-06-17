@@ -2,12 +2,6 @@
     background-color: var(--header);
     padding: min(120px, max(var(--vw)* 120, 0px)) 0;
     position: relative;
-    // @media (min-width: 1920px) {
-    //     padding: 120px 165px;
-    // }
-    // @media (max-width: 420px) {
-    //     padding: 60px 16px;
-    // }
     &__header {
         display: flex;
         align-items: center;
@@ -98,7 +92,6 @@
         }
     }
     &__block {
-        // width: 1590px;
         overflow: hidden;
         margin-bottom: 51px;
         position: relative;
@@ -115,7 +108,6 @@
     &__content {
         display: flex;
         flex-direction: row;
-        // gap: 30px;
         @media (max-width: 400px)  {
             width: auto;
         }
@@ -153,10 +145,6 @@
     }
     &__avatar {
         margin-right: 20px;
-        // width: 13%;
-        // @media (max-width: 400px)  {
-        //     width: auto;
-        // }
         @media (max-width: 500px) {
             margin-right: 0;
             margin-bottom: 20px;
@@ -164,18 +152,6 @@
     }
     &__avatar:hover {
         cursor: pointer;
-    }
-    &__person {
-        // width: 100%;
-        // flex: 0 0 auto;
-        // flex: 1 auto; 
-        // @media (max-width: 768px)  {
-        //     width: 25%;
-        //     width: calc(320 * (100vw / 768));
-        // }
-        // @media (max-width: 400px)  {
-        //     width: auto;
-        // }
     }
     &__name {
         color: var(--white);
@@ -188,10 +164,6 @@
     &__rating {
         font-size: 72px;
         color: var(--grey13-contrast);
-        // flex: 0 0 auto; 
-        // @media (max-width: 400px)  {
-        //     width: auto;
-        // }
     }
     &__coment {
         color: var(--white);
@@ -205,7 +177,6 @@
         }
         @media (max-width: 736px)  {
             width: auto;
-            // padding: 0 30px 0 0;
             font-size: 18px;
         }
         @media (max-width: 400px)  {

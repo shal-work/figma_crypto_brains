@@ -30,7 +30,6 @@
     &__heading {
         display: flex;
         align-items: center;
-        // padding-left: 24px;
         background-color: var(--header);
         position: relative;
         font-size: calc(var(--vw) * 20);
@@ -77,14 +76,11 @@
     &__component {
         background-color: var(--num);
         padding: 20px;
-        // width: 290px;
-        // width: 20%;
         border-radius:8px
     }
     &__component-heading {
         display: flex;
         justify-content: space-between;
-        // margin: 24px 24px 30px 24px;
         flex-direction: column;
         align-items: center;
         gap: 20px;
@@ -102,13 +98,11 @@
     }
     &__graph {
         display: flex;
-        // width: 80%;
         flex-direction: column;
         justify-content: space-between;
         overflow: scroll;
     }
     &__btn-buy {
-        // margin: 30px 0 10px 0;
         width: 100%;
         border: 1px solid var(--green-contrast);
         background-color: var(--green-contrast);
@@ -124,7 +118,6 @@
         border: 1px solid var(--green);
     }
     &__btn-sell {
-        // margin: 30px 0 10px 0;
         width: 100%;
         border: 1px solid var(--red);
         font-size: 20px;
@@ -132,14 +125,12 @@
         font-weight: 400;
         padding-top: 12px;
         padding-bottom: 12px;
-        // color: var(--red);
     }
     &__btn-sell:hover {
         background-color: var(--red20);
         border: 1px solid var(--red20);
     }
     &__fill {
-        // background-color: var(--red);
         background-color: var(--red-contrast);
         color: #FFFFFF;
     }
@@ -172,8 +163,6 @@
         border-right: 1px solid var(--grey);
         width: auto;
         height: 40px;
-        // top: 25px;
-        // right: -14%;
         right: 0;
     }
     &__name {
@@ -215,10 +204,8 @@
         font-size: 20px;
         line-height: 32px;
         font-weight: 400;
-        // padding-bottom: 18px;
         padding-bottom: 2px;
         position: relative;
-        // overflow: hidden;
         text-decoration: none;
         display: inline-block;
         color: var(--grey);
@@ -262,48 +249,7 @@
             flex-direction: column;
         }
     }
-    // &__btn-buy {
-    //     // margin: 30px 0 10px 0;
-    //     width: 100%;
-    //     border: 1px solid var(--green);
-    //     background-color: var(--green);
-    //     font-size: 20px;
-    //     line-height: 32px;
-    //     font-weight: 400;
-    //     color: #FFFFFF;
-    //     padding-top: 12px;
-    //     padding-bottom: 12px;
-    // }
-    // &__btn-buy:hover {
-    //     background-color: var(--green20);
-    // }
-    // &__btn-sell {
-    //     // margin: 30px 0 10px 0;
-    //     width: 100%;
-    //     border: 1px solid var(--red);
-    //     font-size: 20px;
-    //     line-height: 32px;
-    //     font-weight: 400;
-    //     padding-top: 12px;
-    //     padding-bottom: 12px;
-    // }
-    // &__fill {
-    //     background-color: var(--red);
-    //     color: #FFFFFF;
-    // }
-    // &__btn-sell:hover {
-    //     background-color: var(--red20);
-    // }
-    // &__contour {
-    //     color: var(--red);
-    // }
-    // &__text {
-    //     text-align: center;
-    //     font-size: 12px;
-    //     line-height: 15.08px;
-    //     font-weight: 400;
-    //     color: var(--grey);
-    // }
+    
     &__watchlist, &__portfolio, &__open-order {
         display: flex;
         flex-direction: column;
@@ -347,7 +293,6 @@
         width: 6px;
         height: 6px;
         position: absolute;
-        // top: 11px;
         left: 3px;
         transition: 300ms;
         opacity: 0;
@@ -363,7 +308,6 @@
     &__input:checked + &__name {
         color: var(--primary-contrast2);
         font-size: 18px;
-
     }
 }
 
@@ -505,7 +449,6 @@
     }
     &__table-header {
         display: flex;
-        // justify-content: space-between;
         gap: 20px;
         margin-bottom: 10px;
     }
@@ -674,7 +617,6 @@ option {
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
-        // color: var(--grey-paragraph);
         color: var(--grey-paragraph-contrast);
     }
     &__total {

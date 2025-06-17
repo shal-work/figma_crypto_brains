@@ -1,6 +1,4 @@
 .choice {
-    // margin: 120px 165px 0;
-    // margin: calc(var(--vw )* 120) calc(var(--vw) * 165) 0;
     padding-top: calc(var(--vw )* 120);
     padding-bottom: calc(var(--vw )* 120);
     position: relative;
@@ -55,16 +53,8 @@
     &__content {
         display: flex;
         flex-direction: row;
-
-        // gap: calc(135 * var(--vw));
         position: relative;
         z-index: 10;
-        @media (min-width: 1920px) {
-            // gap: 135px;
-        }
-        @media (max-width: 1600px) {
-            // gap: 5px;
-        }
         @media (max-width: 1200px) {
             flex-direction: column-reverse;
         }
@@ -92,7 +82,6 @@
     &__item {
         display: flex;
         flex-direction: row;
-        // gap: 20px;
         align-items: center;
         justify-content: flex-start;
         @media (max-width: 1200px) {
@@ -112,9 +101,7 @@
         }
     }
     &__button {
-        // height: 65%;
         @media (max-width: 1200px) {
-            // height: 40%;
             justify-content: center;
         }
         @media (max-width: 640px) {
@@ -184,7 +171,6 @@
         height: 2px;
         background-image: linear-gradient(to right, var(--grey13-contrast), var(--background));
         position: relative;
-        // margin: 40px 0;
         margin: min(40px, max(var(--vw)* 40, 20px)) 0;
         margin: 20px 0;
         @media (max-width: 640px) {
@@ -200,8 +186,6 @@
         display: flex;
         align-content: center;
         justify-content: center;
-        // flex-wrap: wrap;
-        // width: 22%;
         @media (min-width: 1920px) {
             font-size: 18px;
         }
@@ -235,8 +219,6 @@
         height: 100%;
     }
     &__picture {
-        // width: 50%;
-        // height: 100%;
         flex: 0 0 50%;
         @media (max-width: 1200px) {
             margin-bottom: 60px;
