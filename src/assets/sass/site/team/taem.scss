@@ -1,4 +1,4 @@
-.team {
+    .team {
     margin: calc(var(--vw)*136)
         calc(var(--vw)*165)
         calc(var(--vw)*120)
@@ -10,8 +10,11 @@
         margin: 0 16px 60px 16px;
     }
     &__icon {
-        width: 28px;
-        height: 29px;
+        padding: 12px;
+        @media (max-width: 412px) {
+            max-width: 42px;
+            max-height: 44px;
+        }
     }
     &__header {
         text-align: center;
